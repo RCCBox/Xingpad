@@ -6,7 +6,7 @@
 //
 
 #import "OAuthXing.h"
-#import "XPOAuthConsumerCredentials.h"
+#import "OAuthConsumerCredentials.h"
 
 @implementation OAuthXing
 

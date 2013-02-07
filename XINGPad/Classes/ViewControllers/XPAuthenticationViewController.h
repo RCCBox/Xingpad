@@ -11,8 +11,8 @@
 
 @class OAuthXing;
 
-@interface XPAuthenticationViewController : UIViewController <UINavigationControllerDelegate,
-        OAuthXingCallbacks, OAuthLoginPopupDelegate, UIWebViewDelegate> {
+@interface XPAuthenticationViewController : UIViewController <OAuthXingCallbacks, OAuthLoginPopupDelegate,
+        UIWebViewDelegate> {
 
     IBOutlet UIWebView *webView;
 
@@ -26,10 +26,5 @@
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 
 @property (unsafe_unretained) id<OAuthLoginPopupDelegate> delegate;
-
-//@property (nonatomic, strong) OAuthXing *oAuthXing;
-//@property (nonatomic, copy) NSString *oAuthCallbackUrl;
-
-- (void)authorizeOAuthVerifier:(NSString *)oauth_verifier;
 
 @end

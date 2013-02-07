@@ -84,7 +84,7 @@
 		1F63F8D016C25F7C0077EA2D /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
 		1F63F8D116C25F7C0077EA2D /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		1F63F8D216C25F7C0077EA2D /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		1F63F8DE16C2CD2F0077EA2D /* XPOAuthConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPOAuthConsumerCredentials.h; sourceTree = "<group>"; };
+		1F63F8DE16C2CD2F0077EA2D /* OAuthConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumerCredentials.h; sourceTree = "<group>"; };
 		1F63F8E116C2CF740077EA2D /* XPAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAuthenticationViewController.h; sourceTree = "<group>"; };
 		1F63F8E216C2CF740077EA2D /* XPAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAuthenticationViewController.m; sourceTree = "<group>"; };
 		1F63F8E516C3B25B0077EA2D /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
@@ -127,6 +127,7 @@
 		1FC1BB5516C11D5800404E83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FC1BB5716C11D5800404E83 /* XINGPadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XINGPadTests.h; sourceTree = "<group>"; };
 		1FC1BB5816C11D5800404E83 /* XINGPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XINGPadTests.m; sourceTree = "<group>"; };
+		1FDE7E0016C45C8400D70039 /* OAuthNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthNotifications.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +244,8 @@
 				1F63F8FD16C3B9100077EA2D /* OAuthXing.m */,
 				1F63F8F216C3B4510077EA2D /* Protocols */,
 				1F63F8E416C3B25B0077EA2D /* Crypto */,
-				1F63F8DE16C2CD2F0077EA2D /* XPOAuthConsumerCredentials.h */,
+				1F63F8DE16C2CD2F0077EA2D /* OAuthConsumerCredentials.h */,
+				1FDE7E0016C45C8400D70039 /* OAuthNotifications.h */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -315,7 +317,6 @@
 				1FC1BB3F16C11D5700404E83 /* MainStoryboard.storyboard */,
 				1FC1BB2E16C11D5700404E83 /* Supporting Files */,
 			);
-			name = XINGPad;
 			path = XINGPad;
 			sourceTree = "<group>";
 		};
@@ -340,7 +341,6 @@
 				1FC1BB5816C11D5800404E83 /* XINGPadTests.m */,
 				1FC1BB5216C11D5800404E83 /* Supporting Files */,
 			);
-			name = XINGPadTests;
 			path = XINGPadTests;
 			sourceTree = "<group>";
 		};

@@ -5,6 +5,7 @@
 //
 
 #import "XPViewController.h"
+#import "OAuthConsumerCredentials.h"
 
 @interface XPViewController ()
 
@@ -14,6 +15,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    if ([self isUserAuthorized] == NO) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        UIViewController *ctrl = [storyboard instantiateViewControllerWithIdentifier:@"XPAuthenticationViewController"];
+        [self presentViewController:ctrl animated:NO completion:nil];
+    }
+}
+
+// todo refactor - JPO
+- (BOOL)isUserAuthorized {
+    BOOL authorized = NO;
+    NSString *authTokenKey = [NSString stringWithFormat:@"%@%@", XING_OAUTH_PREFIX, XING_OAUTH_TOKEN];
+
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:authTokenKey]) {
+        NSLog(@"XING User is already authorized.");
+
+        // XING user is already authorized, because an auth token is stored
+        // set isLoggedInViaTwitter:YES
+
+        authorized = YES;
+    }
+    else {
+
+        // user not logged in yet
+        NSLog(@"No XING User logged in yet.");
+        authorized = NO;
+    }
+    return authorized;
 }
 
 @end

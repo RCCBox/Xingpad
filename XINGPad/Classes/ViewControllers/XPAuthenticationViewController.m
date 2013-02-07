@@ -7,12 +7,14 @@
 
 #import "XPAuthenticationViewController.h"
 #import "OAuthXing.h"
-#import "XPOAuthConsumerCredentials.h"
+#import "OAuthConsumerCredentials.h"
+#import "OAuthNotifications.h"
 
 // Private interface
 @interface XPAuthenticationViewController ()
-- (void) requestTokenWithCallbackUrl:(NSString *)callbackUrl;
-- (void) initializeAndSetup;
+- (void)authorizeOAuthVerifier:(NSString *)oauth_verifier;
+- (void)requestTokenWithCallbackUrl:(NSString *)callbackUrl;
+- (void)initializeAndSetup;
 @end
 
 @implementation XPAuthenticationViewController
@@ -49,8 +51,11 @@
 	oAuthXing.delegate = self; // todo implement protocol !!!!
     self.delegate = self;
 
-    // Listen for keyboard hide/show notifications so we can properly reconfigure the UI
+    // Listen for OAuthVerifier Request
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOAuthVerifierAuthorizeRequest:)
+                                                 name:OAuthVerifierCanBeAuthorized object:nil];
 
+    // Listen for keyboard hide/show notifications so we can properly reconfigure the UI
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:)
@@ -70,6 +75,10 @@
 
 #pragma mark -
 #pragma mark Authorize OAuth verifier received through URL callback or UI
+
+- (void)handleOAuthVerifierAuthorizeRequest:(NSNotification *)aNotification {
+    [self authorizeOAuthVerifier:(NSString *)[aNotification object]];
+}
 
 - (void)authorizeOAuthVerifier:(NSString *)oauth_verifier {
     // delegate authorizationRequestDidStart
@@ -218,17 +227,14 @@
 #pragma mark AAuthLoginPopupDelegate
 
 - (void)oAuthLoginPopupDidCancel:(UIViewController *)popup {
-//    [self dismissModalViewControllerAnimated:YES];
-//    loginPopup = nil; // was retained as ivar in "login"
-    
+    [self dismissViewControllerAnimated:NO completion:nil];
+
     // todo user authenticated - adopt UI accordingly
 }
 
 - (void)oAuthLoginPopupDidAuthorize:(UIViewController *)popup {
-//    [self dismissModalViewControllerAnimated:YES];
-//     loginPopup = nil; // was retained as ivar in "login"
     [oAuthXing save];
-//    [self resetUi];
+    [self dismissViewControllerAnimated:NO completion:nil];
     // todo user authenticated - adopt UI accordingly
 }
 
