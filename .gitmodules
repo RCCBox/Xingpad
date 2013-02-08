@@ -1,0 +1,3 @@
+[submodule "Vendor/Model"]
+	path = Vendor/Model
+	url = git://github.com/AFNetworking/AFNetworking.git
