@@ -63,7 +63,7 @@
 		
 	// ... but if we got a new key that is not known, log it.
 	} else {
-		NSLog(@"Got unknown key from provider response. Key: \"%@\", value: \"%@\"", key, value);
+		DLog(@"Got unknown key from provider response. Key: \"%@\", value: \"%@\"", key, value);
 	}
 }
 

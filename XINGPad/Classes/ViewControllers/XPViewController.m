@@ -33,7 +33,7 @@
     NSString *authTokenKey = [NSString stringWithFormat:@"%@%@", XING_OAUTH_PREFIX, XING_OAUTH_TOKEN];
 
     if ([[NSUserDefaults standardUserDefaults] objectForKey:authTokenKey]) {
-        NSLog(@"XING User is already authorized.");
+        DLog(@"XING User is already authorized.");
 
         // XING user is already authorized, because an auth token is stored
         // set isLoggedInViaTwitter:YES
@@ -43,7 +43,7 @@
     else {
 
         // user not logged in yet
-        NSLog(@"No XING User logged in yet.");
+        DLog(@"No XING User logged in yet.");
         authorized = NO;
     }
     return authorized;

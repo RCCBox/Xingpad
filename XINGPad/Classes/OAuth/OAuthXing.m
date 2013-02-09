@@ -82,7 +82,7 @@
                                                                                                  error:&error]
                                                       encoding:NSUTF8StringEncoding];
 
-    NSLog(@"Status code: %d", [response statusCode]);
+    DLog(@"Status code: %d", [response statusCode]);
 
 	if ([response statusCode] != 201) {
         if ([self.delegate respondsToSelector:@selector(requestXingTokenDidFail:)]) {
@@ -138,8 +138,8 @@
 	
 	if ([response statusCode] != 201) {
         
-        NSLog(@"HTTP return code for token authorization error: %d, message: %@, string: %@", [response statusCode], [NSHTTPURLResponse localizedStringForStatusCode:[response statusCode]], responseString);
-        NSLog(@"OAuth header was: %@", oauth_header);
+        DLog(@"HTTP return code for token authorization error: %d, message: %@, string: %@", [response statusCode], [NSHTTPURLResponse localizedStringForStatusCode:[response statusCode]], responseString);
+        DLog(@"OAuth header was: %@", oauth_header);
         
 		if ([self.delegate respondsToSelector:@selector(authorizeXingTokenDidFail:)]) {
 			[self.delegate authorizeXingTokenDidFail:self];
