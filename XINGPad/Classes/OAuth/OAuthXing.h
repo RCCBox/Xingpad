@@ -8,10 +8,7 @@
 #import "OAuth.h"
 #import "OAuthXingCallbacks.h"
 
-@interface OAuthXing : OAuth {
-    NSString *user_id;
-    id<OAuthXingCallbacks> __unsafe_unretained delegate;
-}
+@interface OAuthXing : OAuth
 
 @property (copy) NSString *user_id;
 @property (unsafe_unretained) id<OAuthXingCallbacks> delegate;

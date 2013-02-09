@@ -14,14 +14,11 @@
 @interface XPAuthenticationViewController : UIViewController <OAuthXingCallbacks, OAuthLoginPopupDelegate,
         UIWebViewDelegate> {
 
-    IBOutlet UIWebView *webView;
-
-    OAuthXing *oAuthXing;
-    NSString *oAuthCallbackUrl;
-    NSOperationQueue *queue;
-
-    id <OAuthLoginPopupDelegate> __unsafe_unretained delegate;
 }
+
+@property (strong) OAuthXing *oAuthXing;
+@property (strong) NSString *oAuthCallbackUrl;
+@property (strong) NSOperationQueue *queue;
 
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 

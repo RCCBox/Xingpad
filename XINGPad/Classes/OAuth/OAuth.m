@@ -23,11 +23,6 @@
 
 @implementation OAuth
 
-@synthesize oauth_token;
-@synthesize oauth_token_secret;
-@synthesize oauth_token_authorized;
-@synthesize save_prefix;
-
 #pragma mark -
 #pragma mark Init and dealloc
 
@@ -37,10 +32,10 @@
  */
 - (id) initWithConsumerKey:(NSString *)aConsumerKey andConsumerSecret:(NSString *)aConsumerSecret {
 	if ((self = [super init])) {
-		oauth_consumer_key = [aConsumerKey copy];
-		oauth_consumer_secret = [aConsumerSecret copy];
-		oauth_signature_method = @"HMAC-SHA1";
-		oauth_version = @"1.0";
+		self.oauth_consumer_key = [aConsumerKey copy];
+        self.oauth_consumer_secret = [aConsumerSecret copy];
+        self.oauth_signature_method = @"HMAC-SHA1";
+        self.oauth_version = @"1.0";
 		self.oauth_token = @"";
 		self.oauth_token_secret = @"";
 		srandom(time(NULL)); // seed the random number generator, used for generating nonces
@@ -88,7 +83,7 @@
 	return [self oAuthHeaderForMethod:method 
 							   andUrl:url
 							andParams:params
-					   andTokenSecret:self.oauth_token_authorized ? oauth_token_secret : @""];
+					   andTokenSecret:self.oauth_token_authorized ? self.oauth_token_secret : @""];
 }
 
 /**
@@ -117,7 +112,7 @@
 								 signClearText:[self oauth_signature_base:method
 																  withUrl:url
 																andParams:_params]
-								 withSecret:[NSString stringWithFormat:@"%@&%@", oauth_consumer_secret, token_secret]];
+								 withSecret:[NSString stringWithFormat:@"%@&%@", self.oauth_consumer_secret, token_secret]];
 	
 	// Return the authorization header using the signature and parameters (if any).
 	return [self oauth_authorization_header:oauth_signature withParams:_params];
@@ -135,8 +130,8 @@
 }
 
 - (NSString *) description {
-	return [NSString stringWithFormat:@"OAuth context object with consumer key \"%@\", token \"%@\". Authorized: %@",
-			oauth_consumer_key, self.oauth_token, self.oauth_token_authorized ? @"YES" : @"NO"]; 
+    return [NSString stringWithFormat:@"OAuth context object with consumer key \"%@\", token \"%@\". Authorized: %@",
+                                      self.oauth_consumer_key, self.oauth_token, self.oauth_token_authorized ? @"YES" : @"NO"];
 }
 
 
@@ -175,9 +170,9 @@
 	// Nonce algorithm is sha1(timestamp || random), i.e
 	// we concatenate timestamp with a random string, and then sha1 it.
 	int timestamp = time(NULL);
-	oauth_timestamp = [NSString stringWithFormat:@"%d", timestamp];
+    self.oauth_timestamp = [NSString stringWithFormat:@"%d", timestamp];
 	int myRandom = random();
-	oauth_nonce = [self sha1:[NSString stringWithFormat:@"%d%d", timestamp, myRandom]];
+    self.oauth_nonce = [self sha1:[NSString stringWithFormat:@"%d%d", timestamp, myRandom]];
 	
 	NSMutableDictionary *parts = [NSMutableDictionary dictionaryWithCapacity:[[self oauth_base_components] count]];
 	

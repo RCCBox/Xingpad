@@ -10,8 +10,6 @@
 
 @implementation OAuthXing
 
-@synthesize user_id, delegate;
-
 #pragma mark -
 #pragma mark Init
 
@@ -88,7 +86,7 @@
 
 	if ([response statusCode] != 201) {
         if ([self.delegate respondsToSelector:@selector(requestXingTokenDidFail:)]) {
-            [delegate requestXingTokenDidFail:self];
+            [self.delegate requestXingTokenDidFail:self];
         }
     }
     else {
@@ -101,7 +99,7 @@
 			[self setValue:[subComponents objectAtIndex:1] forKey:[subComponents objectAtIndex:0]];			
 		}
 		if ([self.delegate respondsToSelector:@selector(requestXingTokenDidSucceed:)]) {
-			[delegate requestXingTokenDidSucceed:self];
+			[self.delegate requestXingTokenDidSucceed:self];
 		}
 	}
 }
@@ -119,12 +117,15 @@
 	// We manually specify the token as a param, because it has not yet been authorized
 	// and the automatic state checking wouldn't include it in signature construction or header,
 	// since oauth_token_authorized is still NO by this point.
-	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-							oauth_token, @"oauth_token",
-							oauth_verifier, @"oauth_verifier",
-							nil];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+            self.oauth_token, @"oauth_token",
+            oauth_verifier, @"oauth_verifier",
+            nil];
 	
-	NSString *oauth_header = [super oAuthHeaderForMethod:@"POST" andUrl:url andParams:params andTokenSecret:oauth_token_secret];
+	NSString *oauth_header = [super oAuthHeaderForMethod:@"POST"
+                                                  andUrl:url
+                                               andParams:params
+                                          andTokenSecret:self.oauth_token_secret];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10.0f]; 
 	[request setHTTPMethod:@"POST"];
@@ -141,7 +142,7 @@
         NSLog(@"OAuth header was: %@", oauth_header);
         
 		if ([self.delegate respondsToSelector:@selector(authorizeXingTokenDidFail:)]) {
-			[delegate authorizeXingTokenDidFail:self];
+			[self.delegate authorizeXingTokenDidFail:self];
 		}
 	}
     else {
@@ -154,7 +155,7 @@
 		
 		self.oauth_token_authorized = YES;
 		if ([self.delegate respondsToSelector:@selector(authorizeXingTokenDidSucceed:)]) {
-			[delegate authorizeXingTokenDidSucceed:self];
+			[self.delegate authorizeXingTokenDidSucceed:self];
 		}
 	}
 }

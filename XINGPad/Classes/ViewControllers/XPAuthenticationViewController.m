@@ -19,8 +19,6 @@
 
 @implementation XPAuthenticationViewController
 
-@synthesize webView, delegate;//, oAuthXing, oAuthCallbackUrl;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -46,9 +44,9 @@
 
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 
-	queue = [[NSOperationQueue alloc] init];
+	self.queue = [[NSOperationQueue alloc] init];
 
-	oAuthXing.delegate = self; // todo implement protocol !!!!
+    self.oAuthXing.delegate = self; // todo implement protocol !!!!
     self.delegate = self;
 
     // Listen for OAuthVerifier Request
@@ -61,7 +59,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification object:nil];
 
-    [self requestTokenWithCallbackUrl:oAuthCallbackUrl];
+    [self requestTokenWithCallbackUrl:self.oAuthCallbackUrl];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -85,10 +83,10 @@
 //	[self.uiDelegate authorizationRequestDidStart:self];
 
 	NSInvocationOperation *operation = [[NSInvocationOperation alloc]
-										initWithTarget:oAuthXing
+										initWithTarget:self.oAuthXing
 										selector:@selector(synchronousAuthorizeXingTokenWithVerifier:)
 										object:oauth_verifier];
-	[queue addOperation:operation];
+	[self.queue addOperation:operation];
 }
 
 #pragma mark -
@@ -109,11 +107,11 @@
     NSURL *myURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.xing.com/v1/authorize?oauth_token=%@",
                     someOAuth.oauth_token]];
 
-    webView.dataDetectorTypes = UIDataDetectorTypeNone;
-    webView.scalesPageToFit = YES;
-    webView.delegate = self;
+    self.webView.dataDetectorTypes = UIDataDetectorTypeNone;
+    self.webView.scalesPageToFit = YES;
+    self.webView.delegate = self;
 
-    [webView loadRequest:[NSURLRequest requestWithURL:myURL]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:myURL]];
 
 //	[self.uiDelegate tokenRequestDidSucceed:self];
 }
@@ -159,22 +157,22 @@
 //    [self.uiDelegate tokenRequestDidStart:self];
 
 	NSInvocationOperation *operation = [[NSInvocationOperation alloc]
-										initWithTarget:oAuthXing
+										initWithTarget:self.oAuthXing
 										selector:@selector(synchronousRequestXingTokenWithCallbackUrl:)
 										object:callbackUrl];
 
-	[queue addOperation:operation];
+	[self.queue addOperation:operation];
 }
 
 - (void)initializeAndSetup {
-    if (oAuthXing == nil) {
-        oAuthXing = [[OAuthXing alloc] initWithConsumerKey:OAUTH_CONSUMER_KEY_XING andConsumerSecret:OAUTH_CONSUMER_SECRET_XING];
+    if (self.oAuthXing == nil) {
+        self.oAuthXing = [[OAuthXing alloc] initWithConsumerKey:OAUTH_CONSUMER_KEY_XING andConsumerSecret:OAUTH_CONSUMER_SECRET_XING];
         //        oAuth4Xing.save_prefix = @"PlainOAuth4xing"; // todo what's this ???
-        [oAuthXing load];
+        [self.oAuthXing load];
 
     }
-    if (oAuthCallbackUrl == nil) {
-        oAuthCallbackUrl = @"xingipad://handleOAuthLogin"; // TODO callback URL: e.g. myapp://callback
+    if (self.oAuthCallbackUrl == nil) {
+        self.oAuthCallbackUrl = @"xingipad://handleOAuthLogin"; // TODO callback URL: e.g. myapp://callback
     }
 }
 
@@ -233,7 +231,7 @@
 }
 
 - (void)oAuthLoginPopupDidAuthorize:(UIViewController *)popup {
-    [oAuthXing save];
+    [self.oAuthXing save];
     [self dismissViewControllerAnimated:NO completion:nil];
     // todo user authenticated - adopt UI accordingly
 }

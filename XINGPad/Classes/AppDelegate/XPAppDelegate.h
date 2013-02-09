@@ -7,12 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class XPAuthenticationViewController;
-
-@interface XPAppDelegate : UIResponder <UIApplicationDelegate> {
-    UINavigationController *navigationController;
-    XPAuthenticationViewController *authenticationController;
-}
+@interface XPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

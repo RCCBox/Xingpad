@@ -7,42 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OAuth : NSObject {
-	NSString
-		// my app credentials
-		*oauth_consumer_key,
-		*oauth_consumer_secret,
-	
-		// fixed to "HMAC-SHA1"
-		*oauth_signature_method,
-	
-		// calculated at runtime for each signature
-		*oauth_timestamp,
-		*oauth_nonce,
-	
-		// Fixed to "1.0". Although now that we support v2 too, should fix this.
-		*oauth_version,
-	
-		// We obtain these from the provider.
-		// These may be either request token (oauth 1.0a 6.1.2) or access token (oauth 1.0a 6.3.2);
-		// determine semantics with oauth_token_authorized and call synchronousVerifyCredentials
-		// if you want to be really sure.
-        //
-        // For OAuth 2.0, the token simply stores the token that the provider issued, and
-        // token_secret is undefined.
-		*oauth_token,
-		*oauth_token_secret,
-    
-        // What prefix to use for the keys when saving and loading to/from NSUserDefaults.
-        // Useful to avoid key naming conflicts.
-        *save_prefix;
-		
-	
-	// YES if this token has been authorized and can be used for production calls.
-	// You need to save and load the state of this yourself, but you don't need to
-	// modify it during runtime.
-	BOOL oauth_token_authorized;	
-}
+@interface OAuth : NSObject
 
 // You initialize the object with your app (consumer) credentials.
 - (id) initWithConsumerKey:(NSString *)aConsumerKey andConsumerSecret:(NSString *)aConsumerSecret;
@@ -63,10 +28,38 @@
 - (void) load;
 - (void) save;
 
-@property (assign) BOOL oauth_token_authorized;
+// my app credentials
+@property (copy) NSString *oauth_consumer_key;
+@property (copy) NSString *oauth_consumer_secret;
+
+// fixed to "HMAC-SHA1"
+@property (copy) NSString *oauth_signature_method;
+
+// calculated at runtime for each signature
+@property (copy) NSString *oauth_timestamp;
+@property (copy) NSString *oauth_nonce;
+
+// Fixed to "1.0". Although now that we support v2 too, should fix this.
+@property (copy) NSString *oauth_version;
+
+// We obtain these from the provider.
+// These may be either request token (oauth 1.0a 6.1.2) or access token (oauth 1.0a 6.3.2);
+// determine semantics with oauth_token_authorized and call synchronousVerifyCredentials
+// if you want to be really sure.
+//
+// For OAuth 2.0, the token simply stores the token that the provider issued, and
+// token_secret is undefined.
 @property (copy) NSString *oauth_token;
 @property (copy) NSString *oauth_token_secret;
+
+// What prefix to use for the keys when saving and loading to/from NSUserDefaults.
+// Useful to avoid key naming conflicts.
 @property (copy) NSString *save_prefix;
+
+// YES if this token has been authorized and can be used for production calls.
+// You need to save and load the state of this yourself, but you don't need to
+// modify it during runtime.
+@property (assign) BOOL oauth_token_authorized;
 
 @end
 
