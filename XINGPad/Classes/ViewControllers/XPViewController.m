@@ -6,6 +6,7 @@
 
 #import "XPViewController.h"
 #import "OAuthConsumerCredentials.h"
+#import "OAuthViewController.h"
 
 @interface XPViewController ()
 
@@ -15,16 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
     if ([self isUserAuthorized] == NO) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-        UIViewController *ctrl = [storyboard instantiateViewControllerWithIdentifier:@"XPAuthenticationViewController"];
-        [self presentViewController:ctrl animated:NO completion:nil];
+        OAuthViewController *oauthViewController = [[OAuthViewController alloc] initWithNibName:@"OAuthViewController" bundle:nil];
+        [self presentViewController:oauthViewController animated:NO completion:nil];
     }
+
 }
 
 // todo refactor - JPO

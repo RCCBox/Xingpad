@@ -1,23 +1,23 @@
 //
-//  XPAuthenticationViewController.m
+//  OAuthViewController.m
 //
 //  Created by Jörg Polakowski on 06/02/13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
-#import "XPAuthenticationViewController.h"
+#import "OAuthViewController.h"
 #import "OAuthXing.h"
 #import "OAuthConsumerCredentials.h"
 #import "OAuthNotifications.h"
 
 // Private interface
-@interface XPAuthenticationViewController ()
+@interface OAuthViewController ()
 - (void)authorizeOAuthVerifier:(NSString *)oauth_verifier;
 - (void)requestTokenWithCallbackUrl:(NSString *)callbackUrl;
 - (void)initializeAndSetup;
 @end
 
-@implementation XPAuthenticationViewController
+@implementation OAuthViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

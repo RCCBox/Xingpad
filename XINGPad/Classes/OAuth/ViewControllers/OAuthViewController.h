@@ -1,5 +1,5 @@
 //
-//  XPAuthenticationViewController.h
+//  OAuthViewController.h
 //
 //  Created by Jörg Polakowski on 06/02/13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
@@ -11,7 +11,7 @@
 
 @class OAuthXing;
 
-@interface XPAuthenticationViewController : UIViewController <OAuthXingCallbacks, OAuthLoginPopupDelegate,
+@interface OAuthViewController : UIViewController <OAuthXingCallbacks, OAuthLoginPopupDelegate,
         UIWebViewDelegate> {
 
 }

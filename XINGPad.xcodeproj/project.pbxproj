@@ -19,7 +19,6 @@
 		1F63F8DA16C25F7C0077EA2D /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F8CE16C25F7C0077EA2D /* SBJsonStreamWriterAccumulator.m */; };
 		1F63F8DB16C25F7C0077EA2D /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F8D016C25F7C0077EA2D /* SBJsonStreamWriterState.m */; };
 		1F63F8DC16C25F7C0077EA2D /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F8D216C25F7C0077EA2D /* SBJsonWriter.m */; };
-		1F63F8E316C2CF750077EA2D /* XPAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F8E216C2CF740077EA2D /* XPAuthenticationViewController.m */; };
 		1F63F8EE16C3B25B0077EA2D /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F8E516C3B25B0077EA2D /* Base64Transcoder.c */; };
 		1F63F8EF16C3B25B0077EA2D /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F8E716C3B25B0077EA2D /* hmac.c */; };
 		1F63F8F016C3B25B0077EA2D /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F8EA16C3B25B0077EA2D /* OAHMAC_SHA1SignatureProvider.m */; };
@@ -36,11 +35,13 @@
 		1F63F91C16C44A9B0077EA2D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F63F91616C44A9B0077EA2D /* Default@2x.png */; };
 		1F63F91D16C44A9B0077EA2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F91716C44A9B0077EA2D /* main.m */; };
 		1F63F91E16C44A9B0077EA2D /* XINGPad-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F63F91816C44A9B0077EA2D /* XINGPad-Info.plist */; };
+		1F782A4516C6F2D10005DD59 /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F782A4416C6F2D10005DD59 /* OAuthViewController.m */; };
+		1F782A4916C6F3BD0005DD59 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F782A4816C6F3BD0005DD59 /* OAuthViewController.xib */; };
+		1F782A4B16C6F4250005DD59 /* XPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F782A4A16C6F4250005DD59 /* XPViewController.xib */; };
 		1FC1BB2816C11D5700404E83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2716C11D5700404E83 /* UIKit.framework */; };
 		1FC1BB2A16C11D5700404E83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2916C11D5700404E83 /* Foundation.framework */; };
 		1FC1BB2C16C11D5700404E83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2B16C11D5700404E83 /* CoreGraphics.framework */; };
 		1FC1BB3216C11D5700404E83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1BB3016C11D5700404E83 /* InfoPlist.strings */; };
-		1FC1BB4116C11D5700404E83 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1BB3F16C11D5700404E83 /* MainStoryboard.storyboard */; };
 		1FC1BB4C16C11D5700404E83 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB4B16C11D5700404E83 /* SenTestingKit.framework */; };
 		1FC1BB4D16C11D5700404E83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2716C11D5700404E83 /* UIKit.framework */; };
 		1FC1BB4E16C11D5700404E83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2916C11D5700404E83 /* Foundation.framework */; };
@@ -94,8 +95,6 @@
 		1F63F8D116C25F7C0077EA2D /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		1F63F8D216C25F7C0077EA2D /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		1F63F8DE16C2CD2F0077EA2D /* OAuthConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumerCredentials.h; sourceTree = "<group>"; };
-		1F63F8E116C2CF740077EA2D /* XPAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAuthenticationViewController.h; sourceTree = "<group>"; };
-		1F63F8E216C2CF740077EA2D /* XPAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAuthenticationViewController.m; sourceTree = "<group>"; };
 		1F63F8E516C3B25B0077EA2D /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
 		1F63F8E616C3B25B0077EA2D /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
 		1F63F8E716C3B25B0077EA2D /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
@@ -124,12 +123,15 @@
 		1F63F91716C44A9B0077EA2D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F63F91816C44A9B0077EA2D /* XINGPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "XINGPad-Info.plist"; sourceTree = "<group>"; };
 		1F63F91916C44A9B0077EA2D /* XINGPad-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XINGPad-Prefix.pch"; sourceTree = "<group>"; };
+		1F782A4316C6F2D10005DD59 /* OAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthViewController.h; sourceTree = "<group>"; };
+		1F782A4416C6F2D10005DD59 /* OAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthViewController.m; sourceTree = "<group>"; };
+		1F782A4816C6F3BD0005DD59 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		1F782A4A16C6F4250005DD59 /* XPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPViewController.xib; sourceTree = "<group>"; };
 		1FC1BB2416C11D5700404E83 /* XINGPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XINGPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC1BB2716C11D5700404E83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1FC1BB2916C11D5700404E83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FC1BB2B16C11D5700404E83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1FC1BB3116C11D5700404E83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1FC1BB4016C11D5700404E83 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1FC1BB4A16C11D5700404E83 /* XINGPadTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XINGPadTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC1BB4B16C11D5700404E83 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1FC1BB5316C11D5800404E83 /* XINGPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XINGPadTests-Info.plist"; sourceTree = "<group>"; };
@@ -227,8 +229,6 @@
 			children = (
 				1F63F8BA16C25DB70077EA2D /* XPViewController.h */,
 				1F63F8BB16C25DB70077EA2D /* XPViewController.m */,
-				1F63F8E116C2CF740077EA2D /* XPAuthenticationViewController.h */,
-				1F63F8E216C2CF740077EA2D /* XPAuthenticationViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -264,6 +264,7 @@
 		1F63F8DD16C2CCEC0077EA2D /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				1F782A4216C6F2D10005DD59 /* ViewControllers */,
 				1F63F8F816C3B90F0077EA2D /* NSString+URLEncoding.h */,
 				1F63F8F916C3B90F0077EA2D /* NSString+URLEncoding.m */,
 				1F63F8FA16C3B90F0077EA2D /* OAuth.h */,
@@ -304,6 +305,24 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1F782A4116C6F2310005DD59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F782A4A16C6F4250005DD59 /* XPViewController.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1F782A4216C6F2D10005DD59 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F782A4316C6F2D10005DD59 /* OAuthViewController.h */,
+				1F782A4416C6F2D10005DD59 /* OAuthViewController.m */,
+				1F782A4816C6F3BD0005DD59 /* OAuthViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		1FC1BB1B16C11D5700404E83 = {
 			isa = PBXGroup;
 			children = (
@@ -342,8 +361,8 @@
 		1FC1BB2D16C11D5700404E83 /* XINGPad */ = {
 			isa = PBXGroup;
 			children = (
+				1F782A4116C6F2310005DD59 /* Resources */,
 				1F63F8B216C25C8D0077EA2D /* Classes */,
-				1FC1BB3F16C11D5700404E83 /* MainStoryboard.storyboard */,
 				1FC1BB2E16C11D5700404E83 /* Supporting Files */,
 			);
 			path = XINGPad;
@@ -498,11 +517,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC1BB3216C11D5700404E83 /* InfoPlist.strings in Resources */,
-				1FC1BB4116C11D5700404E83 /* MainStoryboard.storyboard in Resources */,
 				1F63F91A16C44A9B0077EA2D /* Default-568h@2x.png in Resources */,
 				1F63F91B16C44A9B0077EA2D /* Default.png in Resources */,
 				1F63F91C16C44A9B0077EA2D /* Default@2x.png in Resources */,
 				1F63F91E16C44A9B0077EA2D /* XINGPad-Info.plist in Resources */,
+				1F782A4916C6F3BD0005DD59 /* OAuthViewController.xib in Resources */,
+				1F782A4B16C6F4250005DD59 /* XPViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +569,6 @@
 				1F63F8DA16C25F7C0077EA2D /* SBJsonStreamWriterAccumulator.m in Sources */,
 				1F63F8DB16C25F7C0077EA2D /* SBJsonStreamWriterState.m in Sources */,
 				1F63F8DC16C25F7C0077EA2D /* SBJsonWriter.m in Sources */,
-				1F63F8E316C2CF750077EA2D /* XPAuthenticationViewController.m in Sources */,
 				1F63F8EE16C3B25B0077EA2D /* Base64Transcoder.c in Sources */,
 				1F63F8EF16C3B25B0077EA2D /* hmac.c in Sources */,
 				1F63F8F016C3B25B0077EA2D /* OAHMAC_SHA1SignatureProvider.m in Sources */,
@@ -567,6 +586,7 @@
 				6748E28D16C53C8C0041986B /* AFURLConnectionOperation.m in Sources */,
 				6748E28E16C53C8C0041986B /* AFXMLRequestOperation.m in Sources */,
 				6748E28F16C53C8C0041986B /* UIImageView+AFNetworking.m in Sources */,
+				1F782A4516C6F2D10005DD59 /* OAuthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,14 +615,6 @@
 				1FC1BB3116C11D5700404E83 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1FC1BB3F16C11D5700404E83 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FC1BB4016C11D5700404E83 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		1FC1BB5416C11D5800404E83 /* InfoPlist.strings */ = {

@@ -7,8 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class XPViewController;
+
 @interface XPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) XPViewController *viewController;
 
 @end
