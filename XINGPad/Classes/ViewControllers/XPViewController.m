@@ -23,8 +23,7 @@
     [super viewDidAppear:animated];
 
     if ([self isUserAuthorized] == NO) {
-        OAuthViewController *oauthViewController = [[OAuthViewController alloc] initWithNibName:@"OAuthViewController" bundle:nil];
-        [self presentViewController:oauthViewController animated:NO completion:nil];
+        [OAuthViewController presentCredentialsViewController:self animated:NO completion:nil];
     }
 
 }

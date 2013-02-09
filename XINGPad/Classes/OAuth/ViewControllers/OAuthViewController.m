@@ -19,6 +19,17 @@
 
 @implementation OAuthViewController
 
++ (void)presentCredentialsViewController:(UIViewController *)parentController
+                                animated:(BOOL)flag
+                              completion:(void (^)(void))completion {
+
+    OAuthViewController *ctrl = [[OAuthViewController alloc] initWithNibName:@"OAuthViewController" bundle:nil];
+    [parentController presentViewController:ctrl animated:flag completion:completion];
+}
+
+#pragma mark -
+#pragma mark initialization
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {

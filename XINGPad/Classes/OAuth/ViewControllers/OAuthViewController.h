@@ -24,4 +24,11 @@
 
 @property (unsafe_unretained) id<OAuthLoginPopupDelegate> delegate;
 
+/**
+* Creates a new OAuth view controller and presents it on the specified 'parentController'.
+*/
++ (void)presentCredentialsViewController:(UIViewController *)parentController
+                                animated:(BOOL)flag
+                              completion:(void (^)(void))completion;
+
 @end
