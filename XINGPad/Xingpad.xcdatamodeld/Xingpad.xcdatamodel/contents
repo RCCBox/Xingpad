@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="XPActivity" syncable="YES">
+    <entity name="XPActivity" representedClassName="XPActivity" syncable="YES">
         <attribute name="xpAggregated" attributeType="Boolean" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="aggregated"/>
@@ -30,7 +30,7 @@
         <relationship name="xpRelComment" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpInvRelActivity" inverseEntity="XPComment" syncable="YES"/>
         <relationship name="xpRelMetaLike" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPMetaLike" inverseName="xpInvRelActivity" inverseEntity="XPMetaLike" syncable="YES"/>
     </entity>
-    <entity name="XPBookmark" syncable="YES">
+    <entity name="XPBookmark" representedClassName="XPBookmark" syncable="YES">
         <attribute name="xpBookmarkType" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="bookmark_type"/>
@@ -73,7 +73,7 @@
             </userInfo>
         </relationship>
     </entity>
-    <entity name="XPComment" syncable="YES">
+    <entity name="XPComment" representedClassName="XPComment" syncable="YES">
         <attribute name="xpContent" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="content"/>
@@ -98,7 +98,7 @@
             </userInfo>
         </relationship>
     </entity>
-    <entity name="XPCompanyProfile" syncable="YES">
+    <entity name="XPCompanyProfile" representedClassName="XPCompanyProfile" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
                 <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
@@ -126,7 +126,7 @@
             </userInfo>
         </attribute>
     </entity>
-    <entity name="XPCompanyProfileUpdate" syncable="YES">
+    <entity name="XPCompanyProfileUpdate" representedClassName="XPCompanyProfileUpdate" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
                 <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
@@ -154,7 +154,7 @@
             </userInfo>
         </attribute>
     </entity>
-    <entity name="XPEvent" syncable="YES">
+    <entity name="XPEvent" representedClassName="XPEvent" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
                 <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
@@ -177,7 +177,7 @@
             </userInfo>
         </attribute>
     </entity>
-    <entity name="XPGroup" syncable="YES">
+    <entity name="XPGroup" representedClassName="XPGroup" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
                 <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
@@ -200,7 +200,7 @@
             </userInfo>
         </attribute>
     </entity>
-    <entity name="XPJobPosting" syncable="YES">
+    <entity name="XPJobPosting" representedClassName="XPJobPosting" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
                 <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
@@ -223,7 +223,7 @@
             </userInfo>
         </attribute>
     </entity>
-    <entity name="XPMetaComment" syncable="YES">
+    <entity name="XPMetaComment" representedClassName="XPMetaComment" syncable="YES">
         <attribute name="xpAmount" attributeType="Integer 16" defaultValueString="0" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="amount"/>
@@ -243,7 +243,7 @@
             <entry key="key" value="value"/>
         </userInfo>
     </entity>
-    <entity name="XPMetaLike" syncable="YES">
+    <entity name="XPMetaLike" representedClassName="XPMetaLike" syncable="YES">
         <attribute name="xpAmount" attributeType="Integer 16" defaultValueString="0" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="amount"/>
@@ -252,7 +252,7 @@
         <attribute name="xpCurrentUserLiked" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <relationship name="xpInvRelActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpRelMetaLike" inverseEntity="XPActivity" syncable="YES"/>
     </entity>
-    <entity name="XPStatus" syncable="YES">
+    <entity name="XPStatus" representedClassName="XPStatus" syncable="YES">
         <attribute name="xpContent" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="content"/>
@@ -275,7 +275,7 @@
             </userInfo>
         </relationship>
     </entity>
-    <entity name="XPThread" syncable="YES">
+    <entity name="XPThread" representedClassName="XPThread" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
                 <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
@@ -298,7 +298,7 @@
             </userInfo>
         </attribute>
     </entity>
-    <entity name="XPUser" syncable="YES">
+    <entity name="XPUser" representedClassName="XPUser" syncable="YES">
         <attribute name="xpID" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="id"/>
