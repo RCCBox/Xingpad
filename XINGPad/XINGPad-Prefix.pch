@@ -17,6 +17,10 @@
 	#import <SystemConfiguration/SystemConfiguration.h>
 	#import <MobileCoreServices/MobileCoreServices.h>
 
+	// Magical Record
+	#define MR_SHORTHAND // Use MR without MR_ prefix
+	#import "CoreData+MagicalRecord.h"
+
 	/* START OF PREFIX ADDITIONS */
 
 	// NOTES:
