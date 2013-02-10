@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="XPActivity" syncable="YES">
+        <attribute name="xpAggregated" attributeType="Boolean" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="aggregated"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpAggregatedBy" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="aggregated_by"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpVerb" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="verb"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpRelActor" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpInvRelActivity" inverseEntity="XPUser" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="actors"/>
+            </userInfo>
+        </relationship>
+        <relationship name="xpRelComment" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpInvRelActivity" inverseEntity="XPComment" syncable="YES"/>
+        <relationship name="xpRelMetaLike" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPMetaLike" inverseName="xpInvRelActivity" inverseEntity="XPMetaLike" syncable="YES"/>
+    </entity>
+    <entity name="XPBookmark" syncable="YES">
+        <attribute name="xpBookmarkType" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="bookmark_type"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpDescription" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpImage" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="image"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpTitle" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="title"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpURL" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="url"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpRelCreator" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpInvRelBookmark" inverseEntity="XPUser" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="creator"/>
+            </userInfo>
+        </relationship>
+    </entity>
+    <entity name="XPComment" syncable="YES">
+        <attribute name="xpContent" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="content"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpInvRelActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpRelComment" inverseEntity="XPActivity" syncable="YES"/>
+        <relationship name="xpInvRelMetaComment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPMetaComment" inverseName="xpRelComment" inverseEntity="XPMetaComment" syncable="YES"/>
+        <relationship name="xpRelUser" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpInvRelComment" inverseEntity="XPUser" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="creator"/>
+            </userInfo>
+        </relationship>
+    </entity>
+    <entity name="XPCompanyProfile" syncable="YES">
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpName" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPermalink" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="permalink"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPhoto" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="photo"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="XPCompanyProfileUpdate" syncable="YES">
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpDescription" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpName" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPermalink" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="permalink"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="XPEvent" syncable="YES">
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpName" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPermalink" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="permalink"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="XPGroup" syncable="YES">
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpDisplayName" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="display_name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPermalink" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="permalink"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="XPJobPosting" syncable="YES">
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpName" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPermalink" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="permalink"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="XPMetaComment" syncable="YES">
+        <attribute name="xpAmount" attributeType="Integer 16" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="amount"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpRelComment" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpInvRelMetaComment" inverseEntity="XPComment" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="latest_comments"/>
+            </userInfo>
+        </relationship>
+        <userInfo>
+            <entry key="key" value="value"/>
+        </userInfo>
+    </entity>
+    <entity name="XPMetaLike" syncable="YES">
+        <attribute name="xpAmount" attributeType="Integer 16" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="amount"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpCurrentUserLiked" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="xpInvRelActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpRelMetaLike" inverseEntity="XPActivity" syncable="YES"/>
+    </entity>
+    <entity name="XPStatus" syncable="YES">
+        <attribute name="xpContent" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="content"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpRelCreator" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpInvRelStatus" inverseEntity="XPUser" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="creator"/>
+            </userInfo>
+        </relationship>
+    </entity>
+    <entity name="XPThread" syncable="YES">
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpName" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPermalink" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="permalink"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="XPUser" syncable="YES">
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpInvRelActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpRelActor" inverseEntity="XPActivity" syncable="YES"/>
+        <relationship name="xpInvRelBookmark" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPBookmark" inverseName="xpRelCreator" inverseEntity="XPBookmark" syncable="YES"/>
+        <relationship name="xpInvRelComment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpRelUser" inverseEntity="XPComment" syncable="YES"/>
+        <relationship name="xpInvRelStatus" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPStatus" inverseName="xpRelCreator" inverseEntity="XPStatus" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="XPActivity" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="XPBookmark" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="XPCompanyProfile" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="XPCompanyProfileUpdate" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="XPEvent" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="XPGroup" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="XPJobPosting" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="XPMetaComment" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="XPStatus" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="XPThread" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="XPUser" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="XPComment" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="XPMetaLike" positionX="160" positionY="192" width="128" height="90"/>
+    </elements>
+</model>
