@@ -1,0 +1,6 @@
+[submodule "Vendor/Model/AFNetworking"]
+	path = Vendor/Model/AFNetworking
+	url = git://github.com/AFNetworking/AFNetworking.git
+[submodule "Vendor/Model/MagicalRecord"]
+	path = Vendor/Model/MagicalRecord
+	url = git://github.com/magicalpanda/MagicalRecord.git
