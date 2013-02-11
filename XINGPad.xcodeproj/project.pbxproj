@@ -47,6 +47,9 @@
 		1FC1BB4E16C11D5700404E83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2916C11D5700404E83 /* Foundation.framework */; };
 		1FC1BB5616C11D5800404E83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1BB5416C11D5800404E83 /* InfoPlist.strings */; };
 		1FC1BB5916C11D5800404E83 /* XINGPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1BB5816C11D5800404E83 /* XINGPadTests.m */; };
+		6737F67D16C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67816C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m */; };
+		6737F67E16C9087400E0F76B /* XPActivity+XPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67A16C9087400E0F76B /* XPActivity+XPAdditions.m */; };
+		6737F67F16C9087400E0F76B /* XPUser+XPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67C16C9087400E0F76B /* XPUser+XPAdditions.m */; };
 		678EE91A16C82690008EEA16 /* Xingpad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 678EE91816C82690008EEA16 /* Xingpad.xcdatamodeld */; };
 		678EE95E16C83982008EEA16 /* XPActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE94516C83982008EEA16 /* XPActivity.m */; };
 		678EE95F16C83982008EEA16 /* XPBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE94716C83982008EEA16 /* XPBookmark.m */; };
@@ -181,6 +184,12 @@
 		1FC1BB5516C11D5800404E83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FC1BB5716C11D5800404E83 /* XINGPadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XINGPadTests.h; sourceTree = "<group>"; };
 		1FC1BB5816C11D5800404E83 /* XINGPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XINGPadTests.m; sourceTree = "<group>"; };
+		6737F67716C9087400E0F76B /* NSManagedObject+XingAPIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+XingAPIAdditions.h"; sourceTree = "<group>"; };
+		6737F67816C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+XingAPIAdditions.m"; sourceTree = "<group>"; };
+		6737F67916C9087400E0F76B /* XPActivity+XPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XPActivity+XPAdditions.h"; sourceTree = "<group>"; };
+		6737F67A16C9087400E0F76B /* XPActivity+XPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XPActivity+XPAdditions.m"; sourceTree = "<group>"; };
+		6737F67B16C9087400E0F76B /* XPUser+XPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XPUser+XPAdditions.h"; sourceTree = "<group>"; };
+		6737F67C16C9087400E0F76B /* XPUser+XPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XPUser+XPAdditions.m"; sourceTree = "<group>"; };
 		678EE91916C82690008EEA16 /* Xingpad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xingpad.xcdatamodel; sourceTree = "<group>"; };
 		678EE94416C83982008EEA16 /* XPActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPActivity.h; sourceTree = "<group>"; };
 		678EE94516C83982008EEA16 /* XPActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPActivity.m; sourceTree = "<group>"; };
@@ -522,6 +531,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6737F67616C9087400E0F76B /* CoreDataCategories */ = {
+			isa = PBXGroup;
+			children = (
+				6737F67716C9087400E0F76B /* NSManagedObject+XingAPIAdditions.h */,
+				6737F67816C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m */,
+				6737F67916C9087400E0F76B /* XPActivity+XPAdditions.h */,
+				6737F67A16C9087400E0F76B /* XPActivity+XPAdditions.m */,
+				6737F67B16C9087400E0F76B /* XPUser+XPAdditions.h */,
+				6737F67C16C9087400E0F76B /* XPUser+XPAdditions.m */,
+			);
+			path = CoreDataCategories;
+			sourceTree = "<group>";
+		};
 		6748E27116C53C750041986B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +564,7 @@
 		678EE94216C83982008EEA16 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6737F67616C9087400E0F76B /* CoreDataCategories */,
 				678EE94316C83982008EEA16 /* CoreDataBaseClasses */,
 			);
 			path = Model;
@@ -893,6 +916,9 @@
 				678EEA5916C8448A008EEA16 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				678EEA5A16C8448A008EEA16 /* MagicalRecord.m in Sources */,
 				1F52168116C8FD91001D1A10 /* OAuthPersistenceManager.m in Sources */,
+				6737F67D16C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m in Sources */,
+				6737F67E16C9087400E0F76B /* XPActivity+XPAdditions.m in Sources */,
+				6737F67F16C9087400E0F76B /* XPUser+XPAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
