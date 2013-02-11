@@ -17,6 +17,9 @@
 
     // DEBUG
     NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+	
+	// Setup coredata with SQLite db
+	[MagicalRecord setupCoreDataStack];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
