@@ -50,6 +50,7 @@
 		6737F67D16C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67816C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m */; };
 		6737F67E16C9087400E0F76B /* XPActivity+XPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67A16C9087400E0F76B /* XPActivity+XPAdditions.m */; };
 		6737F67F16C9087400E0F76B /* XPUser+XPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67C16C9087400E0F76B /* XPUser+XPAdditions.m */; };
+		6737F68216C9112E00E0F76B /* NetworkActivity.json in Resources */ = {isa = PBXBuildFile; fileRef = 6737F68116C9112E00E0F76B /* NetworkActivity.json */; };
 		678EE91A16C82690008EEA16 /* Xingpad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 678EE91816C82690008EEA16 /* Xingpad.xcdatamodeld */; };
 		678EE95E16C83982008EEA16 /* XPActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE94516C83982008EEA16 /* XPActivity.m */; };
 		678EE95F16C83982008EEA16 /* XPBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE94716C83982008EEA16 /* XPBookmark.m */; };
@@ -190,6 +191,7 @@
 		6737F67A16C9087400E0F76B /* XPActivity+XPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XPActivity+XPAdditions.m"; sourceTree = "<group>"; };
 		6737F67B16C9087400E0F76B /* XPUser+XPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XPUser+XPAdditions.h"; sourceTree = "<group>"; };
 		6737F67C16C9087400E0F76B /* XPUser+XPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XPUser+XPAdditions.m"; sourceTree = "<group>"; };
+		6737F68116C9112E00E0F76B /* NetworkActivity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkActivity.json; sourceTree = "<group>"; };
 		678EE91916C82690008EEA16 /* Xingpad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xingpad.xcdatamodel; sourceTree = "<group>"; };
 		678EE94416C83982008EEA16 /* XPActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPActivity.h; sourceTree = "<group>"; };
 		678EE94516C83982008EEA16 /* XPActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPActivity.m; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		1F782A4116C6F2310005DD59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6737F68016C9112E00E0F76B /* JSON */,
 				1F782A4A16C6F4250005DD59 /* XPViewController.xib */,
 			);
 			path = Resources;
@@ -542,6 +545,14 @@
 				6737F67C16C9087400E0F76B /* XPUser+XPAdditions.m */,
 			);
 			path = CoreDataCategories;
+			sourceTree = "<group>";
+		};
+		6737F68016C9112E00E0F76B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				6737F68116C9112E00E0F76B /* NetworkActivity.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		6748E27116C53C750041986B /* Vendor */ = {
@@ -811,6 +822,7 @@
 				1F63F91C16C44A9B0077EA2D /* Default@2x.png in Resources */,
 				1F782A4916C6F3BD0005DD59 /* OAuthViewController.xib in Resources */,
 				1F782A4B16C6F4250005DD59 /* XPViewController.xib in Resources */,
+				6737F68216C9112E00E0F76B /* NetworkActivity.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
