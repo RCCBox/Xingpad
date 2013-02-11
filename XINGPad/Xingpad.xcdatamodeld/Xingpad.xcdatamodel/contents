@@ -22,6 +22,11 @@
             </userInfo>
         </attribute>
         <relationship name="xpInvRelUser" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpRelActivity" inverseEntity="XPUser" syncable="YES"/>
+        <relationship name="xpRelGroup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPGroup" inverseName="xpInvRelActivity" inverseEntity="XPGroup" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="targets"/>
+            </userInfo>
+        </relationship>
         <relationship name="xpRelMetaComment" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPMetaComment" inverseName="xpInvRelActivity" inverseEntity="XPMetaComment" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="comments"/>
@@ -206,6 +211,7 @@
                 <entry key="mappedKeyName" value="permalink"/>
             </userInfo>
         </attribute>
+        <relationship name="xpInvRelActivity" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpRelGroup" inverseEntity="XPActivity" syncable="YES"/>
     </entity>
     <entity name="XPJobPosting" representedClassName="XPJobPosting" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
@@ -315,13 +321,13 @@
         </relationship>
     </entity>
     <elements>
-        <element name="XPActivity" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="XPActivity" positionX="160" positionY="192" width="128" height="180"/>
         <element name="XPBookmark" positionX="160" positionY="192" width="128" height="165"/>
         <element name="XPComment" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPCompanyProfile" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPCompanyProfileUpdate" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPEvent" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="XPGroup" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="XPGroup" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPJobPosting" positionX="160" positionY="192" width="128" height="105"/>
         <element name="XPMetaComment" positionX="160" positionY="192" width="128" height="90"/>
         <element name="XPMetaLike" positionX="160" positionY="192" width="128" height="90"/>
