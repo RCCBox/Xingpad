@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString* const kOAuthSavePrefixDefault = @"PlainOAuth_";
+
 @interface OAuth : NSObject
 
 // You initialize the object with your app (consumer) credentials.
@@ -51,10 +53,6 @@
 // token_secret is undefined.
 @property (copy) NSString *oauth_token;
 @property (copy) NSString *oauth_token_secret;
-
-// What prefix to use for the keys when saving and loading to/from NSUserDefaults.
-// Useful to avoid key naming conflicts.
-@property (copy) NSString *save_prefix;
 
 // YES if this token has been authorized and can be used for production calls.
 // You need to save and load the state of this yourself, but you don't need to

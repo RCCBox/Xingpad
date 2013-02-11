@@ -8,23 +8,29 @@
 #import "OAuthViewController.h"
 #import "OAuthXing.h"
 #import "OAuthConsumerCredentials.h"
-#import "OAuthNotifications.h"
 
 // Private interface
-@interface OAuthViewController ()
-- (void)authorizeOAuthVerifier:(NSString *)oauth_verifier;
+@interface OAuthViewController (Private)
 - (void)requestTokenWithCallbackUrl:(NSString *)callbackUrl;
 - (void)initializeAndSetup;
 @end
 
 @implementation OAuthViewController
 
-+ (void)presentCredentialsViewController:(UIViewController *)parentController
-                                animated:(BOOL)flag
-                              completion:(void (^)(void))completion {
++ (OAuthViewController *)presentCredentialsViewController:(UIViewController *)parentController
+                                                 animated:(BOOL)flag
+                                               completion:(void (^)(void))completion
+                                          callbackURLName:(NSString *)callbackURL {
+
+    // It's not allowed to call this method with a nil argument
+    // todo Roberto: this gives a compiler warning - fix it
+//    ZAssert(callbackURL, @"VIOLATION: Method argument (NSString *)callbackURL: %@", callbackURL);
 
     OAuthViewController *ctrl = [[OAuthViewController alloc] initWithNibName:@"OAuthViewController" bundle:nil];
+    ctrl.oAuthCallbackUrl = callbackURL;
+
     [parentController presentViewController:ctrl animated:flag completion:completion];
+    return ctrl;
 }
 
 #pragma mark -
@@ -60,10 +66,6 @@
     self.oAuthXing.delegate = self; // todo implement protocol !!!!
     self.delegate = self;
 
-    // Listen for OAuthVerifier Request
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOAuthVerifierAuthorizeRequest:)
-                                                 name:OAuthVerifierCanBeAuthorized object:nil];
-
     // Listen for keyboard hide/show notifications so we can properly reconfigure the UI
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification object:nil];
@@ -85,11 +87,7 @@
 #pragma mark -
 #pragma mark Authorize OAuth verifier received through URL callback or UI
 
-- (void)handleOAuthVerifierAuthorizeRequest:(NSNotification *)aNotification {
-    [self authorizeOAuthVerifier:(NSString *)[aNotification object]];
-}
-
-- (void)authorizeOAuthVerifier:(NSString *)oauth_verifier {
+- (void)handleOAuthVerifier:(NSString *)oauth_verifier {
     // delegate authorizationRequestDidStart
 //	[self.uiDelegate authorizationRequestDidStart:self];
 
@@ -177,13 +175,9 @@
 
 - (void)initializeAndSetup {
     if (self.oAuthXing == nil) {
-        self.oAuthXing = [[OAuthXing alloc] initWithConsumerKey:OAUTH_CONSUMER_KEY_XING andConsumerSecret:OAUTH_CONSUMER_SECRET_XING];
-        //        oAuth4Xing.save_prefix = @"PlainOAuth4xing"; // todo what's this ???
+        self.oAuthXing = [[OAuthXing alloc] initWithConsumerKey:OAUTH_CONSUMER_KEY_XING
+                                              andConsumerSecret:OAUTH_CONSUMER_SECRET_XING];
         [self.oAuthXing load];
-
-    }
-    if (self.oAuthCallbackUrl == nil) {
-        self.oAuthCallbackUrl = @"xingipad://handleOAuthLogin"; // TODO callback URL: e.g. myapp://callback
     }
 }
 

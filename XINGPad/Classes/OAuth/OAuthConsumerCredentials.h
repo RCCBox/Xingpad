@@ -22,15 +22,6 @@
 
 
 /**
- * XING specific OAuth values.
- * String prefix for values, which may be persisted by your app, e.g. NSUserDefaults
- *
- * Note: Changing the prefix might cause an already authenticated user as unregistered.
- * Because the app can't load the already stored OAuth token information.
- */
-#define XING_OAUTH_PREFIX           @"OAuthXING_"
-
-/**
  * The request token to be used in the next call. Please note that this token is not
  * an access token and you will not be able to perform calls with it in order to access
  * XING data. Instead, your application should use the call described next to exchange

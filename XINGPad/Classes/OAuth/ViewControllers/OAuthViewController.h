@@ -11,10 +11,7 @@
 
 @class OAuthXing;
 
-@interface OAuthViewController : UIViewController <OAuthXingCallbacks, OAuthLoginPopupDelegate,
-        UIWebViewDelegate> {
-
-}
+@interface OAuthViewController : UIViewController <OAuthXingCallbacks, OAuthLoginPopupDelegate, UIWebViewDelegate>
 
 @property (strong) OAuthXing *oAuthXing;
 @property (strong) NSString *oAuthCallbackUrl;
@@ -26,9 +23,14 @@
 
 /**
 * Creates a new OAuth view controller and presents it on the specified 'parentController'.
+*
+* @param callbackURL URL schema, which be used in the OAuth callback (e.g. page reload), e.g. @"myappurl://handleOAuthLogin"; value must not be nil
 */
-+ (void)presentCredentialsViewController:(UIViewController *)parentController
-                                animated:(BOOL)flag
-                              completion:(void (^)(void))completion;
++ (OAuthViewController *)presentCredentialsViewController:(UIViewController *)parentController
+                                                 animated:(BOOL)flag
+                                               completion:(void (^)(void))completion
+                                          callbackURLName:(NSString *)callbackURL;
+
+- (void)handleOAuthVerifier:(NSString *)oauth_verifier;
 
 @end

@@ -6,18 +6,31 @@
 //
 
 #import "XPAppDelegate.h"
-#import "OAuthNotifications.h"
 #import "XPViewController.h"
+#import "OAuthXing.h"
+#import "OAuthViewController.h"
+#import "OAuthPersistenceManager.h"
 
 @implementation XPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    // DEBUG
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
     self.viewController = [[XPViewController alloc] initWithNibName:@"XPViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
+
     [self.window makeKeyAndVisible];
+
+    if ([[OAuthPersistenceManager instance] isUserAuthorized] == NO) {
+        self.oauthViewController = [OAuthViewController presentCredentialsViewController:self.viewController
+                                                                                animated:NO
+                                                                              completion:nil
+                                                                         callbackURLName:@"xingipad://handleOAuthLogin"];
+    }
 
     return YES;
 }
@@ -32,8 +45,7 @@
         NSArray *keyVal = [chunk componentsSeparatedByString:@"="];
 
         if ([[keyVal objectAtIndex:0] isEqualToString:@"oauth_verifier"]) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:OAuthVerifierCanBeAuthorized
-                                                                object:[keyVal objectAtIndex:1]];
+            [self.oauthViewController handleOAuthVerifier:[keyVal objectAtIndex:1]];
         }
     }
 

@@ -8,11 +8,14 @@
 #import <UIKit/UIKit.h>
 
 @class XPViewController;
+@class OAuthViewController;
 
 @interface XPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) XPViewController *viewController;
+@property (strong) XPViewController *viewController;
+
+@property (strong) OAuthViewController *oauthViewController;
 
 @end

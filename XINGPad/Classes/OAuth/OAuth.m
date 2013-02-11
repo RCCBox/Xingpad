@@ -10,6 +10,7 @@
 #import "OAHMAC_SHA1SignatureProvider.h"
 #import "NSString+URLEncoding.h"
 #import "OAuthXingCallbacks.h"
+#import "OAuthPersistenceManager.h"
 
 @interface OAuth (PrivateMethods)
 
@@ -40,8 +41,6 @@
 		self.oauth_token_secret = @"";
 		srandom(time(NULL)); // seed the random number generator, used for generating nonces
 		self.oauth_token_authorized = NO;
-
-        self.save_prefix = @"PlainOAuth";
 	}
 	return self;
 }
@@ -118,6 +117,30 @@
 	return [self oauth_authorization_header:oauth_signature withParams:_params];
 }
 
+- (NSString *) description {
+    return [NSString stringWithFormat:@"OAuth context object with consumer key \"%@\", token \"%@\". Authorized: %@",
+                                      self.oauth_consumer_key, self.oauth_token, self.oauth_token_authorized ? @"YES" : @"NO"];
+}
+
+#pragma mark -
+#pragma mark Loading and saving
+
+// The following tasks should really be done using keychain in a real app. But we will use userDefaults
+// for the sake of clarity and brevity of this example app. Do think about security for your own real use.
+
+- (void)load {
+    self.oauth_token = [[OAuthPersistenceManager instance] loadOAuthValue:@"oauth_token"];
+    self.oauth_token_secret = [[OAuthPersistenceManager instance] loadOAuthValue:@"oauth_token_secret"];
+    self.oauth_token_authorized = [[[OAuthPersistenceManager instance] loadOAuthValue:@"oauth_token_authorized"] boolValue];
+}
+
+- (void)save {
+    [[OAuthPersistenceManager instance] saveOAuthValue:self.oauth_token for:@"oauth_token"];
+    [[OAuthPersistenceManager instance] saveOAuthValue:self.oauth_token_secret for:@"oauth_token_secret"];
+    [[OAuthPersistenceManager instance] saveOAuthValue:(self.oauth_token_authorized ? @"YES" : @"NO")
+                                                   for:@"oauth_token_authorized"];
+}
+
 /**
  * When the user invokes the "sign out" function in the app, forget the current OAuth context.
  * We still remember consumer key and secret
@@ -127,33 +150,6 @@
 	self.oauth_token_authorized = NO;
 	self.oauth_token = @"";
 	self.oauth_token_secret = @"";
-}
-
-- (NSString *) description {
-    return [NSString stringWithFormat:@"OAuth context object with consumer key \"%@\", token \"%@\". Authorized: %@",
-                                      self.oauth_consumer_key, self.oauth_token, self.oauth_token_authorized ? @"YES" : @"NO"];
-}
-
-
-#pragma mark -
-#pragma mark Loading and saving
-
-// The following tasks should really be done using keychain in a real app. But we will use userDefaults
-// for the sake of clarity and brevity of this example app. Do think about security for your own real use.
-
-- (void)load {
-    self.oauth_token = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"%@oauth_token", self.save_prefix]];
-    self.oauth_token_secret = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"%@oauth_token_secret", self.save_prefix]];
-    self.oauth_token_authorized = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"%@oauth_token_authorized", self.save_prefix]];
-}
-
-- (void)save {
-    [[NSUserDefaults standardUserDefaults] setObject:self.oauth_token
-                                              forKey:[NSString stringWithFormat:@"%@oauth_token", self.save_prefix]];
-    [[NSUserDefaults standardUserDefaults] setObject:self.oauth_token_secret
-                                              forKey:[NSString stringWithFormat:@"%@oauth_token_secret", self.save_prefix]];
-    [[NSUserDefaults standardUserDefaults] setInteger:self.oauth_token_authorized
-                                               forKey:[NSString stringWithFormat:@"%@oauth_token_authorized", self.save_prefix]];
 }
 
 #pragma mark -

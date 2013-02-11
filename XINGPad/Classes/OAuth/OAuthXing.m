@@ -6,7 +6,7 @@
 //
 
 #import "OAuthXing.h"
-#import "OAuthConsumerCredentials.h"
+#import "OAuthPersistenceManager.h"
 
 @implementation OAuthXing
 
@@ -15,13 +15,6 @@
 
 - (id) initWithConsumerKey:(NSString *)aConsumerKey andConsumerSecret:(NSString *)aConsumerSecret {
     if ((self = [super initWithConsumerKey:aConsumerKey andConsumerSecret:aConsumerSecret])) {
-
-        /*
-        * Careful !!
-        * Changing the prefix might cause the user to be treated as unregistered.
-        * Because the app can't load already stored OAuth token information.
-        */
-        self.save_prefix = XING_OAUTH_PREFIX;
 
         self.user_id = @"";
         self.delegate = nil;
@@ -192,12 +185,14 @@
 
 - (void) load {
     [super load];
-    self.user_id = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"%@user_id", self.save_prefix]];
+    self.user_id = [[OAuthPersistenceManager instance] loadOAuthValue:@"user_id"];
+//    self.user_id = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"%@user_id", self.save_prefix]];
 }
 
 - (void) save {
     [super save];
-    [[NSUserDefaults standardUserDefaults] setObject:self.user_id forKey:[NSString stringWithFormat:@"%@user_id", self.save_prefix]];
+    [[OAuthPersistenceManager instance] saveOAuthValue:self.user_id for:@"user_id"];
+//    [[NSUserDefaults standardUserDefaults] setObject:self.user_id forKey:[NSString stringWithFormat:@"%@user_id", self.save_prefix]];
 }
 
 @end
