@@ -5,14 +5,23 @@
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
+// Header
 #import "XPAppDelegate.h"
-#import "XPViewController.h"
+
+// App classes
+// Model
 #import "OAuthXing.h"
 #import "OAuthViewController.h"
 #import "OAuthPersistenceManager.h"
 
+@interface XPAppDelegate()
+// MARK: Properties (private)
+@property (strong) OAuthViewController *oauthViewController;
+@end
+
 @implementation XPAppDelegate
 
+// MARK: Template methods
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // DEBUG
@@ -21,25 +30,20 @@
 	// Setup coredata with SQLite db
 	[MagicalRecord setupCoreDataStack];
 
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	// Present window
+	[self.window makeKeyAndVisible];
 
-    self.viewController = [[XPViewController alloc] initWithNibName:@"XPViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
-
-    [self.window makeKeyAndVisible];
-
+	// User did not login befor
+	
     if ([[OAuthPersistenceManager instance] isUserAuthorized] == NO) {
-        self.oauthViewController = [OAuthViewController presentCredentialsViewController:self.viewController
-                                                                                animated:NO
-                                                                              completion:nil
-                                                                         callbackURLName:@"xingipad://handleOAuthLogin"];
+
+		// Ask user for login information
+        self.oauthViewController = [OAuthViewController presentCredentialsViewController:self.window.rootViewController animated:NO completion:nil callbackURLName:@"xingipad://handleOAuthLogin"];
     }
 
     return YES;
 }
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
     // todo - refactor: naively parse url
     NSArray *urlComponents = [[url absoluteString] componentsSeparatedByString:@"?"];
@@ -54,5 +58,4 @@
 
     return YES;
 }
-
 @end

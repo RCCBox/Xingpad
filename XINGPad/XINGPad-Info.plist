@@ -35,6 +35,8 @@
 	<string>20130205</string>
 	<key>LSRequiresIPhoneOS</key>
 	<false/>
+	<key>NSMainNibFile~ipad</key>
+	<string>MainWindow</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

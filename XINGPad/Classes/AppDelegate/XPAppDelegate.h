@@ -5,17 +5,11 @@
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
+// Apple
 #import <UIKit/UIKit.h>
 
-@class XPViewController;
-@class OAuthViewController;
-
 @interface XPAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong) XPViewController *viewController;
-
-@property (strong) OAuthViewController *oauthViewController;
-
+// MARK: Properties (public)
+// IBOutlets
+@property (strong, nonatomic) IBOutlet UIWindow *window;
 @end
