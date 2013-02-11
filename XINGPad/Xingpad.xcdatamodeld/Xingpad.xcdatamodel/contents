@@ -27,6 +27,11 @@
                 <entry key="mappedKeyName" value="comments"/>
             </userInfo>
         </relationship>
+        <relationship name="xpRelMetaLike" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPMetaLike" inverseName="xpInvRelActivity" inverseEntity="XPMetaLike" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="likes"/>
+            </userInfo>
+        </relationship>
         <relationship name="xpRelUser" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpInvRelActivity" inverseEntity="XPUser" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="actors"/>
@@ -248,7 +253,7 @@
             </userInfo>
         </attribute>
         <attribute name="xpCurrentUserLiked" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <relationship name="xpInvRelActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" syncable="YES"/>
+        <relationship name="xpInvRelActivity" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpRelMetaLike" inverseEntity="XPActivity" syncable="YES"/>
     </entity>
     <entity name="XPStatus" representedClassName="XPStatus" syncable="YES">
         <attribute name="xpContent" attributeType="String" syncable="YES">
@@ -310,7 +315,7 @@
         </relationship>
     </entity>
     <elements>
-        <element name="XPActivity" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="XPActivity" positionX="160" positionY="192" width="128" height="165"/>
         <element name="XPBookmark" positionX="160" positionY="192" width="128" height="165"/>
         <element name="XPComment" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPCompanyProfile" positionX="160" positionY="192" width="128" height="120"/>
