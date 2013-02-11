@@ -11,7 +11,8 @@
 
 @implementation XPUser(XPAdditions)
 
-// MARK: Fetching
+#pragma mark - Fetching
+
 + (void)activitiesWithBlock:(void (^)(XPActivity *, NSError *error))block {
 	
 	// Fetch activities from db

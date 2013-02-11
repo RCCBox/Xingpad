@@ -8,7 +8,8 @@
 
 @interface NSManagedObject(XingAPIAdditions)
 
-// MARK: Utility
+#pragma mark - Fetching
+
 /**
  Fetches JSON resources using the XING API for the given path:
  Example pathes:
@@ -18,5 +19,17 @@
  @return NSError* in case of failure
  
 */
+
 + (void)fetchJSONForPath:(NSString *)path withBlock:(void (^)(NSString *, NSError *error))block;
+
+#pragma mark - Persistence
+
+/**
+ Converts JSON objects to NSManagedObject entities and saves them to the persistent store.
+ 
+ @return BOOL indicating if the objects have been saved succesfully
+ @return NSError* in case of failure
+ 
+ */
++ (void)importJSONObjects:(id)jsonObjects intoClass:(Class)aClass callback:(MRSaveCompletionHandler)callback;
 @end

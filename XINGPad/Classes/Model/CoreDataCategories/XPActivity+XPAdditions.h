@@ -8,7 +8,8 @@
 
 @interface XPActivity(XPAdditions)
 
-// MARK: Utility
+#pragma mark - Fetching
+
 /**
  Fetches all of the users activities from the XING web api.
  

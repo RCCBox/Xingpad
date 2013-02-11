@@ -9,7 +9,8 @@
 
 @interface XPUser(XPAdditions)
 
-// MARK: Fetching
+#pragma mark - Fetching
+
 /**
  Fetches all of the users activities from db and online and calls the block with whatever is available first.
  Fetched objects from web are beeing stored in the db.
