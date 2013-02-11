@@ -445,7 +445,6 @@
 		1FC1BB1B16C11D5700404E83 = {
 			isa = PBXGroup;
 			children = (
-				678EEA0316C83C24008EEA16 /* CoreData.framework */,
 				6748E27116C53C750041986B /* Vendor */,
 				1FC1BB2D16C11D5700404E83 /* XINGPad */,
 				1FC1BB5116C11D5800404E83 /* XINGPadTests */,
@@ -466,6 +465,7 @@
 		1FC1BB2616C11D5700404E83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				678EEA0316C83C24008EEA16 /* CoreData.framework */,
 				1F63F90116C3FDA00077EA2D /* libz.dylib */,
 				1F63F90716C3FDBE0077EA2D /* SystemConfiguration.framework */,
 				1F63F90516C3FDB50077EA2D /* Security.framework */,
