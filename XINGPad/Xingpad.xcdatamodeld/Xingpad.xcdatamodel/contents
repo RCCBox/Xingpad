@@ -93,7 +93,7 @@
                 <entry key="mappedKeyName" value="id"/>
             </userInfo>
         </attribute>
-        <relationship name="xpInvRelMetaComment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPMetaComment" syncable="YES"/>
+        <relationship name="xpInvRelMetaComment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPMetaComment" inverseName="xpRelComment" inverseEntity="XPMetaComment" syncable="YES"/>
         <relationship name="xpRelUser" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPUser" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="creator"/>
@@ -232,6 +232,11 @@
             </userInfo>
         </attribute>
         <relationship name="xpInvRelActivity" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpRelMetaComment" inverseEntity="XPActivity" syncable="YES"/>
+        <relationship name="xpRelComment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpInvRelMetaComment" inverseEntity="XPComment" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="latest_comments"/>
+            </userInfo>
+        </relationship>
         <userInfo>
             <entry key="key" value="value"/>
         </userInfo>
@@ -313,7 +318,7 @@
         <element name="XPEvent" positionX="160" positionY="192" width="128" height="105"/>
         <element name="XPGroup" positionX="160" positionY="192" width="128" height="105"/>
         <element name="XPJobPosting" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="XPMetaComment" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="XPMetaComment" positionX="160" positionY="192" width="128" height="90"/>
         <element name="XPMetaLike" positionX="160" positionY="192" width="128" height="90"/>
         <element name="XPStatus" positionX="160" positionY="192" width="128" height="105"/>
         <element name="XPThread" positionX="160" positionY="192" width="128" height="105"/>
