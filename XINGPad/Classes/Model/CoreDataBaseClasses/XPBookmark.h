@@ -2,13 +2,14 @@
 //  XPBookmark.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 10.02.13.
+//  Created by Roberto Seidenberg on 11.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class XPUser;
 
 @interface XPBookmark : NSManagedObject
 
@@ -24,8 +25,8 @@
 
 @interface XPBookmark (CoreDataGeneratedAccessors)
 
-- (void)addXpRelCreatorObject:(NSManagedObject *)value;
-- (void)removeXpRelCreatorObject:(NSManagedObject *)value;
+- (void)addXpRelCreatorObject:(XPUser *)value;
+- (void)removeXpRelCreatorObject:(XPUser *)value;
 - (void)addXpRelCreator:(NSSet *)values;
 - (void)removeXpRelCreator:(NSSet *)values;
 

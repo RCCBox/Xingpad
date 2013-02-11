@@ -2,21 +2,18 @@
 //  XPUser.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 10.02.13.
+//  Created by Roberto Seidenberg on 11.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
 #import "XPUser.h"
-#import "XPBookmark.h"
-#import "XPStatus.h"
+#import "XPActivity.h"
 
 
 @implementation XPUser
 
 @dynamic xpID;
-@dynamic xpInvRelBookmark;
-@dynamic xpInvRelStatus;
-@dynamic xpInvRelComment;
+@dynamic xpRelActivity;
 @dynamic xpInvRelActivity;
 
 @end
