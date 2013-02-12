@@ -70,9 +70,11 @@
 #pragma mark Public methods
 
 /**
- * You will be calling this most of the time in your app, after the bootstrapping (authorization) is complete. You pass it
- * a set of information about your HTTP request (HTTP method, URL and any extra parameters), and you get back a header value
- * that you can put in the "Authorization" header. The header will also include a signature.
+ * You will be calling this most of the time in your app, after the bootstrapping (authorization) is complete.
+ * You pass it a set of information about your HTTP request (HTTP method, URL and any extra parameters), and
+ * you get back a header value that you can put in the "Authorization" header.
+ *
+ * The header will also include a signature.
  *
  * "params" should be NSDictionary with any extra material to add in the signature. If you are doing a POST request,
  * this needs to exactly match what you will be POSTing. If you are GETting, this should include the parameters in your
@@ -86,10 +88,12 @@
 }
 
 /**
- * An extra method that lets the caller override the token secret used to sign the header. This is determined automatically
- * most of the time based on if our token has been authorized or not and you can use the method without the extra parameter,
- * but we need to override it for our /authorize request because our token has not been authorized by this point,
- * yet we still need to sign our /authorize request with both consumer and token secrets.
+ * An extra method that lets the caller override the token secret used to sign the header.
+ * This is determined automatically most of the time based on if our token has been authorized
+ * or not and you can use the method without the extra parameter,
+ * but we need to override it for our /authorize request because our token has not been
+ * authorized by this point, yet we still need to sign our /authorize request with
+ * both consumer and token secrets.
  */
 - (NSString *) oAuthHeaderForMethod:(NSString *)method
 							 andUrl:(NSString *)url

@@ -36,6 +36,7 @@
 		1F63F91D16C44A9B0077EA2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F63F91716C44A9B0077EA2D /* main.m */; };
 		1F782A4516C6F2D10005DD59 /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F782A4416C6F2D10005DD59 /* OAuthViewController.m */; };
 		1F782A4916C6F3BD0005DD59 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F782A4816C6F3BD0005DD59 /* OAuthViewController.xib */; };
+		1F8EDAAB16CA50AE00CF595A /* OAuthFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EDAAA16CA50AE00CF595A /* OAuthFactory.m */; };
 		1FC1BB2816C11D5700404E83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2716C11D5700404E83 /* UIKit.framework */; };
 		1FC1BB2A16C11D5700404E83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2916C11D5700404E83 /* Foundation.framework */; };
 		1FC1BB2C16C11D5700404E83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2B16C11D5700404E83 /* CoreGraphics.framework */; };
@@ -172,6 +173,8 @@
 		1F782A4316C6F2D10005DD59 /* OAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthViewController.h; sourceTree = "<group>"; };
 		1F782A4416C6F2D10005DD59 /* OAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthViewController.m; sourceTree = "<group>"; };
 		1F782A4816C6F3BD0005DD59 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		1F8EDAA916CA50AE00CF595A /* OAuthFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthFactory.h; sourceTree = "<group>"; };
+		1F8EDAAA16CA50AE00CF595A /* OAuthFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthFactory.m; sourceTree = "<group>"; };
 		1FC1BB2416C11D5700404E83 /* XINGPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XINGPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC1BB2716C11D5700404E83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1FC1BB2916C11D5700404E83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -396,6 +399,8 @@
 			children = (
 				1F52167F16C8FD91001D1A10 /* OAuthPersistenceManager.h */,
 				1F52168016C8FD91001D1A10 /* OAuthPersistenceManager.m */,
+				1F8EDAA916CA50AE00CF595A /* OAuthFactory.h */,
+				1F8EDAAA16CA50AE00CF595A /* OAuthFactory.m */,
 				1F782A4216C6F2D10005DD59 /* ViewControllers */,
 				1F63F8F816C3B90F0077EA2D /* NSString+URLEncoding.h */,
 				1F63F8F916C3B90F0077EA2D /* NSString+URLEncoding.m */,
@@ -943,6 +948,7 @@
 				6718E17816C9605E0020BC6D /* XPStatus.m in Sources */,
 				6718E17916C9605E0020BC6D /* XPThread.m in Sources */,
 				6718E17A16C9605E0020BC6D /* XPUser.m in Sources */,
+				1F8EDAAB16CA50AE00CF595A /* OAuthFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

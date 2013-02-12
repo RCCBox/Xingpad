@@ -7,7 +7,7 @@
 
 #import "OAuthViewController.h"
 #import "OAuthXing.h"
-#import "OAuthConsumerCredentials.h"
+#import "OAuthFactory.h"
 
 // Private interface
 @interface OAuthViewController (Private)
@@ -175,9 +175,7 @@
 
 - (void)initializeAndSetup {
     if (self.oAuthXing == nil) {
-        self.oAuthXing = [[OAuthXing alloc] initWithConsumerKey:OAUTH_CONSUMER_KEY_XING
-                                              andConsumerSecret:OAUTH_CONSUMER_SECRET_XING];
-        [self.oAuthXing load];
+        self.oAuthXing = [OAuthFactory createAndLoadOAuthXingAuthenticator];
     }
 }
 

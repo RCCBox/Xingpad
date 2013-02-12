@@ -7,44 +7,51 @@
 #import "NSManagedObject+XingAPIAdditions.h"
 
 // Inherited classes
-// OAuth herer ...
+#import "OAuthFactory.h"
+#import "OAuthXing.h"
+
+// Network
+#import "AFJSONRequestOperation.h"
+
+// Constants
+static NSString* const kXPXingApiBaseURL = @"https://api.xing.com/v1";
 
 @implementation NSManagedObject(XingAPIAdditions)
 
 #pragma mark - Fetching
 
 + (void)fetchJSONForPath:(NSString *)path withBlock:(void (^)(NSString *, NSError *error))block {
-	
-	// Read placeholder string for testing
-	NSError *error;
-	NSString *jsonPath   = [[NSBundle mainBundle] pathForResource:@"NetworkActivity" ofType:@"json"];
-	NSString *jsonString = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:&error];
-	
-	// Error
-	if (error) {
-		
-		// Call block with error object
-		block(nil, error);
-		
-	// Success
-	} else if (jsonString) {
-		
-		// Call block with JSON
-		block(jsonString, nil);
-		
-	// Nothing to return
-	} else {
-		
-		// Call block with nil values
-		block (nil, nil);
-	}
-	
-	// Build OAuth Fetching stuff
-	// Get JSON string
-	
-	// Return string and nil error
-	// Or nil
-	// Or nil and error
+
+    // fetch authenticated OAuth credentials
+    OAuthXing *oAuthXing = [OAuthFactory createAndLoadOAuthXingAuthenticator];
+
+    // prepare request URL
+    NSURL *url = [NSURL URLWithString:[kXPXingApiBaseURL stringByAppendingString:path]];
+
+    // initialize HTTP request
+    NSMutableURLRequest *apiRequest = [NSMutableURLRequest requestWithURL:url];
+
+    // enrich network request with OAuth specific header values
+    NSString *oAuthValue = [oAuthXing oAuthHeaderForMethod:@"GET" andUrl:[url absoluteString] andParams:nil];
+    [apiRequest addValue:oAuthValue forHTTPHeaderField:@"Authorization"];
+
+    // keep success and failure blocks separately for better readability
+    void (^success)(NSURLRequest*, NSHTTPURLResponse*, id) = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"JSON Stream: %@", JSON);
+
+        block(JSON, nil);
+    };
+
+    void (^failure)(NSURLRequest*, NSHTTPURLResponse*, NSError*, id) = ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        DLog(@"Fetching error: %@", [error description]);
+
+        block(JSON, error);
+    };
+
+    // setup AFNetwork json request & fire request
+    [[AFJSONRequestOperation JSONRequestOperationWithRequest:apiRequest
+                                                     success:success
+                                                     failure:failure] start];
 }
 
 #pragma mark - Persistence
