@@ -4,3 +4,6 @@
 [submodule "Vendor/Model/MagicalRecord"]
 	path = Vendor/Model/MagicalRecord
 	url = git://github.com/magicalpanda/MagicalRecord.git
+[submodule "Vendor/Frameworks/PonyDebugger"]
+	path = Vendor/Frameworks/PonyDebugger
+	url = git://github.com/square/PonyDebugger.git
