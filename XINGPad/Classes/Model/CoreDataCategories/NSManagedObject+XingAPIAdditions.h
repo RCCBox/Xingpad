@@ -17,11 +17,11 @@
 
  This constitutes a GET request.
 
- @return NSString* containing JSON. Nil if nothing could be fetched.
+ @return NSDictionary* containing JSON. Nil if nothing could be fetched.
  @return NSError* in case of failure
  
 */
-+ (void)fetchJSONForPath:(NSString *)path withBlock:(void (^)(NSString *, NSError *error))block;
++ (void)fetchJSONForPath:(NSString *)path withBlock:(void (^)(NSDictionary *, NSError *error))block;
 
 #pragma mark - Persistence
 
