@@ -13,11 +13,11 @@
 
 #pragma mark - Fetching
 
-+ (void)activitiesWithBlock:(void (^)(XPActivity *, NSError *error))block {
++ (void)activitiesWithBlock:(void (^)(NSArray *, NSError *error))block {
 	
 	// Fetch activities from db
 	// Call block when finished
-	[XPActivity fetchOfflineWithBlock:^(XPActivity *activity, NSError *error) {
+	[XPActivity fetchOfflineWithBlock:^(NSArray *activities, NSError *error) {
 			
 		// Error
 		// Return error
@@ -26,8 +26,8 @@
 			
 		// Success
 		// Return objects
-		} else if (activity) {
-			block(activity, nil);
+		} else if (activities) {
+			block(activities, nil);
 			
 		// No objects available
 		// Wait for online data
@@ -39,7 +39,7 @@
 	// Check if connected to internet
 	// If yes kick off online fetching in parallel
  	// Call block when finished
-	[XPActivity fetchOnlineWithBlock:^(XPActivity *activity, NSError *error) {
+	[XPActivity fetchOnlineWithBlock:^(NSArray *activities, NSError *error) {
 		
 		// Error
 		// Return error
@@ -48,8 +48,8 @@
 			
 		// Success
 		// Return objects
-		} else if (activity) {
-			block(activity, nil);
+		} else if (activities) {
+			block(activities, nil);
 			
 		// No objects available
 		} else {

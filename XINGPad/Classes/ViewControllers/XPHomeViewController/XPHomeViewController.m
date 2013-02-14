@@ -17,13 +17,13 @@
 	[super viewDidAppear:animated];
 	
 	// Fetch activities for user
-	[XPUser activitiesWithBlock:^(XPActivity *activity, NSError *error) {
+	[XPUser activitiesWithBlock:^(NSArray *activities, NSError *error) {
 		
 		if (error) {
 			;
 			
-		} else if (activity) {
-			DLog(@"%@", activity);
+		} else if (activities) {
+			DLog(@"%@", activities);
 		}
 	}];
 }
