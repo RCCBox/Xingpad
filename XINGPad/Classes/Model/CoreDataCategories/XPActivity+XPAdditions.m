@@ -19,7 +19,7 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 
 #pragma mark - Fetching
 
-+ (void)fetchOnlineWithBlock:(void (^)(XPActivity *, NSError *error))block {
++ (void)fetchOnlineWithBlock:(void (^)(NSArray *, NSError *error))block {
 	
 	// Fetch JSON
 	[self fetchJSONForPath:kXPActivityAPIPath withBlock:^(NSDictionary *json, NSError *error) {
@@ -38,12 +38,12 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 				
 				// Success
 				if (success) {
-					
-					// Call block with saved objects
-					block([XPActivity findFirst], nil);
 
-				// Error
-				} else if (error) {
+                    // Call block with saved objects
+                    block([XPActivity findAll], nil);
+
+                    // Error
+                } else if (error) {
 					
 					// Call block with error
 					block(nil, error);
@@ -64,7 +64,7 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 		}
 	}];
 }
-+ (void)fetchOfflineWithBlock:(void (^)(XPActivity *, NSError *error))block {
++ (void)fetchOfflineWithBlock:(void (^)(NSArray *, NSError *error))block {
 	
 	// Magical Record fetching stuff
 	// Call block with appropriate values
