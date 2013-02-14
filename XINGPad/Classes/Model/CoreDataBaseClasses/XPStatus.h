@@ -2,7 +2,7 @@
 //  XPStatus.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 11.02.13.
+//  Created by Roberto Seidenberg on 13.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -16,14 +16,14 @@
 @property (nonatomic, retain) NSString * xpContent;
 @property (nonatomic, retain) NSDate * xpCreatedAt;
 @property (nonatomic, retain) NSString * xpID;
-@property (nonatomic, retain) NSSet *xpRelCreator;
+@property (nonatomic, retain) NSSet *xpCreator;
 @end
 
 @interface XPStatus (CoreDataGeneratedAccessors)
 
-- (void)addXpRelCreatorObject:(XPUser *)value;
-- (void)removeXpRelCreatorObject:(XPUser *)value;
-- (void)addXpRelCreator:(NSSet *)values;
-- (void)removeXpRelCreator:(NSSet *)values;
+- (void)addXpCreatorObject:(XPUser *)value;
+- (void)removeXpCreatorObject:(XPUser *)value;
+- (void)addXpCreator:(NSSet *)values;
+- (void)removeXpCreator:(NSSet *)values;
 
 @end

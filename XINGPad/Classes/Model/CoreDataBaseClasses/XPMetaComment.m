@@ -2,7 +2,7 @@
 //  XPMetaComment.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 11.02.13.
+//  Created by Roberto Seidenberg on 13.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 @implementation XPMetaComment
 
 @dynamic xpAmount;
-@dynamic xpInvRelActivity;
-@dynamic xpRelComment;
+@dynamic xpActivity;
+@dynamic xpComment;
 
 @end

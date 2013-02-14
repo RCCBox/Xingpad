@@ -2,14 +2,14 @@
 //  XPActivity.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 11.02.13.
+//  Created by Roberto Seidenberg on 13.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class XPGroup, XPMetaComment, XPMetaLike, XPUser;
+@class XPGroup, XPMetaComment, XPMetaLike, XPObjects, XPUser;
 
 @interface XPActivity : NSManagedObject
 
@@ -17,28 +17,33 @@
 @property (nonatomic, retain) NSString * xpAggregatedBy;
 @property (nonatomic, retain) NSDate * xpCreatedAt;
 @property (nonatomic, retain) NSString * xpVerb;
-@property (nonatomic, retain) XPUser *xpInvRelUser;
-@property (nonatomic, retain) NSSet *xpRelUser;
-@property (nonatomic, retain) NSSet *xpRelMetaComment;
-@property (nonatomic, retain) XPMetaLike *xpRelMetaLike;
-@property (nonatomic, retain) NSSet *xpRelGroup;
+@property (nonatomic, retain) NSSet *xpGroup;
+@property (nonatomic, retain) NSSet *xpMetaComment;
+@property (nonatomic, retain) XPMetaLike *xpMetaLike;
+@property (nonatomic, retain) NSSet *xpObjects;
+@property (nonatomic, retain) NSSet *xpUser;
 @end
 
 @interface XPActivity (CoreDataGeneratedAccessors)
 
-- (void)addXpRelUserObject:(XPUser *)value;
-- (void)removeXpRelUserObject:(XPUser *)value;
-- (void)addXpRelUser:(NSSet *)values;
-- (void)removeXpRelUser:(NSSet *)values;
+- (void)addXpGroupObject:(XPGroup *)value;
+- (void)removeXpGroupObject:(XPGroup *)value;
+- (void)addXpGroup:(NSSet *)values;
+- (void)removeXpGroup:(NSSet *)values;
 
-- (void)addXpRelMetaCommentObject:(XPMetaComment *)value;
-- (void)removeXpRelMetaCommentObject:(XPMetaComment *)value;
-- (void)addXpRelMetaComment:(NSSet *)values;
-- (void)removeXpRelMetaComment:(NSSet *)values;
+- (void)addXpMetaCommentObject:(XPMetaComment *)value;
+- (void)removeXpMetaCommentObject:(XPMetaComment *)value;
+- (void)addXpMetaComment:(NSSet *)values;
+- (void)removeXpMetaComment:(NSSet *)values;
 
-- (void)addXpRelGroupObject:(XPGroup *)value;
-- (void)removeXpRelGroupObject:(XPGroup *)value;
-- (void)addXpRelGroup:(NSSet *)values;
-- (void)removeXpRelGroup:(NSSet *)values;
+- (void)addXpObjectsObject:(XPObjects *)value;
+- (void)removeXpObjectsObject:(XPObjects *)value;
+- (void)addXpObjects:(NSSet *)values;
+- (void)removeXpObjects:(NSSet *)values;
+
+- (void)addXpUserObject:(XPUser *)value;
+- (void)removeXpUserObject:(XPUser *)value;
+- (void)addXpUser:(NSSet *)values;
+- (void)removeXpUser:(NSSet *)values;
 
 @end

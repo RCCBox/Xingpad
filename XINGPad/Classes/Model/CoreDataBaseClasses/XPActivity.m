@@ -2,7 +2,7 @@
 //  XPActivity.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 11.02.13.
+//  Created by Roberto Seidenberg on 13.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 #import "XPGroup.h"
 #import "XPMetaComment.h"
 #import "XPMetaLike.h"
+#import "XPObjects.h"
 #import "XPUser.h"
 
 
@@ -19,10 +20,10 @@
 @dynamic xpAggregatedBy;
 @dynamic xpCreatedAt;
 @dynamic xpVerb;
-@dynamic xpInvRelUser;
-@dynamic xpRelUser;
-@dynamic xpRelMetaComment;
-@dynamic xpRelMetaLike;
-@dynamic xpRelGroup;
+@dynamic xpGroup;
+@dynamic xpMetaComment;
+@dynamic xpMetaLike;
+@dynamic xpObjects;
+@dynamic xpUser;
 
 @end

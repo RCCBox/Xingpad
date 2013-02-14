@@ -2,7 +2,7 @@
 //  XPComment.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 11.02.13.
+//  Created by Roberto Seidenberg on 13.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -16,15 +16,15 @@
 @property (nonatomic, retain) NSString * xpContent;
 @property (nonatomic, retain) NSDate * xpCreatedAt;
 @property (nonatomic, retain) NSString * xpID;
-@property (nonatomic, retain) XPMetaComment *xpInvRelMetaComment;
-@property (nonatomic, retain) NSSet *xpRelUser;
+@property (nonatomic, retain) XPMetaComment *xpMetaComment;
+@property (nonatomic, retain) NSSet *xpUser;
 @end
 
 @interface XPComment (CoreDataGeneratedAccessors)
 
-- (void)addXpRelUserObject:(XPUser *)value;
-- (void)removeXpRelUserObject:(XPUser *)value;
-- (void)addXpRelUser:(NSSet *)values;
-- (void)removeXpRelUser:(NSSet *)values;
+- (void)addXpUserObject:(XPUser *)value;
+- (void)removeXpUserObject:(XPUser *)value;
+- (void)addXpUser:(NSSet *)values;
+- (void)removeXpUser:(NSSet *)values;
 
 @end

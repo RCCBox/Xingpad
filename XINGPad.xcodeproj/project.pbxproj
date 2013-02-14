@@ -57,6 +57,7 @@
 		6737F68516C9131500E0F76B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6737F68416C9131500E0F76B /* MainWindow.xib */; };
 		6737F68B16C9136000E0F76B /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F68916C9136000E0F76B /* XPHomeViewController.m */; };
 		6737F68C16C9136000E0F76B /* XPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6737F68A16C9136000E0F76B /* XPHomeViewController.xib */; };
+		67461CC116CD2DE200DCA5AD /* XPObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 67461CC016CD2DE200DCA5AD /* XPObjects.m */; };
 		678EE9AE16C83B15008EEA16 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE96F16C83B14008EEA16 /* AFHTTPClient.m */; };
 		678EE9AF16C83B15008EEA16 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE97116C83B14008EEA16 /* AFHTTPRequestOperation.m */; };
 		678EE9B016C83B15008EEA16 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE97316C83B14008EEA16 /* AFImageRequestOperation.m */; };
@@ -193,6 +194,8 @@
 		6737F68816C9136000E0F76B /* XPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPHomeViewController.h; path = XPHomeViewController/XPHomeViewController.h; sourceTree = "<group>"; };
 		6737F68916C9136000E0F76B /* XPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPHomeViewController.m; path = XPHomeViewController/XPHomeViewController.m; sourceTree = "<group>"; };
 		6737F68A16C9136000E0F76B /* XPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XPHomeViewController.xib; path = XPHomeViewController/XPHomeViewController.xib; sourceTree = "<group>"; };
+		67461CBF16CD2DE200DCA5AD /* XPObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPObjects.h; sourceTree = "<group>"; };
+		67461CC016CD2DE200DCA5AD /* XPObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPObjects.m; sourceTree = "<group>"; };
 		678EE96E16C83B14008EEA16 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
 		678EE96F16C83B14008EEA16 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = AFNetworking/AFHTTPClient.m; sourceTree = "<group>"; };
 		678EE97016C83B14008EEA16 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -532,6 +535,8 @@
 		678EE94316C83982008EEA16 /* CoreDataBaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				67461CBF16CD2DE200DCA5AD /* XPObjects.h */,
+				67461CC016CD2DE200DCA5AD /* XPObjects.m */,
 				6718E15416C9605E0020BC6D /* XPActivity.h */,
 				6718E15516C9605E0020BC6D /* XPActivity.m */,
 				6718E15616C9605E0020BC6D /* XPBookmark.h */,
@@ -871,6 +876,7 @@
 				6718E17916C9605E0020BC6D /* XPThread.m in Sources */,
 				6718E17A16C9605E0020BC6D /* XPUser.m in Sources */,
 				1F8EDAAB16CA50AE00CF595A /* OAuthFactory.m in Sources */,
+				67461CC116CD2DE200DCA5AD /* XPObjects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

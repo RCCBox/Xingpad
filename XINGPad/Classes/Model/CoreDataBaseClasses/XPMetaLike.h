@@ -2,7 +2,7 @@
 //  XPMetaLike.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 11.02.13.
+//  Created by Roberto Seidenberg on 13.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -15,6 +15,6 @@
 
 @property (nonatomic, retain) NSNumber * xpAmount;
 @property (nonatomic, retain) NSNumber * xpCurrentUserLiked;
-@property (nonatomic, retain) XPActivity *xpInvRelActivity;
+@property (nonatomic, retain) XPActivity *xpActivity;
 
 @end
