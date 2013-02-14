@@ -20,7 +20,7 @@ static NSString* const kXPXingApiBaseURL = @"https://api.xing.com/v1";
 
 #pragma mark - Fetching
 
-+ (void)fetchJSONForPath:(NSString *)path withBlock:(void (^)(NSString *, NSError *error))block {
++ (void)fetchJSONForPath:(NSString *)path withBlock:(void (^)(NSDictionary *, NSError *error))block {
 
     // fetch authenticated OAuth credentials
     OAuthXing *oAuthXing = [OAuthFactory createAndLoadOAuthXingAuthenticator];

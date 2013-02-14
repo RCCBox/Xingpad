@@ -22,7 +22,7 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 + (void)fetchOnlineWithBlock:(void (^)(XPActivity *, NSError *error))block {
 	
 	// Fetch JSON
-	[self fetchJSONForPath:kXPActivityAPIPath withBlock:^(NSString *json, NSError *error) {
+	[self fetchJSONForPath:kXPActivityAPIPath withBlock:^(NSDictionary *json, NSError *error) {
 		
 		// Failure
 		if (error) {
@@ -32,19 +32,16 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 			
 		// Success
 		} else if (json) {
-			
-			// Convert JSON to objects
-			NSDictionary *jsonObjects = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
 
 			// Convert and store objects in db
-			[XPUser importJSONObjects:jsonObjects intoClass:[XPUser class] callback:^(BOOL success, NSError *error) {
+			[XPUser importJSONObjects:json intoClass:[XPUser class] callback:^(BOOL success, NSError *error) {
 				
 				// Success
 				if (success) {
 					
 					// Call block with saved objects
 					block([XPActivity findFirst], nil);
-					
+
 				// Error
 				} else if (error) {
 					
