@@ -58,6 +58,10 @@
 		6737F68B16C9136000E0F76B /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F68916C9136000E0F76B /* XPHomeViewController.m */; };
 		6737F68C16C9136000E0F76B /* XPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6737F68A16C9136000E0F76B /* XPHomeViewController.xib */; };
 		67461CC116CD2DE200DCA5AD /* XPObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 67461CC016CD2DE200DCA5AD /* XPObjects.m */; };
+		6746213416CD310A00DCA5AD /* libPonyDebugger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6746213116CD30F700DCA5AD /* libPonyDebugger.a */; };
+		6746213616CD311000DCA5AD /* libSocketRocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6746213516CD311000DCA5AD /* libSocketRocket.a */; };
+		6746213816CD319B00DCA5AD /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6746213716CD319B00DCA5AD /* libicucore.dylib */; };
+		6746213A16CD31A400DCA5AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6746213916CD31A400DCA5AD /* CFNetwork.framework */; };
 		678EE9AE16C83B15008EEA16 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE96F16C83B14008EEA16 /* AFHTTPClient.m */; };
 		678EE9AF16C83B15008EEA16 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE97116C83B14008EEA16 /* AFHTTPRequestOperation.m */; };
 		678EE9B016C83B15008EEA16 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE97316C83B14008EEA16 /* AFImageRequestOperation.m */; };
@@ -103,6 +107,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1FC1BB2316C11D5700404E83;
 			remoteInfo = XINGPad;
+		};
+		6746213016CD30F700DCA5AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6746212B16CD30F600DCA5AD /* PonyDebugger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F683ADAC14FC1B4C008EBBA7;
+			remoteInfo = PonyDebugger;
+		};
+		6746213216CD310700DCA5AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6746212B16CD30F600DCA5AD /* PonyDebugger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F683ADAB14FC1B4C008EBBA7;
+			remoteInfo = PonyDebugger;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -196,6 +214,10 @@
 		6737F68A16C9136000E0F76B /* XPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XPHomeViewController.xib; path = XPHomeViewController/XPHomeViewController.xib; sourceTree = "<group>"; };
 		67461CBF16CD2DE200DCA5AD /* XPObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPObjects.h; sourceTree = "<group>"; };
 		67461CC016CD2DE200DCA5AD /* XPObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPObjects.m; sourceTree = "<group>"; };
+		6746212B16CD30F600DCA5AD /* PonyDebugger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PonyDebugger.xcodeproj; path = PonyDebugger/ObjC/PonyDebugger.xcodeproj; sourceTree = "<group>"; };
+		6746213516CD311000DCA5AD /* libSocketRocket.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libSocketRocket.a; path = "Vendor/Frameworks/PonyDebugger/ObjC/SocketRocket/build/Release-iphoneos/libSocketRocket.a"; sourceTree = "<group>"; };
+		6746213716CD319B00DCA5AD /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		6746213916CD31A400DCA5AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		678EE96E16C83B14008EEA16 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
 		678EE96F16C83B14008EEA16 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = AFNetworking/AFHTTPClient.m; sourceTree = "<group>"; };
 		678EE97016C83B14008EEA16 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -277,10 +299,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F63F90616C3FDB50077EA2D /* Security.framework in Frameworks */,
+				6746213A16CD31A400DCA5AD /* CFNetwork.framework in Frameworks */,
+				6746213816CD319B00DCA5AD /* libicucore.dylib in Frameworks */,
+				6746213616CD311000DCA5AD /* libSocketRocket.a in Frameworks */,
+				6746213416CD310A00DCA5AD /* libPonyDebugger.a in Frameworks */,
 				678EEA0416C83C24008EEA16 /* CoreData.framework in Frameworks */,
 				1F63F90816C3FDBF0077EA2D /* SystemConfiguration.framework in Frameworks */,
 				1F63F90416C3FDAC0077EA2D /* MobileCoreServices.framework in Frameworks */,
-				1F63F90616C3FDB50077EA2D /* Security.framework in Frameworks */,
 				1F63F90216C3FDA00077EA2D /* libz.dylib in Frameworks */,
 				1FC1BB2816C11D5700404E83 /* UIKit.framework in Frameworks */,
 				1FC1BB2A16C11D5700404E83 /* Foundation.framework in Frameworks */,
@@ -418,6 +444,9 @@
 		1FC1BB2616C11D5700404E83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6746213916CD31A400DCA5AD /* CFNetwork.framework */,
+				6746213716CD319B00DCA5AD /* libicucore.dylib */,
+				6746213516CD311000DCA5AD /* libSocketRocket.a */,
 				678EEA0316C83C24008EEA16 /* CoreData.framework */,
 				1F63F90116C3FDA00077EA2D /* libz.dylib */,
 				1F63F90716C3FDBE0077EA2D /* SystemConfiguration.framework */,
@@ -506,9 +535,35 @@
 			name = XPHomeViewController;
 			sourceTree = "<group>";
 		};
+		67461CC216CD30D100DCA5AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6746212A16CD30E600DCA5AD /* PonyDebugger */,
+			);
+			name = Frameworks;
+			path = Vendor/Frameworks;
+			sourceTree = "<group>";
+		};
+		6746212A16CD30E600DCA5AD /* PonyDebugger */ = {
+			isa = PBXGroup;
+			children = (
+				6746212B16CD30F600DCA5AD /* PonyDebugger.xcodeproj */,
+			);
+			name = PonyDebugger;
+			sourceTree = "<group>";
+		};
+		6746212C16CD30F600DCA5AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6746213116CD30F700DCA5AD /* libPonyDebugger.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6748E27116C53C750041986B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				67461CC216CD30D100DCA5AD /* Frameworks */,
 				6748E27216C53C7A0041986B /* Model */,
 			);
 			name = Vendor;
@@ -711,6 +766,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6746213316CD310700DCA5AD /* PBXTargetDependency */,
 			);
 			name = XINGPad;
 			productName = XINGPad;
@@ -756,6 +812,12 @@
 			mainGroup = 1FC1BB1B16C11D5700404E83;
 			productRefGroup = 1FC1BB2516C11D5700404E83 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6746212C16CD30F600DCA5AD /* Products */;
+					ProjectRef = 6746212B16CD30F600DCA5AD /* PonyDebugger.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1FC1BB2316C11D5700404E83 /* XINGPad */,
@@ -763,6 +825,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6746213116CD30F700DCA5AD /* libPonyDebugger.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPonyDebugger.a;
+			remoteRef = 6746213016CD30F700DCA5AD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1FC1BB2216C11D5700404E83 /* Resources */ = {
@@ -896,6 +968,11 @@
 			target = 1FC1BB2316C11D5700404E83 /* XINGPad */;
 			targetProxy = 1FC1BB4F16C11D5800404E83 /* PBXContainerItemProxy */;
 		};
+		6746213316CD310700DCA5AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PonyDebugger;
+			targetProxy = 6746213216CD310700DCA5AD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -983,6 +1060,7 @@
 				GCC_PREFIX_HEADER = "XINGPad/XINGPad-Prefix.pch";
 				INFOPLIST_FILE = "XINGPad/XINGPad-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = XINGPad;
 				WRAPPER_EXTENSION = app;
 			};
@@ -995,6 +1073,7 @@
 				GCC_PREFIX_HEADER = "XINGPad/XINGPad-Prefix.pch";
 				INFOPLIST_FILE = "XINGPad/XINGPad-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = XINGPad;
 				WRAPPER_EXTENSION = app;
 			};
