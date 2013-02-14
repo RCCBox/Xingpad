@@ -8,6 +8,10 @@
 // Header
 #import "XPAppDelegate.h"
 
+// Debug
+// Vendor
+#import <PonyDebugger/PonyDebugger.h>
+
 // App classes
 // Model
 #import "OAuthXing.h"
@@ -15,17 +19,36 @@
 #import "OAuthPersistenceManager.h"
 
 @interface XPAppDelegate()
-// MARK: Properties (private)
 @property (strong) OAuthViewController *oauthViewController;
+@end
+
+@implementation XPAppDelegate(Private)
+
+#pragma mark - Debugging
+
+- (void)setupPonyDebugger {
+		
+    PDDebugger *debugger = [PDDebugger defaultInstance];
+    
+    // Enable Network debugging, and automatically track network traffic that comes through any classes that NSURLConnectionDelegate methods.
+    [debugger enableNetworkTrafficDebugging];
+    [debugger forwardAllNetworkTraffic];
+    
+    // Enable Core Data debugging, and broadcast the main managed object context.
+    [debugger enableCoreDataDebugging];
+    [debugger addManagedObjectContext:[NSManagedObjectContext defaultContext] withName:@"XingPAD default MR context"];
+
+    // Auto connect via bonjour discovery
+	[debugger connectToURL:[NSURL URLWithString:@"ws://localhost:9000/device"]];
+}
+
 @end
 
 @implementation XPAppDelegate
 
-// MARK: Template methods
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+#pragma mark - Template methods
 
-    // DEBUG
-    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
 	// Setup coredata with SQLite db
 	[MagicalRecord setupCoreDataStack];
@@ -33,13 +56,16 @@
 	// Present window
 	[self.window makeKeyAndVisible];
 
-	// User did not login befor
-	
+	// User did not login before	
     if ([[OAuthPersistenceManager instance] isUserAuthorized] == NO) {
 
 		// Ask user for login information
         self.oauthViewController = [OAuthViewController presentCredentialsViewController:self.window.rootViewController animated:NO completion:nil callbackURLName:@"xingipad://handleOAuthLogin"];
     }
+	
+	#ifdef DEBUG
+		[self setupPonyDebugger];
+	#endif
 
     return YES;
 }
