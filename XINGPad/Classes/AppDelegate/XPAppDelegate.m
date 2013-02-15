@@ -25,6 +25,7 @@
 
 @interface XPAppDelegate()
 @property (strong) OAuthViewController *oauthViewController;
+@property (assign) BOOL alreadyCalled;
 @end
 
 @implementation XPAppDelegate(Private)
@@ -115,17 +116,22 @@
     // Persist
 	__block XPHomeViewController *xpHVC = (XPHomeViewController *)self.window.rootViewController;
 	__block XPUser *user;
-    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+	__block NSString *userID = [[OAuthPersistenceManager instance] authorizedUserID];
+	
+	if (userID && !self.alreadyCalled) {
 		
-		// Create new user  with returned id
-        user      = [XPUser createInContext:localContext];
-        user.xpID = [[OAuthPersistenceManager instance] authorizedUserID];
+		self.alreadyCalled = YES;
 		
-    } completion:^(BOOL success, NSError *error) {
+		[MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
+			
+			// Create new user  with returned id
+			user      = [XPUser createInContext:localContext];
+			user.xpID = userID;
+		}];
 		
 		// Forward new user to initial viewcontroller
 		[xpHVC setUser:user];
-    }];
+	}
 }
 - (void)authorizationDidFail:(OAuth *)oauth {
     // todo ?!
