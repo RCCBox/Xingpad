@@ -1,5 +1,13 @@
+# Project Setup
 
+    $ git clone https://github.com/robertoseidenberg/Xingpad.git
+    $ cd Xingpad
+    
+Initialize the required submodules in your project.
 
+    $ git submodule init
+    $ git submodule update
+    
 ## Third Party libraries
 
 ### OAuth handling
