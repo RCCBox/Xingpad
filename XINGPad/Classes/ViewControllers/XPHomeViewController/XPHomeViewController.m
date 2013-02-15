@@ -30,7 +30,8 @@
 	NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
 	
 	// Import JSON into db
-	[user importValuesForKeysWithObject:json];
+	[self.user importValuesForKeysWithObject:json];
+	[[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
 }
 
 #pragma mark - Template methods

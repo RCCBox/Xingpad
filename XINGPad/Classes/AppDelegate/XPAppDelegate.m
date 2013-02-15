@@ -114,23 +114,18 @@
 - (void)authorizationDidSucceed:(OAuth *)oauth {
 	
     // Persist
-	__block XPHomeViewController *xpHVC = (XPHomeViewController *)self.window.rootViewController;
-	__block XPUser *user;
-	__block NSString *userID = [[OAuthPersistenceManager instance] authorizedUserID];
-	
-	if (userID && !self.alreadyCalled) {
+	if (!self.alreadyCalled) {
 		
+		// FIXME: This is beeing called several times
 		self.alreadyCalled = YES;
 		
-		[MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
-			
-			// Create new user  with returned id
-			user      = [XPUser createInContext:localContext];
-			user.xpID = userID;
-		}];
+		// Create new user  with returned id
+		XPUser *user = [XPUser createEntity];
+		user.xpID    = [[OAuthPersistenceManager instance] authorizedUserID];
 		
-		// Forward new user to initial viewcontroller
-		[xpHVC setUser:user];
+		// Forward user object to initial viewcontroller
+		XPHomeViewController *xpHVC = (XPHomeViewController *)self.window.rootViewController;
+		xpHVC.user = user;
 	}
 }
 - (void)authorizationDidFail:(OAuth *)oauth {
