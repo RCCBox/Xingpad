@@ -75,34 +75,39 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 
 #pragma mark - MagicalRecord template methods
 
-- (BOOL)importXpObjects:(id)data {
-
+- (BOOL)importXpObjects:(id)data {	
+	
 	// Get data for "objects" property
 	data = [data objectForKey:@"objects"];
 			
 	// Only continue if an array is beeing passed in
 	if ([data isKindOfClass:[NSArray class]]) {
 		
-		[MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+		XPObjects *xpObjects;
+		if (!self.xpObjects) {
+			xpObjects = [XPObjects createInContext:[NSManagedObjectContext defaultContext]];
+			self.xpObjects       = xpObjects;
+		}
+		
+		// Iterate over contained dictionarys
+		for (NSDictionary *aDict in data) {
 			
-			// Iterate over contained dictionarys
-			for (NSDictionary *aDict in data) {
-								
-				// Insert object of matching class into context
-				id aManagedObject = [[aDict matchingXingAPIClass] performSelector:@selector(createInContext:) withObject:localContext];
-				
-				// Populate properties with given values
-				[aManagedObject performSelector:@selector(importValuesForKeysWithObject:) withObject:aDict];
-				
-				// Insert joining class and add new class
-				XPObjects *xpObject = [XPObjects createInContext:localContext];
-				if ([aManagedObject isKindOfClass:[XPUser class]]) {
-					[xpObject addXpUserObject:aManagedObject];
-				} else if ([aManagedObject isKindOfClass:[XPStatus class]]) {
-					[xpObject addXpStatusObject:aManagedObject];
-				}
+			// Insert object of matching class into context
+			id aManagedObject = [[aDict matchingXingAPIClass] performSelector:@selector(createInContext:) withObject:[NSManagedObjectContext defaultContext]];
+			
+			// Populate properties with given values
+			[aManagedObject importValuesForKeysWithObject:aDict];
+			
+			// Insert joining class and add new class
+			if ([aManagedObject isKindOfClass:[XPUser class]]) {
+				[xpObjects addXpUserObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPStatus class]]) {
+				[xpObjects addXpStatusObject:aManagedObject];
 			}
-		}];
+		}
+		
+		// Persist
+		[[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
 	}
 	
 	// Returning YES means: Object import has been taken care of

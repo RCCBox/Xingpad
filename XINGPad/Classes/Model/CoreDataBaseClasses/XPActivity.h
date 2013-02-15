@@ -2,7 +2,7 @@
 //  XPActivity.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 13.02.13.
+//  Created by Roberto Seidenberg on 15.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -20,7 +20,7 @@
 @property (nonatomic, retain) NSSet *xpGroup;
 @property (nonatomic, retain) NSSet *xpMetaComment;
 @property (nonatomic, retain) XPMetaLike *xpMetaLike;
-@property (nonatomic, retain) NSSet *xpObjects;
+@property (nonatomic, retain) XPObjects *xpObjects;
 @property (nonatomic, retain) NSSet *xpUser;
 @end
 
@@ -35,11 +35,6 @@
 - (void)removeXpMetaCommentObject:(XPMetaComment *)value;
 - (void)addXpMetaComment:(NSSet *)values;
 - (void)removeXpMetaComment:(NSSet *)values;
-
-- (void)addXpObjectsObject:(XPObjects *)value;
-- (void)removeXpObjectsObject:(XPObjects *)value;
-- (void)addXpObjects:(NSSet *)values;
-- (void)removeXpObjects:(NSSet *)values;
 
 - (void)addXpUserObject:(XPUser *)value;
 - (void)removeXpUserObject:(XPUser *)value;

@@ -36,7 +36,7 @@
                 <entry key="mappedKeyName" value="likes"/>
             </userInfo>
         </relationship>
-        <relationship name="xpObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpActivity" inverseEntity="XPObjects" syncable="YES">
+        <relationship name="xpObjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpActivity" inverseEntity="XPObjects" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="objects"/>
             </userInfo>
