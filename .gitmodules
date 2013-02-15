@@ -7,3 +7,6 @@
 [submodule "Vendor/Frameworks/PonyDebugger"]
 	path = Vendor/Frameworks/PonyDebugger
 	url = git://github.com/square/PonyDebugger.git
+[submodule "Vendor/Model/KVOBlockBinding"]
+	path = Vendor/Model/KVOBlockBinding
+	url = git://github.com/rayh/kvo-block-binding.git
