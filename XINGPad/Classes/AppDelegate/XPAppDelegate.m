@@ -18,6 +18,8 @@
 #import "OAuthViewController.h"
 #import "OAuthPersistenceManager.h"
 
+#import "XPUser.h"
+
 @interface XPAppDelegate()
 @property (strong) OAuthViewController *oauthViewController;
 @end
@@ -53,7 +55,6 @@
 	// Setup coredata with SQLite db
 	[MagicalRecord setupCoreDataStack];
 
-	// Present window
 	[self.window makeKeyAndVisible];
 
 	// User did not login before	
@@ -61,6 +62,7 @@
 
 		// Ask user for login information
         self.oauthViewController = [OAuthViewController presentCredentialsViewController:self.window.rootViewController animated:NO completion:nil callbackURLName:@"xingipad://handleOAuthLogin"];
+        self.oauthViewController.oAuthCallbackDelegate = self;
     }
 	
 	#ifdef DEBUG
@@ -84,4 +86,30 @@
 
     return YES;
 }
+
+#pragma mark -
+#pragma mark OAuthAuthorizationCallbacks implementation
+
+- (void)authorizationDidSucceed:(OAuth *)oauth {
+
+    DLog(@"xxxxxxxxx------------------xxxxxxxxxxxxxx SUCCESS");
+    // Do persist stuff here
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+        NSString *userID = [[OAuthPersistenceManager instance] authorizedUserID];
+
+        XPUser *user = [XPUser createInContext:localContext];
+        user.xpID = userID;
+
+    } completion:^(BOOL success, NSError *error) {
+
+//        [XPUser activitiesWithBlock:^(NSArray *activities, NSError *error) {
+//
+//        }];
+    }];
+}
+
+- (void)authorizationDidFail:(OAuth *)oauth {
+    // todo ?!
+}
+
 @end

@@ -14,6 +14,12 @@
 
 - (BOOL)isUserAuthorized;
 
+/**
+* Returns the currently authenticated and logged in user's 'user_id', or nil when the user is not
+* authenticated / not persisted.
+*/
+- (NSString *)authorizedUserID;
+
 - (NSString *)loadOAuthValue:(NSString *)key;
 
 - (void)saveOAuthValue:(NSString *)value for:(NSString *)key;

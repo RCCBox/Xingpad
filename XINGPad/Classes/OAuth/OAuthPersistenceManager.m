@@ -42,6 +42,15 @@
     return authorized;
 }
 
+- (NSString *)authorizedUserID {
+    NSString *userID = nil;
+    if ([self isUserAuthorized]) {
+        NSString *userIdKey = [NSString stringWithFormat:@"%@%@", [self safePrefix], XING_OAUTH_USER_ID];
+        userID = [[NSUserDefaults standardUserDefaults] objectForKey:userIdKey];
+    }
+    return nil;
+}
+
 - (NSString *)loadOAuthValue:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] stringForKey:
             [NSString stringWithFormat:@"%@%@", [self safePrefix], key]];

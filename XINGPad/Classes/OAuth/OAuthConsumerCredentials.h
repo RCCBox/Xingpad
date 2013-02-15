@@ -39,3 +39,8 @@
  * Boolean value, which indicates whether the token has been authorized or not.
  */
 #define XING_OAUTH_TOKEN_AUTHORIZED @"oauth_token_authorized"
+
+/**
+ * The key for the Xing user ID provided by the Xing API after successful authentication.
+ */
+#define XING_OAUTH_USER_ID          @"user_id"

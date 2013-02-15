@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "OAuthXingCallbacks.h"
 #import "OAuthLoginPopupDelegate.h"
+#import "OAuthAuthorizationCallbacks.h"
 
 @class OAuthXing;
 
@@ -20,6 +21,7 @@
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 
 @property (unsafe_unretained) id<OAuthLoginPopupDelegate> delegate;
+@property (unsafe_unretained) id<OAuthAuthorizationCallbacks> oAuthCallbackDelegate;
 
 /**
 * Creates a new OAuth view controller and presents it on the specified 'parentController'.

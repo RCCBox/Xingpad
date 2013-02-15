@@ -8,7 +8,10 @@
 // Apple
 #import <UIKit/UIKit.h>
 
-@interface XPAppDelegate : UIResponder <UIApplicationDelegate>
+// OAuth handling
+#import "OAuthAuthorizationCallbacks.h"
+
+@interface XPAppDelegate : UIResponder <UIApplicationDelegate, OAuthAuthorizationCallbacks>
 // MARK: Properties (public)
 // IBOutlets
 @property (strong, nonatomic) IBOutlet UIWindow *window;

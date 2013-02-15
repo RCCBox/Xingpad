@@ -225,18 +225,25 @@
 }
 
 #pragma mark -
-#pragma mark AAuthLoginPopupDelegate
+#pragma mark OAuthLoginPopupDelegate
 
 - (void)oAuthLoginPopupDidCancel:(UIViewController *)popup {
     [self dismissViewControllerAnimated:NO completion:nil];
 
-    // todo user authenticated - adopt UI accordingly
+    // todo user did cancel authenticated - adopt UI accordingly
+
+    if (self.oAuthCallbackDelegate) {
+        [self.oAuthCallbackDelegate authorizationDidFail:self.oAuthXing];
+    }
 }
 
 - (void)oAuthLoginPopupDidAuthorize:(UIViewController *)popup {
     [self.oAuthXing save];
     [self dismissViewControllerAnimated:NO completion:nil];
-    // todo user authenticated - adopt UI accordingly
+
+    if (self.oAuthCallbackDelegate) {
+        [self.oAuthCallbackDelegate authorizationDidSucceed:self.oAuthXing];
+    }
 }
 
 #pragma mark -
