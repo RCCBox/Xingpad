@@ -233,7 +233,7 @@
     // todo user did cancel authenticated - adopt UI accordingly
 
     if (self.oAuthCallbackDelegate) {
-        [self.oAuthCallbackDelegate authorizationDidFail:self.oAuthXing];
+        [self.oAuthCallbackDelegate authorizationDidCancel:self.oAuthXing];
     }
 }
 

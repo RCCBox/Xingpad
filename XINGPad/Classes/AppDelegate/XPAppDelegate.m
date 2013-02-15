@@ -112,23 +112,26 @@
 #pragma mark - OAuthAuthorizationProtocol
 
 - (void)authorizationDidSucceed:(OAuth *)oauth {
-	
-    // Persist
-	if (!self.alreadyCalled) {
-		
-		// FIXME: This is beeing called several times
-		self.alreadyCalled = YES;
-		
-		// Create new user  with returned id
-		XPUser *user = [XPUser createEntity];
-		user.xpID    = [[OAuthPersistenceManager instance] authorizedUserID];
-		
-		// Forward user object to initial viewcontroller
-		XPHomeViewController *xpHVC = (XPHomeViewController *)self.window.rootViewController;
-		xpHVC.user = user;
-	}
+
+    /* cannot reproduce the "called multiple times" scenario, please report with stacktrace
+    * NSLog(@"%@",[NSThread callStackSymbols]);*/
+
+     // Persist
+    if (!self.alreadyCalled) {
+
+        // FIXME: This is beeing called several times
+        self.alreadyCalled = YES;
+
+        // Create new user  with returned id
+        XPUser *user = [XPUser createEntity];
+        user.xpID = [((OAuthXing *)oauth) user_id];
+
+        // Forward user object to initial viewcontroller
+        XPHomeViewController *xpHVC = (XPHomeViewController *) self.window.rootViewController;
+        xpHVC.user = user;
+    }
 }
-- (void)authorizationDidFail:(OAuth *)oauth {
+- (void)authorizationDidCancel:(OAuth *)oauth {
     // todo ?!
 }
 
