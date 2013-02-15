@@ -1233,6 +1233,7 @@
 				6716974A16CEB10600C15B61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
