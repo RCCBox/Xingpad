@@ -18,10 +18,10 @@
 @property (strong) NSString *oAuthCallbackUrl;
 @property (strong) NSOperationQueue *queue;
 
-@property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (strong) IBOutlet UIWebView *webView;
 
-@property (unsafe_unretained) id<OAuthLoginPopupDelegate> delegate;
-@property (unsafe_unretained) id<OAuthAuthorizationCallbacks> oAuthCallbackDelegate;
+@property (weak) id<OAuthLoginPopupDelegate> delegate;
+@property (weak) id<OAuthAuthorizationCallbacks> oAuthCallbackDelegate;
 
 /**
 * Creates a new OAuth view controller and presents it on the specified 'parentController'.

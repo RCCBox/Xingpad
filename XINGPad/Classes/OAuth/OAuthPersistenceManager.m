@@ -43,12 +43,20 @@
 }
 
 - (NSString *)authorizedUserID {
-    NSString *userID = nil;
+    
+	// Returned user id string
+	NSString *userID = nil;
+	
+	// User is already authorized
     if ([self isUserAuthorized]) {
+		
+		// Get string from user defaults
         NSString *userIdKey = [NSString stringWithFormat:@"%@%@", [self safePrefix], XING_OAUTH_USER_ID];
         userID = [[NSUserDefaults standardUserDefaults] objectForKey:userIdKey];
     }
-    return nil;
+	
+	// Returns user id string or nil
+    return userID;
 }
 
 - (NSString *)loadOAuthValue:(NSString *)key {

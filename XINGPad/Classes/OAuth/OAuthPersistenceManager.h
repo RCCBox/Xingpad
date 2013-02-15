@@ -15,8 +15,9 @@
 - (BOOL)isUserAuthorized;
 
 /**
-* Returns the currently authenticated and logged in user's 'user_id', or nil when the user is not
-* authenticated / not persisted.
+  Check if a user is currently authenticated
+ 
+  @return NSString * of currently authenticated and logged in user's 'user_id', or nil when the user is not authenticated / not persisted.
 */
 - (NSString *)authorizedUserID;
 

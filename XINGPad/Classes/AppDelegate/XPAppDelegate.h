@@ -11,8 +11,14 @@
 // OAuth handling
 #import "OAuthAuthorizationCallbacks.h"
 
-@interface XPAppDelegate : UIResponder <UIApplicationDelegate, OAuthAuthorizationCallbacks>
+@interface XPAppDelegate : UIResponder <UIApplicationDelegate>
+
 // MARK: Properties (public)
 // IBOutlets
 @property (strong, nonatomic) IBOutlet UIWindow *window;
+@end
+
+@interface XPAppDelegate(OAuthAuthorizationProtocol) <OAuthAuthorizationCallbacks>
+- (void)authorizationDidSucceed:(OAuth *)oauth;
+- (void)authorizationDidFail:(OAuth *)oauth;
 @end

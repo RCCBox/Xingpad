@@ -6,25 +6,47 @@
 // Header
 #import "XPHomeViewController.h"
 
+// Vendor
+// Categories
+#import "NSObject+KVOBlockBinding.h"
+
 // App classes
-// Model categories
-#import "XPUser+XPAdditions.h"
+// Model
+#import "OAuthPersistenceManager.h"
+
+
+@implementation XPHomeViewController (Private)
+
+#pragma mark - Utility (private)
+@end
 
 @implementation XPHomeViewController
 
-// MARK: Template methods
-- (void)viewDidAppear:(BOOL)animated {	
-	[super viewDidAppear:animated];
+#pragma mark - Setters
+
+- (void)setUser:(XPUser *)user {
 	
-	// Fetch activities for user
-	[XPUser activitiesWithBlock:^(NSArray *activities, NSError *error) {
-		
-		if (error) {
-			;
-			
-		} else if (activities) {
-			DLog(@"%@", activities);
-		}
+	// Store object
+	_user = user;
+	
+	// FIXME: Remove this once testing is done
+	// Import JSON placeholder data
+	NSString *path     = [[NSBundle mainBundle] pathForResource:@"NetworkActivity" ofType:@"json"];
+	NSData *data       = [NSData dataWithContentsOfFile:path];
+	NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+	
+	[MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {[user importValuesForKeysWithObject:json];} completion:^(BOOL success, NSError *error) {}];
+}
+
+#pragma mark - Template methods
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	
+	// Observe user property
+	[self addObserverForKeyPath:@"self.user.xpActivity" owner:self block:^(id observed, NSDictionary *change) {
+		DLog(@"!!!\n%@", change);
 	}];
 }
+
 @end

@@ -14,11 +14,14 @@
 
 // App classes
 // Model
+// Coredata base classes
+#import "XPUser.h"
+// Authentication
 #import "OAuthXing.h"
 #import "OAuthViewController.h"
 #import "OAuthPersistenceManager.h"
-
-#import "XPUser.h"
+// Viewcontrollers
+#import "XPHomeViewController.h"
 
 @interface XPAppDelegate()
 @property (strong) OAuthViewController *oauthViewController;
@@ -55,20 +58,34 @@
 	// Setup coredata with SQLite db
 	[MagicalRecord setupCoreDataStack];
 
+	// Present window
 	[self.window makeKeyAndVisible];
 
-	// User did not login before	
-    if ([[OAuthPersistenceManager instance] isUserAuthorized] == NO) {
+	// User is logged in
+    if ([[OAuthPersistenceManager instance] isUserAuthorized]) {
+		
+		// Get user object for logged in user
+		XPUser *user = [XPUser findFirstByAttribute:@"xpID" withValue:[[OAuthPersistenceManager instance] authorizedUserID]];
+		
+		// Forward user to initial view controller
+		XPHomeViewController *xpHVC = (XPHomeViewController *)self.window.rootViewController;
+		[xpHVC setUser:user];
 
+	// User did not login before
+    } else {
+		
 		// Ask user for login information
         self.oauthViewController = [OAuthViewController presentCredentialsViewController:self.window.rootViewController animated:NO completion:nil callbackURLName:@"xingipad://handleOAuthLogin"];
         self.oauthViewController.oAuthCallbackDelegate = self;
-    }
+
+	}
 	
+	// Setup debugger for coredata and network debugging
 	#ifdef DEBUG
 		[self setupPonyDebugger];
 	#endif
 
+	// Setup successfull
     return YES;
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -87,27 +104,29 @@
     return YES;
 }
 
-#pragma mark -
-#pragma mark OAuthAuthorizationCallbacks implementation
+@end
+
+@implementation XPAppDelegate(OAuthAuthorizationProtocol)
+
+#pragma mark - OAuthAuthorizationProtocol
 
 - (void)authorizationDidSucceed:(OAuth *)oauth {
-
-    DLog(@"xxxxxxxxx------------------xxxxxxxxxxxxxx SUCCESS");
-    // Do persist stuff here
+	
+    // Persist
+	__block XPHomeViewController *xpHVC = (XPHomeViewController *)self.window.rootViewController;
+	__block XPUser *user;
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-        NSString *userID = [[OAuthPersistenceManager instance] authorizedUserID];
-
-        XPUser *user = [XPUser createInContext:localContext];
-        user.xpID = userID;
-
+		
+		// Create new user  with returned id
+        user      = [XPUser createInContext:localContext];
+        user.xpID = [[OAuthPersistenceManager instance] authorizedUserID];
+		
     } completion:^(BOOL success, NSError *error) {
-
-//        [XPUser activitiesWithBlock:^(NSArray *activities, NSError *error) {
-//
-//        }];
+		
+		// Forward new user to initial viewcontroller
+		[xpHVC setUser:user];
     }];
 }
-
 - (void)authorizationDidFail:(OAuth *)oauth {
     // todo ?!
 }
