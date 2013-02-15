@@ -163,6 +163,7 @@
 		1F782A4816C6F3BD0005DD59 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		1F8EDAA916CA50AE00CF595A /* OAuthFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthFactory.h; sourceTree = "<group>"; };
 		1F8EDAAA16CA50AE00CF595A /* OAuthFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthFactory.m; sourceTree = "<group>"; };
+		1FB0E62216CE48C200575117 /* OAuthAuthorizationCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthAuthorizationCallbacks.h; sourceTree = "<group>"; };
 		1FC1BB2416C11D5700404E83 /* XINGPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XINGPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC1BB2716C11D5700404E83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1FC1BB2916C11D5700404E83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -395,6 +396,7 @@
 		1F63F8F216C3B4510077EA2D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1FB0E62216CE48C200575117 /* OAuthAuthorizationCallbacks.h */,
 				1F63F8F616C3B8E30077EA2D /* OAuthXingCallbacks.h */,
 				1F63F8F716C3B8E30077EA2D /* XingLoginUiFeedback.h */,
 				1F63F8F316C3B4520077EA2D /* OAuthLoginPopupDelegate.h */,
