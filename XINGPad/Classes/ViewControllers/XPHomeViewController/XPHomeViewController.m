@@ -14,12 +14,6 @@
 // Model
 #import "OAuthPersistenceManager.h"
 
-
-@implementation XPHomeViewController (Private)
-
-#pragma mark - Utility (private)
-@end
-
 @implementation XPHomeViewController
 
 #pragma mark - Setters
@@ -35,7 +29,8 @@
 	NSData *data       = [NSData dataWithContentsOfFile:path];
 	NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
 	
-	[MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {[user importValuesForKeysWithObject:json];} completion:^(BOOL success, NSError *error) {}];
+	// Import JSON into db
+	[user importValuesForKeysWithObject:json];
 }
 
 #pragma mark - Template methods
