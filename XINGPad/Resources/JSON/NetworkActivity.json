@@ -1,1300 +1,205 @@
 {
   "network_activities": [
     {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "274466351_6b0968"
+      "actors": [
+        {
+          "id": "6666666_6a0d84",
+          "type": "user"
+        }
       ],
-      "verb": "update",
-      "created_at": "2012-11-25T16:42:20Z",
+      "aggregated": false,
+      "aggregated_by": null,
       "changes": [
         "haves"
       ],
-      "aggregated": false,
-      "targets": [
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [],
+        "type": "meta_comment"
+      },
+      "created_at": "2011-05-26T11:14:38Z",
+      "ids": [
+        "9493_7c6b3a"
       ],
       "likes": {
-        "type": "meta_like",
         "amount": 0,
-        "current_user_liked": false
+        "current_user_liked": false,
+        "type": "meta_like"
       },
-      "type": "activity",
       "objects": [
         {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
+          "id": "6666666_6a0d84",
+          "type": "user"
         }
       ],
       "possible_actions": [
         "COMMENT",
-        "DELETE",
         "LIKE"
       ],
-      "aggregated_by": null
+      "type": "activity",
+      "verb": "update"
     },
     {
+      "actors": [
+        {
+          "id": "6666666_6a0d84",
+          "type": "user"
+        }
+      ],
+      "aggregated": false,
+      "aggregated_by": null,
       "comments": {
-        "amount": 0,
-        "current_user_commented": false,
+        "amount": 1,
+        "current_user_commented": true,
         "latest_comments": [
+          {
+            "content": "Kann ich nur empfehlen!",
+            "created_at": "2011-05-30T15:02:43Z",
+            "creator": {
+              "id": "6666666_6a0d84",
+              "type": "user"
+            },
+            "id": "10368_ddec16",
+            "type": "comment"
+          }
         ],
         "type": "meta_comment"
       },
+      "created_at": "2011-05-23T10:07:48Z",
       "ids": [
-        "273308353_62787c"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-22T08:48:22Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
+        "8683_4cc37d"
       ],
       "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
+        "amount": 1,
+        "current_user_liked": true,
+        "type": "meta_like"
       },
-      "type": "activity",
       "objects": [
         {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
+          "id": "1_a1fbc6",
+          "type": "user"
         }
       ],
       "possible_actions": [
         "COMMENT",
-        "DELETE",
-        "LIKE"
+        "LIKE",
+        "SHARE"
       ],
-      "aggregated_by": null
+      "type": "activity",
+      "verb": "share"
     },
     {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272949267_b29c15"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-21T12:55:00Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
       "actors": [
         {
-          "type": "user",
-          "id": "15988651_1737b8"
+          "id": "3228492_0cc2a7",
+          "type": "user"
         }
       ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
+      "aggregated": false,
+      "aggregated_by": null,
       "comments": {
         "amount": 0,
         "current_user_commented": false,
-        "latest_comments": [
-        ],
+        "latest_comments": [],
         "type": "meta_comment"
       },
+      "created_at": "2011-05-11T09:34:06Z",
       "ids": [
-        "272948856_e30c25"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-21T12:53:55Z",
-      "changes": [
-        "photo_urls"
-      ],
-      "aggregated": false,
-      "targets": [
+        "8062_8e1764"
       ],
       "likes": {
-        "type": "meta_like",
         "amount": 0,
-        "current_user_liked": false
+        "current_user_liked": false,
+        "type": "meta_like"
       },
-      "type": "activity",
       "objects": [
         {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272225756_db9d22"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:55:07Z",
-      "changes": [
-        "professional_experience"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272225504_04ef77"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:54:48Z",
-      "changes": [
-        "professional_experience"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272225258_dc0d9c"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:54:15Z",
-      "changes": [
-        "professional_experience"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272225249_4b69c2"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:54:12Z",
-      "changes": [
-        "professional_experience"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272209918_f7a60e"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:11:11Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272208764_4475e0"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:07:53Z",
-      "changes": [
-        "professional_experience"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272208425_1d062b"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:06:43Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272208155_0ec00e"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:05:47Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272206581_d2a8e5"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T21:01:59Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272205587_dbf81c"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T20:59:31Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272205164_bab85f"
-      ],
-      "verb": "update",
-      "created_at": "2012-11-19T20:58:32Z",
-      "changes": [
-        "haves"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "272203946_5e205a"
-      ],
-      "verb": "post",
-      "created_at": "2012-11-19T20:55:18Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "id": "272203945_4cf491",
-          "content": "probiert gerade die neue Funktion \"Profileinträge bestätigen\" aus, die jetzt in den XING Beta Labs verfügbar ist. (http://www.xing.com/betalabs)",
-          "type": "status",
+          "content": "Ab jetzt wieder als Freelancer unterwegs...",
+          "created_at": "2011-05-11T09:34:06Z",
           "creator": {
-            "type": "user",
-            "id": "15988651_1737b8"
+            "id": "3228492_0cc2a7",
+            "type": "user"
           },
-          "created_at": "2012-11-19T20:55:18Z"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
+          "id": "8061_58f2e7",
+          "type": "status"
         }
       ],
       "possible_actions": [
         "COMMENT",
-        "DELETE",
-        "LIKE"
+        "LIKE",
+        "IGNORE"
       ],
-      "aggregated_by": null
+      "type": "activity",
+      "verb": "post"
     },
     {
+      "actors": [
+        {
+          "id": "6666666_6a0d84",
+          "type": "user"
+        }
+      ],
+      "aggregated": false,
+      "aggregated_by": null,
       "comments": {
-        "amount": 0,
-        "current_user_commented": false,
+        "amount": 2,
+        "current_user_commented": true,
         "latest_comments": [
+          {
+            "content": "Schon irgendwie interessant",
+            "created_at": "2011-05-10T16:46:33Z",
+            "creator": {
+              "id": "6666666_6a0d84",
+              "type": "user"
+            },
+            "id": "8046_7a5193",
+            "type": "comment"
+          },
+          {
+            "content": "Mal sehen.",
+            "created_at": "2011-05-11T10:07:58Z",
+            "creator": {
+              "id": "3228492_0cc2a7",
+              "type": "user"
+            },
+            "id": "8063_9fa85b",
+            "type": "comment"
+          }
         ],
         "type": "meta_comment"
       },
+      "created_at": "2011-05-10T16:46:33Z",
       "ids": [
-        "220951258_359478"
-      ],
-      "verb": "update",
-      "created_at": "2012-07-18T07:58:23Z",
-      "changes": [
-        "photo_urls"
-      ],
-      "aggregated": false,
-      "targets": [
+        "8045_72f2b8"
       ],
       "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
+        "amount": 1,
+        "current_user_liked": false,
+        "type": "meta_like"
       },
-      "type": "activity",
       "objects": [
         {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
+          "created_at": "2011-05-10T16:46:33Z",
+          "creator": {
+            "id": "6666666_6a0d84",
+            "type": "user"
+          },
+          "description": "FDP-Fraktionschefin Birgit Homburger gibt auf und verzichtet auf eine weitere Amtszeit. Aus Dank schenkt ihr die Partei immerhin ein Pöstchen.",
+          "id": "8044_fa9495",
+          "image": "http://www.welt.de/multimedia/archive/01374/beide_pk_BM_Bayern_1374265m.jpg",
+          "title": "Brüderle verdrängt Homburger von Fraktionsspitze",
+          "type": "article",
+          "url": "http://www.welt.de/politik/deutschland/article13363306/Bruederle-verdraengt-Homburger-von-Fraktionsspitze.html"
         }
       ],
       "possible_actions": [
         "COMMENT",
-        "DELETE",
-        "LIKE"
+        "LIKE",
+        "SHARE"
       ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "220950976_369f02"
-      ],
-      "verb": "update",
-      "created_at": "2012-07-18T07:57:29Z",
-      "changes": [
-        "photo_urls"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
       "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "192595812_5550a2"
-      ],
-      "verb": "update",
-      "created_at": "2012-05-18T07:36:30Z",
-      "changes": [
-        "display_name"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "192218096_a290f3"
-      ],
-      "verb": "make-friend",
-      "created_at": "2012-05-16T17:18:41Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "10407010_67ff43"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "192217378_fbe9f8"
-      ],
-      "verb": "make-friend",
-      "created_at": "2012-05-16T17:16:25Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "16581646_dbbf15"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "192217261_ddf6ee"
-      ],
-      "verb": "make-friend",
-      "created_at": "2012-05-16T17:15:47Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "7102981_9c81bf"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "144032817_fa3a02"
-      ],
-      "verb": "make-friend",
-      "created_at": "2011-12-13T16:24:56Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15872763_36c9ef"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "140738699_dda057"
-      ],
-      "verb": "make-friend",
-      "created_at": "2011-11-25T17:47:39Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "4226289_a51605"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "117276334_ad80ad"
-      ],
-      "verb": "make-friend",
-      "created_at": "2011-09-30T05:29:58Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15835958_bbfef9"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "18457603_f2032e"
-      ],
-      "verb": "make-friend",
-      "created_at": "2011-06-01T00:53:57Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "7504688_ca51bf"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "14819229_3794ff"
-      ],
-      "verb": "make-friend",
-      "created_at": "2011-05-06T20:34:14Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "4357893_2d364b"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "13797251_0320ce"
-      ],
-      "verb": "update",
-      "created_at": "2011-04-30T09:18:45Z",
-      "changes": [
-        "professional_experience"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "13797036_c18288"
-      ],
-      "verb": "update",
-      "created_at": "2011-04-30T09:16:06Z",
-      "changes": [
-        "private_address.email"
-      ],
-      "aggregated": false,
-      "targets": [
-      ],
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
-    },
-    {
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [
-        ],
-        "type": "meta_comment"
-      },
-      "ids": [
-        "13796783_dbfb0f"
-      ],
-      "verb": "make-friend",
-      "created_at": "2011-04-30T09:12:47Z",
-      "targets": [
-      ],
-      "aggregated": false,
-      "likes": {
-        "type": "meta_like",
-        "amount": 0,
-        "current_user_liked": false
-      },
-      "type": "activity",
-      "objects": [
-        {
-          "type": "user",
-          "id": "450_14a4f9"
-        }
-      ],
-      "actors": [
-        {
-          "type": "user",
-          "id": "15988651_1737b8"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "DELETE",
-        "LIKE"
-      ],
-      "aggregated_by": null
+      "verb": "post"
     }
   ]
 }
