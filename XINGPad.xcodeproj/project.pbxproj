@@ -98,6 +98,10 @@
 		678EEA5816C8448A008EEA16 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EEA3A16C8448A008EEA16 /* MagicalRecord+Setup.m */; };
 		678EEA5916C8448A008EEA16 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EEA3C16C8448A008EEA16 /* MagicalRecord+ShorthandSupport.m */; };
 		678EEA5A16C8448A008EEA16 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EEA3E16C8448A008EEA16 /* MagicalRecord.m */; };
+		67E0AF3A16CE83AC005750E2 /* NSObject+KVOBlockBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3316CE83AC005750E2 /* NSObject+KVOBlockBinding.m */; };
+		67E0AF3B16CE83AC005750E2 /* NSObject+WSKeyPathBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3516CE83AC005750E2 /* NSObject+WSKeyPathBinding.m */; };
+		67E0AF3C16CE83AC005750E2 /* NSObject+WSObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3716CE83AC005750E2 /* NSObject+WSObservation.m */; };
+		67E0AF3D16CE83AC005750E2 /* WSObservationBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3916CE83AC005750E2 /* WSObservationBinding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,7 +220,7 @@
 		67461CBF16CD2DE200DCA5AD /* XPObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPObjects.h; sourceTree = "<group>"; };
 		67461CC016CD2DE200DCA5AD /* XPObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPObjects.m; sourceTree = "<group>"; };
 		6746212B16CD30F600DCA5AD /* PonyDebugger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PonyDebugger.xcodeproj; path = PonyDebugger/ObjC/PonyDebugger.xcodeproj; sourceTree = "<group>"; };
-		6746213516CD311000DCA5AD /* libSocketRocket.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libSocketRocket.a; path = "Vendor/Frameworks/PonyDebugger/ObjC/SocketRocket/build/Release-iphoneos/libSocketRocket.a"; sourceTree = "<group>"; };
+		6746213516CD311000DCA5AD /* libSocketRocket.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSocketRocket.a; path = "Vendor/Frameworks/PonyDebugger/ObjC/SocketRocket/build/Release-iphoneos/libSocketRocket.a"; sourceTree = "<group>"; };
 		6746213716CD319B00DCA5AD /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		6746213916CD31A400DCA5AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		678EE96E16C83B14008EEA16 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
@@ -293,6 +297,14 @@
 		678EEA3E16C8448A008EEA16 /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		678EEA3F16C8448A008EEA16 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		678EEA4016C8448A008EEA16 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CoreData+MagicalRecord.h"; path = "Vendor/Model/MagicalRecord/MagicalRecord/CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
+		67E0AF3216CE83AC005750E2 /* NSObject+KVOBlockBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlockBinding.h"; sourceTree = "<group>"; };
+		67E0AF3316CE83AC005750E2 /* NSObject+KVOBlockBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOBlockBinding.m"; sourceTree = "<group>"; };
+		67E0AF3416CE83AC005750E2 /* NSObject+WSKeyPathBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WSKeyPathBinding.h"; sourceTree = "<group>"; };
+		67E0AF3516CE83AC005750E2 /* NSObject+WSKeyPathBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WSKeyPathBinding.m"; sourceTree = "<group>"; };
+		67E0AF3616CE83AC005750E2 /* NSObject+WSObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WSObservation.h"; sourceTree = "<group>"; };
+		67E0AF3716CE83AC005750E2 /* NSObject+WSObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WSObservation.m"; sourceTree = "<group>"; };
+		67E0AF3816CE83AC005750E2 /* WSObservationBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSObservationBinding.h; sourceTree = "<group>"; };
+		67E0AF3916CE83AC005750E2 /* WSObservationBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSObservationBinding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -574,6 +586,7 @@
 		6748E27216C53C7A0041986B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				67E0AF3116CE83AC005750E2 /* KVOBlockBinding */,
 				678EEA0516C8447B008EEA16 /* MagicalRecord */,
 				678EE96B16C83B14008EEA16 /* AFNetworking */,
 			);
@@ -752,6 +765,22 @@
 			);
 			name = Core;
 			path = Vendor/Model/MagicalRecord/MagicalRecord/Core;
+			sourceTree = "<group>";
+		};
+		67E0AF3116CE83AC005750E2 /* KVOBlockBinding */ = {
+			isa = PBXGroup;
+			children = (
+				67E0AF3216CE83AC005750E2 /* NSObject+KVOBlockBinding.h */,
+				67E0AF3316CE83AC005750E2 /* NSObject+KVOBlockBinding.m */,
+				67E0AF3416CE83AC005750E2 /* NSObject+WSKeyPathBinding.h */,
+				67E0AF3516CE83AC005750E2 /* NSObject+WSKeyPathBinding.m */,
+				67E0AF3616CE83AC005750E2 /* NSObject+WSObservation.h */,
+				67E0AF3716CE83AC005750E2 /* NSObject+WSObservation.m */,
+				67E0AF3816CE83AC005750E2 /* WSObservationBinding.h */,
+				67E0AF3916CE83AC005750E2 /* WSObservationBinding.m */,
+			);
+			name = KVOBlockBinding;
+			path = Vendor/Model/KVOBlockBinding/KVOBlockBinding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -951,6 +980,10 @@
 				6718E17A16C9605E0020BC6D /* XPUser.m in Sources */,
 				1F8EDAAB16CA50AE00CF595A /* OAuthFactory.m in Sources */,
 				67461CC116CD2DE200DCA5AD /* XPObjects.m in Sources */,
+				67E0AF3A16CE83AC005750E2 /* NSObject+KVOBlockBinding.m in Sources */,
+				67E0AF3B16CE83AC005750E2 /* NSObject+WSKeyPathBinding.m in Sources */,
+				67E0AF3C16CE83AC005750E2 /* NSObject+WSObservation.m in Sources */,
+				67E0AF3D16CE83AC005750E2 /* WSObservationBinding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
