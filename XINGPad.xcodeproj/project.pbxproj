@@ -102,6 +102,7 @@
 		67E0AF3B16CE83AC005750E2 /* NSObject+WSKeyPathBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3516CE83AC005750E2 /* NSObject+WSKeyPathBinding.m */; };
 		67E0AF3C16CE83AC005750E2 /* NSObject+WSObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3716CE83AC005750E2 /* NSObject+WSObservation.m */; };
 		67E0AF3D16CE83AC005750E2 /* WSObservationBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3916CE83AC005750E2 /* WSObservationBinding.m */; };
+		67E0AF4016CE8627005750E2 /* NSDictionary+XingAPIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3F16CE8627005750E2 /* NSDictionary+XingAPIAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +306,8 @@
 		67E0AF3716CE83AC005750E2 /* NSObject+WSObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WSObservation.m"; sourceTree = "<group>"; };
 		67E0AF3816CE83AC005750E2 /* WSObservationBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSObservationBinding.h; sourceTree = "<group>"; };
 		67E0AF3916CE83AC005750E2 /* WSObservationBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSObservationBinding.m; sourceTree = "<group>"; };
+		67E0AF3E16CE8626005750E2 /* NSDictionary+XingAPIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XingAPIAdditions.h"; sourceTree = "<group>"; };
+		67E0AF3F16CE8627005750E2 /* NSDictionary+XingAPIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XingAPIAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,6 +524,8 @@
 		6737F67616C9087400E0F76B /* CoreDataCategories */ = {
 			isa = PBXGroup;
 			children = (
+				67E0AF3E16CE8626005750E2 /* NSDictionary+XingAPIAdditions.h */,
+				67E0AF3F16CE8627005750E2 /* NSDictionary+XingAPIAdditions.m */,
 				6737F67716C9087400E0F76B /* NSManagedObject+XingAPIAdditions.h */,
 				6737F67816C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m */,
 				6737F67916C9087400E0F76B /* XPActivity+XPAdditions.h */,
@@ -984,6 +989,7 @@
 				67E0AF3B16CE83AC005750E2 /* NSObject+WSKeyPathBinding.m in Sources */,
 				67E0AF3C16CE83AC005750E2 /* NSObject+WSObservation.m in Sources */,
 				67E0AF3D16CE83AC005750E2 /* WSObservationBinding.m in Sources */,
+				67E0AF4016CE8627005750E2 /* NSDictionary+XingAPIAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
