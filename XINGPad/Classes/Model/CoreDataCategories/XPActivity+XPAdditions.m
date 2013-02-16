@@ -83,10 +83,13 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 	// Only continue if an array is beeing passed in
 	if ([data isKindOfClass:[NSArray class]]) {
 		
+		// No "connecting" xpObjects class available
 		XPObjects *xpObjects;
 		if (!self.xpObjects) {
-			xpObjects = [XPObjects createInContext:[NSManagedObjectContext defaultContext]];
-			self.xpObjects       = xpObjects;
+			
+			// Create new xpObjects instance and add to activity class
+			xpObjects      = [XPObjects createInContext:[NSManagedObjectContext defaultContext]];
+			self.xpObjects = xpObjects;
 		}
 		
 		// Iterate over contained dictionarys
@@ -103,6 +106,26 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
 				[xpObjects addXpUserObject:aManagedObject];
 			} else if ([aManagedObject isKindOfClass:[XPStatus class]]) {
 				[xpObjects addXpStatusObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPEvent class]]) {
+				[xpObjects addXpEventObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPCompanyProfile class]]) {
+				[xpObjects addXpCompanyProfileObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPCompanyProfileUpdate class]]) {
+				[xpObjects addXpCompanyProfileUpdateObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPCompanyProfile class]]) {
+				[xpObjects addXpCompanyProfileObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPJobPosting class]]) {
+				[xpObjects addXpJobPostingObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPCompanyProfile class]]) {
+				[xpObjects addXpCompanyProfileObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPThread class]]) {
+				[xpObjects addXpThreadObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPBookmark class]]) {
+				[xpObjects addXpBookmarkObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPGroup class]]) {
+				[xpObjects addXpGroupObject:aManagedObject];
+			} else if ([aManagedObject isKindOfClass:[XPArticle class]]) {
+				[xpObjects addXpArticleObject:aManagedObject];
 			}
 		}
 		

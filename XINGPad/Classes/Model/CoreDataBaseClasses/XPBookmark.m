@@ -2,11 +2,12 @@
 //  XPBookmark.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 13.02.13.
+//  Created by Roberto Seidenberg on 15.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
 #import "XPBookmark.h"
+#import "XPObjects.h"
 #import "XPUser.h"
 
 
@@ -20,5 +21,6 @@
 @dynamic xpTitle;
 @dynamic xpURL;
 @dynamic xpCreator;
+@dynamic xpObjects;
 
 @end

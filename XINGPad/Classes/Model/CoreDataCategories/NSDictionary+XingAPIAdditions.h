@@ -6,7 +6,23 @@
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
+// Apple
 #import <Foundation/Foundation.h>
+
+// Inherited classes
+#import "XPUser.h"
+#import "XPCompanyProfile.h"
+#import "XPStatus.h"
+#import "XPEvent.h"
+#import "XPCompanyProfileUpdate.h"
+#import "XPJobPosting.h"
+#import "XPThread.h"
+#import "XPBookmark.h"
+#import "XPGroup.h"
+#import "XPMetaComment.h"
+#import "XPComment.h"
+#import "XPMetaLike.h"
+#import "XPArticle.h"
 
 @interface NSDictionary (XingAPIAdditions)
 

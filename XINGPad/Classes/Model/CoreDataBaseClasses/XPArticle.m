@@ -1,21 +1,25 @@
 //
-//  XPEvent.m
+//  XPArticle.m
 //  XINGPad
 //
 //  Created by Roberto Seidenberg on 15.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
-#import "XPEvent.h"
+#import "XPArticle.h"
 #import "XPObjects.h"
+#import "XPUser.h"
 
 
-@implementation XPEvent
+@implementation XPArticle
 
 @dynamic xpCreatedAt;
+@dynamic xpDescription;
 @dynamic xpID;
-@dynamic xpName;
-@dynamic xpPermalink;
+@dynamic xpImageURL;
+@dynamic xpTitle;
+@dynamic xpURL;
+@dynamic xpUser;
 @dynamic xpObjects;
 
 @end

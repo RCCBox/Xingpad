@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="XPActivity" representedClassName="XPActivity" syncable="YES">
-        <attribute name="xpAggregated" attributeType="Boolean" syncable="YES">
+        <attribute name="xpAggregated" optional="YES" attributeType="Boolean" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="aggregated"/>
             </userInfo>
@@ -50,6 +50,44 @@
             <entry key="mappedKeyName" value="objects"/>
         </userInfo>
     </entity>
+    <entity name="XPArticle" representedClassName="XPArticle" syncable="YES">
+        <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="created_at"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpDescription" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpID" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpImageURL" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="image"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpTitle" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="title"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpURL" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="url"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpArticle" inverseEntity="XPObjects" syncable="YES"/>
+        <relationship name="xpUser" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpArticle" inverseEntity="XPUser" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="creator"/>
+            </userInfo>
+        </relationship>
+    </entity>
     <entity name="XPBookmark" representedClassName="XPBookmark" syncable="YES">
         <attribute name="xpBookmarkType" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
@@ -92,6 +130,7 @@
                 <entry key="mappedKeyName" value="creator"/>
             </userInfo>
         </relationship>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpBookmark" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPComment" representedClassName="XPComment" syncable="YES">
         <attribute name="xpContent" attributeType="String" syncable="YES">
@@ -144,6 +183,7 @@
                 <entry key="mappedKeyName" value="photo"/>
             </userInfo>
         </attribute>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpCompanyProfile" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPCompanyProfileUpdate" representedClassName="XPCompanyProfileUpdate" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
@@ -172,6 +212,7 @@
                 <entry key="mappedKeyName" value="permalink"/>
             </userInfo>
         </attribute>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpCompanyProfileUpdate" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPEvent" representedClassName="XPEvent" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
@@ -195,6 +236,7 @@
                 <entry key="mappedKeyName" value="permalink"/>
             </userInfo>
         </attribute>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpEvent" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPGroup" representedClassName="XPGroup" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
@@ -219,6 +261,7 @@
             </userInfo>
         </attribute>
         <relationship name="xpActivity" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpGroup" inverseEntity="XPActivity" syncable="YES"/>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpGroup" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPJobPosting" representedClassName="XPJobPosting" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
@@ -242,6 +285,7 @@
                 <entry key="mappedKeyName" value="permalink"/>
             </userInfo>
         </attribute>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpJobPosting" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPMetaComment" representedClassName="XPMetaComment" syncable="YES">
         <attribute name="xpAmount" attributeType="Integer 16" defaultValueString="0" syncable="YES">
@@ -271,8 +315,16 @@
     <entity name="XPObjects" representedClassName="XPObjects" syncable="YES">
         <attribute name="xpID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="xpActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpObjects" inverseEntity="XPActivity" syncable="YES"/>
-        <relationship name="xpStatus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPStatus" syncable="YES"/>
-        <relationship name="xpUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPUser" syncable="YES"/>
+        <relationship name="xpArticle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPArticle" inverseName="xpObjects" inverseEntity="XPArticle" syncable="YES"/>
+        <relationship name="xpBookmark" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPBookmark" inverseName="xpObjects" inverseEntity="XPBookmark" syncable="YES"/>
+        <relationship name="xpCompanyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPCompanyProfile" inverseName="xpObjects" inverseEntity="XPCompanyProfile" syncable="YES"/>
+        <relationship name="xpCompanyProfileUpdate" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPCompanyProfileUpdate" inverseName="xpObjects" inverseEntity="XPCompanyProfileUpdate" syncable="YES"/>
+        <relationship name="xpEvent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPEvent" inverseName="xpObjects" inverseEntity="XPEvent" syncable="YES"/>
+        <relationship name="xpGroup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPGroup" inverseName="xpObjects" inverseEntity="XPGroup" syncable="YES"/>
+        <relationship name="xpJobPosting" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPJobPosting" inverseName="xpObjects" inverseEntity="XPJobPosting" syncable="YES"/>
+        <relationship name="xpStatus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPStatus" inverseName="xpObjects" inverseEntity="XPStatus" syncable="YES"/>
+        <relationship name="xpThread" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPThread" inverseName="xpThread" inverseEntity="XPThread" syncable="YES"/>
+        <relationship name="xpUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpObjects" inverseEntity="XPUser" syncable="YES"/>
     </entity>
     <entity name="XPStatus" representedClassName="XPStatus" syncable="YES">
         <attribute name="xpContent" attributeType="String" syncable="YES">
@@ -295,6 +347,7 @@
                 <entry key="mappedKeyName" value="creator"/>
             </userInfo>
         </relationship>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpStatus" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPThread" representedClassName="XPThread" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
@@ -318,6 +371,7 @@
                 <entry key="mappedKeyName" value="permalink"/>
             </userInfo>
         </attribute>
+        <relationship name="xpThread" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpThread" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPUser" representedClassName="XPUser" syncable="YES">
         <attribute name="xpID" optional="YES" attributeType="String" syncable="YES">
@@ -330,24 +384,27 @@
                 <entry key="mappedKeyName" value="network_activities"/>
             </userInfo>
         </relationship>
+        <relationship name="xpArticle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPArticle" inverseName="xpUser" inverseEntity="XPArticle" syncable="YES"/>
         <relationship name="xpBookmark" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPBookmark" inverseName="xpCreator" inverseEntity="XPBookmark" syncable="YES"/>
         <relationship name="xpComment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpUser" inverseEntity="XPComment" syncable="YES"/>
+        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpUser" inverseEntity="XPObjects" syncable="YES"/>
         <relationship name="xpStatus" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPStatus" inverseName="xpCreator" inverseEntity="XPStatus" syncable="YES"/>
     </entity>
     <elements>
         <element name="XPActivity" positionX="160" positionY="192" width="128" height="180"/>
-        <element name="XPBookmark" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="XPArticle" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="XPBookmark" positionX="160" positionY="192" width="128" height="180"/>
         <element name="XPComment" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="XPCompanyProfile" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="XPCompanyProfileUpdate" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="XPEvent" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="XPGroup" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="XPJobPosting" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="XPCompanyProfile" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="XPCompanyProfileUpdate" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="XPEvent" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="XPGroup" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="XPJobPosting" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPMetaComment" positionX="160" positionY="192" width="128" height="90"/>
         <element name="XPMetaLike" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="XPObjects" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="XPStatus" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="XPThread" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="XPUser" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="XPObjects" positionX="160" positionY="192" width="128" height="225"/>
+        <element name="XPStatus" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="XPThread" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="XPUser" positionX="160" positionY="192" width="128" height="150"/>
     </elements>
 </model>

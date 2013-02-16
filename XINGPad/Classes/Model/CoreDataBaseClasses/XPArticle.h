@@ -1,5 +1,5 @@
 //
-//  XPCompanyProfileUpdate.h
+//  XPArticle.h
 //  XINGPad
 //
 //  Created by Roberto Seidenberg on 15.02.13.
@@ -9,15 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class XPObjects;
+@class XPObjects, XPUser;
 
-@interface XPCompanyProfileUpdate : NSManagedObject
+@interface XPArticle : NSManagedObject
 
 @property (nonatomic, retain) NSDate * xpCreatedAt;
 @property (nonatomic, retain) NSString * xpDescription;
 @property (nonatomic, retain) NSString * xpID;
-@property (nonatomic, retain) NSString * xpName;
-@property (nonatomic, retain) NSString * xpPermalink;
+@property (nonatomic, retain) NSString * xpImageURL;
+@property (nonatomic, retain) NSString * xpTitle;
+@property (nonatomic, retain) NSString * xpURL;
+@property (nonatomic, retain) XPUser *xpUser;
 @property (nonatomic, retain) XPObjects *xpObjects;
 
 @end

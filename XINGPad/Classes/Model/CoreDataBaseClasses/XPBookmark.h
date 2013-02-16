@@ -2,14 +2,14 @@
 //  XPBookmark.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 13.02.13.
+//  Created by Roberto Seidenberg on 15.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class XPUser;
+@class XPObjects, XPUser;
 
 @interface XPBookmark : NSManagedObject
 
@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSString * xpTitle;
 @property (nonatomic, retain) NSString * xpURL;
 @property (nonatomic, retain) NSSet *xpCreator;
+@property (nonatomic, retain) XPObjects *xpObjects;
 @end
 
 @interface XPBookmark (CoreDataGeneratedAccessors)

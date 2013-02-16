@@ -2,11 +2,12 @@
 //  XPCompanyProfileUpdate.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 13.02.13.
+//  Created by Roberto Seidenberg on 15.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
 #import "XPCompanyProfileUpdate.h"
+#import "XPObjects.h"
 
 
 @implementation XPCompanyProfileUpdate
@@ -16,5 +17,6 @@
 @dynamic xpID;
 @dynamic xpName;
 @dynamic xpPermalink;
+@dynamic xpObjects;
 
 @end
