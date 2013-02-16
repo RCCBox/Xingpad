@@ -50,21 +50,20 @@
 		1FC1BB4E16C11D5700404E83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC1BB2916C11D5700404E83 /* Foundation.framework */; };
 		1FC1BB5616C11D5800404E83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1BB5416C11D5800404E83 /* InfoPlist.strings */; };
 		1FC1BB5916C11D5800404E83 /* XINGPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1BB5816C11D5800404E83 /* XINGPadTests.m */; };
-		671697AF16CECBAD00C15B61 /* XPActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697AE16CECBAD00C15B61 /* XPActivity.m */; };
-		671697B216CECBB000C15B61 /* XPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697B116CECBB000C15B61 /* XPEvent.m */; };
-		671697B516CECBB200C15B61 /* XPCompanyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697B416CECBB200C15B61 /* XPCompanyProfile.m */; };
-		671697BB16CECBB400C15B61 /* XPJobPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697BA16CECBB400C15B61 /* XPJobPosting.m */; };
-		671697BE16CECBB400C15B61 /* XPMetaLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697BD16CECBB400C15B61 /* XPMetaLike.m */; };
-		671697C116CECBB700C15B61 /* XPComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697C016CECBB700C15B61 /* XPComment.m */; };
-		671697C416CECBB800C15B61 /* XPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697C316CECBB800C15B61 /* XPUser.m */; };
-		671697C716CECBB900C15B61 /* XPStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697C616CECBB900C15B61 /* XPStatus.m */; };
-		671697CD16CECBBA00C15B61 /* XPCompanyProfileUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697CC16CECBBA00C15B61 /* XPCompanyProfileUpdate.m */; };
-		671697D016CECBBA00C15B61 /* XPGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697CF16CECBBA00C15B61 /* XPGroup.m */; };
-		671697D316CECBBB00C15B61 /* XPMetaComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697D216CECBBB00C15B61 /* XPMetaComment.m */; };
-		671697D616CECBBB00C15B61 /* XPBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697D516CECBBB00C15B61 /* XPBookmark.m */; };
-		671697D916CECBBC00C15B61 /* XPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697D816CECBBC00C15B61 /* XPThread.m */; };
-		671697DC16CECC3E00C15B61 /* XPObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697DB16CECC3E00C15B61 /* XPObjects.m */; };
-		671697DF16CECC4000C15B61 /* XPArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 671697DE16CECC4000C15B61 /* XPArticle.m */; };
+		6716974F16CEC19B00C15B61 /* XPActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6716974E16CEC19B00C15B61 /* XPActivity.m */; };
+		6716975216CEC19C00C15B61 /* XPObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 6716975116CEC19C00C15B61 /* XPObjects.m */; };
+		6718E16F16C9605E0020BC6D /* XPBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E15716C9605E0020BC6D /* XPBookmark.m */; };
+		6718E17016C9605E0020BC6D /* XPComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E15916C9605E0020BC6D /* XPComment.m */; };
+		6718E17116C9605E0020BC6D /* XPCompanyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E15B16C9605E0020BC6D /* XPCompanyProfile.m */; };
+		6718E17216C9605E0020BC6D /* XPCompanyProfileUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E15D16C9605E0020BC6D /* XPCompanyProfileUpdate.m */; };
+		6718E17316C9605E0020BC6D /* XPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E15F16C9605E0020BC6D /* XPEvent.m */; };
+		6718E17416C9605E0020BC6D /* XPGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E16116C9605E0020BC6D /* XPGroup.m */; };
+		6718E17516C9605E0020BC6D /* XPJobPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E16316C9605E0020BC6D /* XPJobPosting.m */; };
+		6718E17616C9605E0020BC6D /* XPMetaComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E16516C9605E0020BC6D /* XPMetaComment.m */; };
+		6718E17716C9605E0020BC6D /* XPMetaLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E16716C9605E0020BC6D /* XPMetaLike.m */; };
+		6718E17816C9605E0020BC6D /* XPStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E16916C9605E0020BC6D /* XPStatus.m */; };
+		6718E17916C9605E0020BC6D /* XPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E16B16C9605E0020BC6D /* XPThread.m */; };
+		6718E17A16C9605E0020BC6D /* XPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6718E16D16C9605E0020BC6D /* XPUser.m */; };
 		67232B5E16C94A2F0010EAE3 /* Xingpad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67232B5C16C94A2F0010EAE3 /* Xingpad.xcdatamodeld */; };
 		6737F67D16C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67816C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m */; };
 		6737F67E16C9087400E0F76B /* XPActivity+XPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6737F67A16C9087400E0F76B /* XPActivity+XPAdditions.m */; };
@@ -195,36 +194,34 @@
 		1FC1BB5516C11D5800404E83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FC1BB5716C11D5800404E83 /* XINGPadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XINGPadTests.h; sourceTree = "<group>"; };
 		1FC1BB5816C11D5800404E83 /* XINGPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XINGPadTests.m; sourceTree = "<group>"; };
-		671697AD16CECBAD00C15B61 /* XPActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPActivity.h; sourceTree = "<group>"; };
-		671697AE16CECBAD00C15B61 /* XPActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPActivity.m; sourceTree = "<group>"; };
-		671697B016CECBB000C15B61 /* XPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPEvent.h; sourceTree = "<group>"; };
-		671697B116CECBB000C15B61 /* XPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPEvent.m; sourceTree = "<group>"; };
-		671697B316CECBB200C15B61 /* XPCompanyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCompanyProfile.h; sourceTree = "<group>"; };
-		671697B416CECBB200C15B61 /* XPCompanyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCompanyProfile.m; sourceTree = "<group>"; };
-		671697B916CECBB400C15B61 /* XPJobPosting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPJobPosting.h; sourceTree = "<group>"; };
-		671697BA16CECBB400C15B61 /* XPJobPosting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPJobPosting.m; sourceTree = "<group>"; };
-		671697BC16CECBB400C15B61 /* XPMetaLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMetaLike.h; sourceTree = "<group>"; };
-		671697BD16CECBB400C15B61 /* XPMetaLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMetaLike.m; sourceTree = "<group>"; };
-		671697BF16CECBB700C15B61 /* XPComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPComment.h; sourceTree = "<group>"; };
-		671697C016CECBB700C15B61 /* XPComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPComment.m; sourceTree = "<group>"; };
-		671697C216CECBB800C15B61 /* XPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPUser.h; sourceTree = "<group>"; };
-		671697C316CECBB800C15B61 /* XPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPUser.m; sourceTree = "<group>"; };
-		671697C516CECBB900C15B61 /* XPStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPStatus.h; sourceTree = "<group>"; };
-		671697C616CECBB900C15B61 /* XPStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPStatus.m; sourceTree = "<group>"; };
-		671697CB16CECBBA00C15B61 /* XPCompanyProfileUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCompanyProfileUpdate.h; sourceTree = "<group>"; };
-		671697CC16CECBBA00C15B61 /* XPCompanyProfileUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCompanyProfileUpdate.m; sourceTree = "<group>"; };
-		671697CE16CECBBA00C15B61 /* XPGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPGroup.h; sourceTree = "<group>"; };
-		671697CF16CECBBA00C15B61 /* XPGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPGroup.m; sourceTree = "<group>"; };
-		671697D116CECBBB00C15B61 /* XPMetaComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMetaComment.h; sourceTree = "<group>"; };
-		671697D216CECBBB00C15B61 /* XPMetaComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMetaComment.m; sourceTree = "<group>"; };
-		671697D416CECBBB00C15B61 /* XPBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBookmark.h; sourceTree = "<group>"; };
-		671697D516CECBBB00C15B61 /* XPBookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBookmark.m; sourceTree = "<group>"; };
-		671697D716CECBBC00C15B61 /* XPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPThread.h; sourceTree = "<group>"; };
-		671697D816CECBBC00C15B61 /* XPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPThread.m; sourceTree = "<group>"; };
-		671697DA16CECC3E00C15B61 /* XPObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPObjects.h; sourceTree = "<group>"; };
-		671697DB16CECC3E00C15B61 /* XPObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPObjects.m; sourceTree = "<group>"; };
-		671697DD16CECC4000C15B61 /* XPArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPArticle.h; sourceTree = "<group>"; };
-		671697DE16CECC4000C15B61 /* XPArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPArticle.m; sourceTree = "<group>"; };
+		6716974D16CEC19B00C15B61 /* XPActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPActivity.h; sourceTree = "<group>"; };
+		6716974E16CEC19B00C15B61 /* XPActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPActivity.m; sourceTree = "<group>"; };
+		6716975016CEC19C00C15B61 /* XPObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPObjects.h; sourceTree = "<group>"; };
+		6716975116CEC19C00C15B61 /* XPObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPObjects.m; sourceTree = "<group>"; };
+		6718E15616C9605E0020BC6D /* XPBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBookmark.h; sourceTree = "<group>"; };
+		6718E15716C9605E0020BC6D /* XPBookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBookmark.m; sourceTree = "<group>"; };
+		6718E15816C9605E0020BC6D /* XPComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPComment.h; sourceTree = "<group>"; };
+		6718E15916C9605E0020BC6D /* XPComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPComment.m; sourceTree = "<group>"; };
+		6718E15A16C9605E0020BC6D /* XPCompanyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCompanyProfile.h; sourceTree = "<group>"; };
+		6718E15B16C9605E0020BC6D /* XPCompanyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCompanyProfile.m; sourceTree = "<group>"; };
+		6718E15C16C9605E0020BC6D /* XPCompanyProfileUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCompanyProfileUpdate.h; sourceTree = "<group>"; };
+		6718E15D16C9605E0020BC6D /* XPCompanyProfileUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCompanyProfileUpdate.m; sourceTree = "<group>"; };
+		6718E15E16C9605E0020BC6D /* XPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPEvent.h; sourceTree = "<group>"; };
+		6718E15F16C9605E0020BC6D /* XPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPEvent.m; sourceTree = "<group>"; };
+		6718E16016C9605E0020BC6D /* XPGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPGroup.h; sourceTree = "<group>"; };
+		6718E16116C9605E0020BC6D /* XPGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPGroup.m; sourceTree = "<group>"; };
+		6718E16216C9605E0020BC6D /* XPJobPosting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPJobPosting.h; sourceTree = "<group>"; };
+		6718E16316C9605E0020BC6D /* XPJobPosting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPJobPosting.m; sourceTree = "<group>"; };
+		6718E16416C9605E0020BC6D /* XPMetaComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMetaComment.h; sourceTree = "<group>"; };
+		6718E16516C9605E0020BC6D /* XPMetaComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMetaComment.m; sourceTree = "<group>"; };
+		6718E16616C9605E0020BC6D /* XPMetaLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMetaLike.h; sourceTree = "<group>"; };
+		6718E16716C9605E0020BC6D /* XPMetaLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMetaLike.m; sourceTree = "<group>"; };
+		6718E16816C9605E0020BC6D /* XPStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPStatus.h; sourceTree = "<group>"; };
+		6718E16916C9605E0020BC6D /* XPStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPStatus.m; sourceTree = "<group>"; };
+		6718E16A16C9605E0020BC6D /* XPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPThread.h; sourceTree = "<group>"; };
+		6718E16B16C9605E0020BC6D /* XPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPThread.m; sourceTree = "<group>"; };
+		6718E16C16C9605E0020BC6D /* XPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPUser.h; sourceTree = "<group>"; };
+		6718E16D16C9605E0020BC6D /* XPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPUser.m; sourceTree = "<group>"; };
 		67232B5D16C94A2F0010EAE3 /* Xingpad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xingpad.xcdatamodel; sourceTree = "<group>"; };
 		6737F67716C9087400E0F76B /* NSManagedObject+XingAPIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+XingAPIAdditions.h"; sourceTree = "<group>"; };
 		6737F67816C9087400E0F76B /* NSManagedObject+XingAPIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+XingAPIAdditions.m"; sourceTree = "<group>"; };
@@ -627,36 +624,34 @@
 		678EE94316C83982008EEA16 /* CoreDataBaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				671697D716CECBBC00C15B61 /* XPThread.h */,
-				671697D816CECBBC00C15B61 /* XPThread.m */,
-				671697D416CECBBB00C15B61 /* XPBookmark.h */,
-				671697D516CECBBB00C15B61 /* XPBookmark.m */,
-				671697D116CECBBB00C15B61 /* XPMetaComment.h */,
-				671697D216CECBBB00C15B61 /* XPMetaComment.m */,
-				671697CE16CECBBA00C15B61 /* XPGroup.h */,
-				671697CF16CECBBA00C15B61 /* XPGroup.m */,
-				671697CB16CECBBA00C15B61 /* XPCompanyProfileUpdate.h */,
-				671697CC16CECBBA00C15B61 /* XPCompanyProfileUpdate.m */,
-				671697C516CECBB900C15B61 /* XPStatus.h */,
-				671697C616CECBB900C15B61 /* XPStatus.m */,
-				671697C216CECBB800C15B61 /* XPUser.h */,
-				671697C316CECBB800C15B61 /* XPUser.m */,
-				671697BF16CECBB700C15B61 /* XPComment.h */,
-				671697C016CECBB700C15B61 /* XPComment.m */,
-				671697BC16CECBB400C15B61 /* XPMetaLike.h */,
-				671697BD16CECBB400C15B61 /* XPMetaLike.m */,
-				671697B916CECBB400C15B61 /* XPJobPosting.h */,
-				671697BA16CECBB400C15B61 /* XPJobPosting.m */,
-				671697B316CECBB200C15B61 /* XPCompanyProfile.h */,
-				671697B416CECBB200C15B61 /* XPCompanyProfile.m */,
-				671697B016CECBB000C15B61 /* XPEvent.h */,
-				671697B116CECBB000C15B61 /* XPEvent.m */,
-				671697AD16CECBAD00C15B61 /* XPActivity.h */,
-				671697AE16CECBAD00C15B61 /* XPActivity.m */,
-				671697DA16CECC3E00C15B61 /* XPObjects.h */,
-				671697DB16CECC3E00C15B61 /* XPObjects.m */,
-				671697DD16CECC4000C15B61 /* XPArticle.h */,
-				671697DE16CECC4000C15B61 /* XPArticle.m */,
+				6718E15616C9605E0020BC6D /* XPBookmark.h */,
+				6718E15716C9605E0020BC6D /* XPBookmark.m */,
+				6718E15816C9605E0020BC6D /* XPComment.h */,
+				6718E15916C9605E0020BC6D /* XPComment.m */,
+				6718E15A16C9605E0020BC6D /* XPCompanyProfile.h */,
+				6718E15B16C9605E0020BC6D /* XPCompanyProfile.m */,
+				6718E15C16C9605E0020BC6D /* XPCompanyProfileUpdate.h */,
+				6718E15D16C9605E0020BC6D /* XPCompanyProfileUpdate.m */,
+				6718E15E16C9605E0020BC6D /* XPEvent.h */,
+				6718E15F16C9605E0020BC6D /* XPEvent.m */,
+				6718E16016C9605E0020BC6D /* XPGroup.h */,
+				6718E16116C9605E0020BC6D /* XPGroup.m */,
+				6718E16216C9605E0020BC6D /* XPJobPosting.h */,
+				6718E16316C9605E0020BC6D /* XPJobPosting.m */,
+				6718E16416C9605E0020BC6D /* XPMetaComment.h */,
+				6718E16516C9605E0020BC6D /* XPMetaComment.m */,
+				6718E16616C9605E0020BC6D /* XPMetaLike.h */,
+				6718E16716C9605E0020BC6D /* XPMetaLike.m */,
+				6718E16816C9605E0020BC6D /* XPStatus.h */,
+				6718E16916C9605E0020BC6D /* XPStatus.m */,
+				6718E16A16C9605E0020BC6D /* XPThread.h */,
+				6718E16B16C9605E0020BC6D /* XPThread.m */,
+				6718E16C16C9605E0020BC6D /* XPUser.h */,
+				6718E16D16C9605E0020BC6D /* XPUser.m */,
+				6716974D16CEC19B00C15B61 /* XPActivity.h */,
+				6716974E16CEC19B00C15B61 /* XPActivity.m */,
+				6716975016CEC19C00C15B61 /* XPObjects.h */,
+				6716975116CEC19C00C15B61 /* XPObjects.m */,
 			);
 			path = CoreDataBaseClasses;
 			sourceTree = "<group>";
@@ -1003,27 +998,26 @@
 				6737F67F16C9087400E0F76B /* XPUser+XPAdditions.m in Sources */,
 				6737F68B16C9136000E0F76B /* XPHomeViewController.m in Sources */,
 				67232B5E16C94A2F0010EAE3 /* Xingpad.xcdatamodeld in Sources */,
+				6718E16F16C9605E0020BC6D /* XPBookmark.m in Sources */,
+				6718E17016C9605E0020BC6D /* XPComment.m in Sources */,
+				6718E17116C9605E0020BC6D /* XPCompanyProfile.m in Sources */,
+				6718E17216C9605E0020BC6D /* XPCompanyProfileUpdate.m in Sources */,
+				6718E17316C9605E0020BC6D /* XPEvent.m in Sources */,
+				6718E17416C9605E0020BC6D /* XPGroup.m in Sources */,
+				6718E17516C9605E0020BC6D /* XPJobPosting.m in Sources */,
+				6718E17616C9605E0020BC6D /* XPMetaComment.m in Sources */,
+				6718E17716C9605E0020BC6D /* XPMetaLike.m in Sources */,
+				6718E17816C9605E0020BC6D /* XPStatus.m in Sources */,
+				6718E17916C9605E0020BC6D /* XPThread.m in Sources */,
+				6718E17A16C9605E0020BC6D /* XPUser.m in Sources */,
 				1F8EDAAB16CA50AE00CF595A /* OAuthFactory.m in Sources */,
 				67E0AF3A16CE83AC005750E2 /* NSObject+KVOBlockBinding.m in Sources */,
 				67E0AF3B16CE83AC005750E2 /* NSObject+WSKeyPathBinding.m in Sources */,
 				67E0AF3C16CE83AC005750E2 /* NSObject+WSObservation.m in Sources */,
 				67E0AF3D16CE83AC005750E2 /* WSObservationBinding.m in Sources */,
 				67E0AF4016CE8627005750E2 /* NSDictionary+XingAPIAdditions.m in Sources */,
-				671697AF16CECBAD00C15B61 /* XPActivity.m in Sources */,
-				671697B216CECBB000C15B61 /* XPEvent.m in Sources */,
-				671697B516CECBB200C15B61 /* XPCompanyProfile.m in Sources */,
-				671697BB16CECBB400C15B61 /* XPJobPosting.m in Sources */,
-				671697BE16CECBB400C15B61 /* XPMetaLike.m in Sources */,
-				671697C116CECBB700C15B61 /* XPComment.m in Sources */,
-				671697C416CECBB800C15B61 /* XPUser.m in Sources */,
-				671697C716CECBB900C15B61 /* XPStatus.m in Sources */,
-				671697CD16CECBBA00C15B61 /* XPCompanyProfileUpdate.m in Sources */,
-				671697D016CECBBA00C15B61 /* XPGroup.m in Sources */,
-				671697D316CECBBB00C15B61 /* XPMetaComment.m in Sources */,
-				671697D616CECBBB00C15B61 /* XPBookmark.m in Sources */,
-				671697D916CECBBC00C15B61 /* XPThread.m in Sources */,
-				671697DC16CECC3E00C15B61 /* XPObjects.m in Sources */,
-				671697DF16CECC4000C15B61 /* XPArticle.m in Sources */,
+				6716974F16CEC19B00C15B61 /* XPActivity.m in Sources */,
+				6716975216CEC19C00C15B61 /* XPObjects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

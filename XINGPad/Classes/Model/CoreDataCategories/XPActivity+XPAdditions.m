@@ -16,7 +16,7 @@
 #import "NSManagedObject+XingAPIAdditions.h"
 
 // Constants
-static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json";
+static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json?user_fields=id,display_name,gender,permalink,photo_urls";
 
 @implementation XPActivity(XPAdditions)
 

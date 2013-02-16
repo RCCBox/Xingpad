@@ -22,6 +22,6 @@
  *
  * @params oauth - the OAuth authenticator object, which contains details about the authenticated user.
 */
-- (void) authorizationDidFail:(OAuth *)oauth;
+- (void)authorizationDidCancel:(OAuth *)oauth;
 
 @end

@@ -20,5 +20,5 @@
 
 @interface XPAppDelegate(OAuthAuthorizationProtocol) <OAuthAuthorizationCallbacks>
 - (void)authorizationDidSucceed:(OAuth *)oauth;
-- (void)authorizationDidFail:(OAuth *)oauth;
+- (void)authorizationDidCancel:(OAuth *)oauth;
 @end
