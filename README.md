@@ -1,7 +1,5 @@
 ## XingPad
 
----
-
 An iPad XING client using the XING API v1.
 
 ### Project Setup
@@ -18,25 +16,27 @@ Build and run the project using XCode.
 Install [PonyDebugger](https://github.com/square/PonyDebugger) and run it using the terminal:
 
 	ponyd serve --listen-interface=127.0.0.1
-	
-	
-###Coding guidelines
+
+##### Logging
+
 Some macros are being defined in XINGPad-Prefix.pch. Use these for debugging reasons. [Read more ...](http://www.cimgf.com/wp-login.php?redirect_to=http://www.cimgf.com/2010/05/02/my-current-prefix-pch-file/)
 
-#####DLog
+**DLog**
 
 Never use NSLog. Use DLog instead. DLog output is beeing silenced in release builds.
 
 	DLog(@"Some va: r%@", <#(id)#>);
 
-#####ALog
+##### Assertions
+
+**ALog**
 
 If you need logging in release builds use ALog. It throws an assertion when being hit in DEBUG mode and converts to an NSLog in release builds.
 
 	// Error
 	NSAssert(<#(evaluation to NO throws assertion)#>, @"It failed");
 
-###### ZASSert
+**ZASSert**
 
 Use these assertions macros to validate objects at runtime.
 
@@ -56,12 +56,12 @@ Documentation for the project is being generated using [appledoc](https://github
 
 XINGPad makes heavy use these open source projects::
 
-###### Networking
+**Networking**
 
 * [PlainOAuth](https://github.com/leviathan/PlainOAuth) A plain OAuth 1.0 library in Objective-C
 * [AFNewtworking](https://github.com/AFNetworking/AFNetworking) A delightful iOS and OS X networking framework
 * [kvo-block-binding](https://github.com/rayh/kvo-block-binding) Use blocks to observe Objective-C properties using KVO
 
-###### Debugging
+**Debugging**
 
 * [PonyDebugger](https://github.com/square/PonyDebugger) Remote network and data debugging for your native iOS app using Chrome Developer Tools
