@@ -112,6 +112,7 @@
 		678EEA5816C8448A008EEA16 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EEA3A16C8448A008EEA16 /* MagicalRecord+Setup.m */; };
 		678EEA5916C8448A008EEA16 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EEA3C16C8448A008EEA16 /* MagicalRecord+ShorthandSupport.m */; };
 		678EEA5A16C8448A008EEA16 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EEA3E16C8448A008EEA16 /* MagicalRecord.m */; };
+		678F5A5A16D0435C00814065 /* XPArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 678F5A5916D0435C00814065 /* XPArticle.m */; };
 		67E0AF3A16CE83AC005750E2 /* NSObject+KVOBlockBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3316CE83AC005750E2 /* NSObject+KVOBlockBinding.m */; };
 		67E0AF3B16CE83AC005750E2 /* NSObject+WSKeyPathBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3516CE83AC005750E2 /* NSObject+WSKeyPathBinding.m */; };
 		67E0AF3C16CE83AC005750E2 /* NSObject+WSObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0AF3716CE83AC005750E2 /* NSObject+WSObservation.m */; };
@@ -312,6 +313,8 @@
 		678EEA3E16C8448A008EEA16 /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		678EEA3F16C8448A008EEA16 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		678EEA4016C8448A008EEA16 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CoreData+MagicalRecord.h"; path = "Vendor/Model/MagicalRecord/MagicalRecord/CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
+		678F5A5816D0435C00814065 /* XPArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPArticle.h; sourceTree = "<group>"; };
+		678F5A5916D0435C00814065 /* XPArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPArticle.m; sourceTree = "<group>"; };
 		67E0AF3216CE83AC005750E2 /* NSObject+KVOBlockBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlockBinding.h"; sourceTree = "<group>"; };
 		67E0AF3316CE83AC005750E2 /* NSObject+KVOBlockBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOBlockBinding.m"; sourceTree = "<group>"; };
 		67E0AF3416CE83AC005750E2 /* NSObject+WSKeyPathBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WSKeyPathBinding.h"; sourceTree = "<group>"; };
@@ -624,6 +627,8 @@
 		678EE94316C83982008EEA16 /* CoreDataBaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				678F5A5816D0435C00814065 /* XPArticle.h */,
+				678F5A5916D0435C00814065 /* XPArticle.m */,
 				6718E15616C9605E0020BC6D /* XPBookmark.h */,
 				6718E15716C9605E0020BC6D /* XPBookmark.m */,
 				6718E15816C9605E0020BC6D /* XPComment.h */,
@@ -1018,6 +1023,7 @@
 				67E0AF4016CE8627005750E2 /* NSDictionary+XingAPIAdditions.m in Sources */,
 				6716974F16CEC19B00C15B61 /* XPActivity.m in Sources */,
 				6716975216CEC19C00C15B61 /* XPObjects.m in Sources */,
+				678F5A5A16D0435C00814065 /* XPArticle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
