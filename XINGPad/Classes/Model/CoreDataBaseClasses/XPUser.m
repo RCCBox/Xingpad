@@ -2,7 +2,7 @@
 //  XPUser.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 15.02.13.
+//  Created by Roberto Seidenberg on 17.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 #import "XPArticle.h"
 #import "XPBookmark.h"
 #import "XPComment.h"
+#import "XPObjects.h"
 #import "XPStatus.h"
 
 
@@ -18,9 +19,10 @@
 
 @dynamic xpID;
 @dynamic xpActivity;
+@dynamic xpArticle;
 @dynamic xpBookmark;
 @dynamic xpComment;
+@dynamic xpObjects;
 @dynamic xpStatus;
-@dynamic xpArticle;
 
 @end

@@ -2,7 +2,7 @@
 //  XPArticle.h
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 15.02.13.
+//  Created by Roberto Seidenberg on 17.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -19,7 +19,7 @@
 @property (nonatomic, retain) NSString * xpImageURL;
 @property (nonatomic, retain) NSString * xpTitle;
 @property (nonatomic, retain) NSString * xpURL;
-@property (nonatomic, retain) XPUser *xpUser;
 @property (nonatomic, retain) XPObjects *xpObjects;
+@property (nonatomic, retain) XPUser *xpUser;
 
 @end

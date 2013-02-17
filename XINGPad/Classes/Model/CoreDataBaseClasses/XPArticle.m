@@ -2,7 +2,7 @@
 //  XPArticle.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 15.02.13.
+//  Created by Roberto Seidenberg on 17.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -19,7 +19,7 @@
 @dynamic xpImageURL;
 @dynamic xpTitle;
 @dynamic xpURL;
-@dynamic xpUser;
 @dynamic xpObjects;
+@dynamic xpUser;
 
 @end

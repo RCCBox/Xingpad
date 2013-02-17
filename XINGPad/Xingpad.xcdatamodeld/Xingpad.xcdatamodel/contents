@@ -26,12 +26,12 @@
                 <entry key="mappedKeyName" value="targets"/>
             </userInfo>
         </relationship>
-        <relationship name="xpMetaComment" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPMetaComment" inverseName="xpActivity" inverseEntity="XPMetaComment" syncable="YES">
+        <relationship name="xpMetaComment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPMetaComment" inverseName="xpActivity" inverseEntity="XPMetaComment" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="comments"/>
             </userInfo>
         </relationship>
-        <relationship name="xpMetaLike" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPMetaLike" inverseName="xpActivity" inverseEntity="XPMetaLike" syncable="YES">
+        <relationship name="xpMetaLike" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPMetaLike" inverseName="xpActivity" inverseEntity="XPMetaLike" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="likes"/>
             </userInfo>
@@ -41,7 +41,7 @@
                 <entry key="mappedKeyName" value="objects"/>
             </userInfo>
         </relationship>
-        <relationship name="xpUser" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpActivity" inverseEntity="XPUser" syncable="YES">
+        <relationship name="xpUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpActivity" inverseEntity="XPUser" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="actors"/>
             </userInfo>
@@ -159,7 +159,6 @@
     <entity name="XPCompanyProfile" representedClassName="XPCompanyProfile" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
-                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
                 <entry key="mappedKeyName" value="created_at"/>
             </userInfo>
         </attribute>
@@ -241,7 +240,6 @@
     <entity name="XPGroup" representedClassName="XPGroup" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
             <userInfo>
-                <entry key="dateFormat" value="yyyy-MM-dd’T'HH:mm:ss’Z’"/>
                 <entry key="mappedKeyName" value="created_at"/>
             </userInfo>
         </attribute>
@@ -260,8 +258,8 @@
                 <entry key="mappedKeyName" value="permalink"/>
             </userInfo>
         </attribute>
-        <relationship name="xpActivity" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpGroup" inverseEntity="XPActivity" syncable="YES"/>
-        <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpGroup" inverseEntity="XPObjects" syncable="YES"/>
+        <relationship name="xpActivity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpGroup" inverseEntity="XPActivity" syncable="YES"/>
+        <relationship name="xpObjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpGroup" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPJobPosting" representedClassName="XPJobPosting" syncable="YES">
         <attribute name="xpCreatedAt" attributeType="Date" syncable="YES">
@@ -293,8 +291,13 @@
                 <entry key="mappedKeyName" value="amount"/>
             </userInfo>
         </attribute>
+        <attribute name="xpCurrentUserCommented" optional="YES" attributeType="Boolean" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="current_user_commented"/>
+            </userInfo>
+        </attribute>
         <relationship name="xpActivity" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpMetaComment" inverseEntity="XPActivity" syncable="YES"/>
-        <relationship name="xpComment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpMetaComment" inverseEntity="XPComment" syncable="YES">
+        <relationship name="xpComment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpMetaComment" inverseEntity="XPComment" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="latest_comments"/>
             </userInfo>
@@ -400,7 +403,7 @@
         <element name="XPEvent" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPGroup" positionX="160" positionY="192" width="128" height="135"/>
         <element name="XPJobPosting" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="XPMetaComment" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="XPMetaComment" positionX="160" positionY="192" width="128" height="105"/>
         <element name="XPMetaLike" positionX="160" positionY="192" width="128" height="90"/>
         <element name="XPObjects" positionX="160" positionY="192" width="128" height="225"/>
         <element name="XPStatus" positionX="160" positionY="192" width="128" height="120"/>

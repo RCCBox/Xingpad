@@ -1,205 +1,568 @@
 {
   "network_activities": [
     {
-      "actors": [
-        {
-          "id": "6666666_6a0d84",
-          "type": "user"
-        }
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "307146296_74a761"
       ],
-      "aggregated": false,
-      "aggregated_by": null,
+      "verb": "update",
+      "created_at": "2013-02-17T16:14:33Z",
       "changes": [
         "haves"
       ],
-      "comments": {
-        "amount": 0,
-        "current_user_commented": false,
-        "latest_comments": [],
-        "type": "meta_comment"
-      },
-      "created_at": "2011-05-26T11:14:38Z",
-      "ids": [
-        "9493_7c6b3a"
+      "aggregated": false,
+      "targets": [
+      ],
+      "type": "activity",
+      "objects": [
+        {
+          "gender": "f",
+          "id": "16581646_dbbf15",
+          "display_name": "Andrea Franke",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Andrea_Franke28"
+        }
       ],
       "likes": {
         "amount": 0,
-        "current_user_liked": false,
-        "type": "meta_like"
+        "type": "meta_like",
+        "current_user_liked": false
       },
-      "objects": [
-        {
-          "id": "6666666_6a0d84",
-          "type": "user"
-        }
-      ],
       "possible_actions": [
         "COMMENT",
+        "IGNORE",
         "LIKE"
       ],
-      "type": "activity",
-      "verb": "update"
-    },
-    {
+      "aggregated_by": null,
       "actors": [
         {
-          "id": "6666666_6a0d84",
-          "type": "user"
+          "gender": "f",
+          "id": "16581646_dbbf15",
+          "display_name": "Andrea Franke",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Andrea_Franke28"
         }
-      ],
-      "aggregated": false,
-      "aggregated_by": null,
-      "comments": {
-        "amount": 1,
-        "current_user_commented": true,
-        "latest_comments": [
-          {
-            "content": "Kann ich nur empfehlen!",
-            "created_at": "2011-05-30T15:02:43Z",
-            "creator": {
-              "id": "6666666_6a0d84",
-              "type": "user"
-            },
-            "id": "10368_ddec16",
-            "type": "comment"
-          }
-        ],
-        "type": "meta_comment"
-      },
-      "created_at": "2011-05-23T10:07:48Z",
-      "ids": [
-        "8683_4cc37d"
-      ],
-      "likes": {
-        "amount": 1,
-        "current_user_liked": true,
-        "type": "meta_like"
-      },
-      "objects": [
-        {
-          "id": "1_a1fbc6",
-          "type": "user"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "LIKE",
-        "SHARE"
-      ],
-      "type": "activity",
-      "verb": "share"
+      ]
     },
     {
-      "actors": [
-        {
-          "id": "3228492_0cc2a7",
-          "type": "user"
-        }
-      ],
-      "aggregated": false,
-      "aggregated_by": null,
       "comments": {
         "amount": 0,
         "current_user_commented": false,
-        "latest_comments": [],
-        "type": "meta_comment"
-      },
-      "created_at": "2011-05-11T09:34:06Z",
-      "ids": [
-        "8062_8e1764"
-      ],
-      "likes": {
-        "amount": 0,
-        "current_user_liked": false,
-        "type": "meta_like"
-      },
-      "objects": [
-        {
-          "content": "Ab jetzt wieder als Freelancer unterwegs...",
-          "created_at": "2011-05-11T09:34:06Z",
-          "creator": {
-            "id": "3228492_0cc2a7",
-            "type": "user"
-          },
-          "id": "8061_58f2e7",
-          "type": "status"
-        }
-      ],
-      "possible_actions": [
-        "COMMENT",
-        "LIKE",
-        "IGNORE"
-      ],
-      "type": "activity",
-      "verb": "post"
-    },
-    {
-      "actors": [
-        {
-          "id": "6666666_6a0d84",
-          "type": "user"
-        }
-      ],
-      "aggregated": false,
-      "aggregated_by": null,
-      "comments": {
-        "amount": 2,
-        "current_user_commented": true,
         "latest_comments": [
-          {
-            "content": "Schon irgendwie interessant",
-            "created_at": "2011-05-10T16:46:33Z",
-            "creator": {
-              "id": "6666666_6a0d84",
-              "type": "user"
-            },
-            "id": "8046_7a5193",
-            "type": "comment"
-          },
-          {
-            "content": "Mal sehen.",
-            "created_at": "2011-05-11T10:07:58Z",
-            "creator": {
-              "id": "3228492_0cc2a7",
-              "type": "user"
-            },
-            "id": "8063_9fa85b",
-            "type": "comment"
-          }
         ],
         "type": "meta_comment"
       },
-      "created_at": "2011-05-10T16:46:33Z",
       "ids": [
-        "8045_72f2b8"
+        "307145974_45ad34"
       ],
-      "likes": {
-        "amount": 1,
-        "current_user_liked": false,
-        "type": "meta_like"
-      },
+      "verb": "update",
+      "created_at": "2013-02-17T16:13:20Z",
+      "changes": [
+        "professional_experience"
+      ],
+      "aggregated": false,
+      "targets": [
+      ],
+      "type": "activity",
       "objects": [
         {
-          "created_at": "2011-05-10T16:46:33Z",
-          "creator": {
-            "id": "6666666_6a0d84",
-            "type": "user"
+          "gender": "f",
+          "id": "16581646_dbbf15",
+          "display_name": "Andrea Franke",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.18x24.jpg"
           },
-          "description": "FDP-Fraktionschefin Birgit Homburger gibt auf und verzichtet auf eine weitere Amtszeit. Aus Dank schenkt ihr die Partei immerhin ein Pöstchen.",
-          "id": "8044_fa9495",
-          "image": "http://www.welt.de/multimedia/archive/01374/beide_pk_BM_Bayern_1374265m.jpg",
-          "title": "Brüderle verdrängt Homburger von Fraktionsspitze",
-          "type": "article",
-          "url": "http://www.welt.de/politik/deutschland/article13363306/Bruederle-verdraengt-Homburger-von-Fraktionsspitze.html"
+          "permalink": "https://www.xing.com/profile/Andrea_Franke28"
+        }
+      ],
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "possible_actions": [
+        "COMMENT",
+        "IGNORE",
+        "LIKE"
+      ],
+      "aggregated_by": null,
+      "actors": [
+        {
+          "gender": "f",
+          "id": "16581646_dbbf15",
+          "display_name": "Andrea Franke",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/a/6/d/61ea78eb4.16581646,5.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Andrea_Franke28"
+        }
+      ]
+    },
+    {
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "305825371_322db9"
+      ],
+      "verb": "make-friend",
+      "created_at": "2013-02-14T09:35:17Z",
+      "targets": [
+      ],
+      "aggregated": false,
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "type": "activity",
+      "objects": [
+        {
+          "gender": "m",
+          "id": "5819114_a5c41f",
+          "display_name": "Christoph Pater",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/2/8/0/120ac4f04.5819114,6.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/2/8/0/120ac4f04.5819114,6.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/2/8/0/120ac4f04.5819114,6.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/2/8/0/120ac4f04.5819114,6.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/2/8/0/120ac4f04.5819114,6.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Christoph_Pater"
         }
       ],
       "possible_actions": [
         "COMMENT",
-        "LIKE",
-        "SHARE"
+        "IGNORE",
+        "LIKE"
+      ],
+      "actors": [
+        {
+          "gender": "m",
+          "id": "7504688_ca51bf",
+          "display_name": "Marcus Nemack",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Marcus_Nemack"
+        }
+      ],
+      "aggregated_by": null
+    },
+    {
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "305145849_34ceb7"
+      ],
+      "verb": "make-friend",
+      "created_at": "2013-02-12T20:56:16Z",
+      "targets": [
+      ],
+      "aggregated": false,
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "type": "activity",
+      "objects": [
+        {
+          "gender": "f",
+          "id": "13212386_afc62c",
+          "display_name": "Stefanie Fuhrmann",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/img/users/4/8/7/13f91f661.13212386,4.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/img/users/4/8/7/13f91f661.13212386,4.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/img/users/4/8/7/13f91f661.13212386,4.57x75.jpg",
+            "thumb": "https://www.xing.com/img/users/4/8/7/13f91f661.13212386,4.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/img/users/4/8/7/13f91f661.13212386,4.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Stefanie_Fuhrmann5"
+        }
+      ],
+      "possible_actions": [
+        "COMMENT",
+        "IGNORE",
+        "LIKE"
+      ],
+      "actors": [
+        {
+          "gender": "m",
+          "id": "7504688_ca51bf",
+          "display_name": "Marcus Nemack",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/2/2/8/7f812047d.7504688,2.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Marcus_Nemack"
+        }
+      ],
+      "aggregated_by": null
+    },
+    {
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "304260684_45e21e"
+      ],
+      "verb": "make-friend",
+      "created_at": "2013-02-11T08:58:00Z",
+      "targets": [
+      ],
+      "aggregated": false,
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "type": "activity",
+      "objects": [
+        {
+          "gender": "m",
+          "id": "363194_3192a2",
+          "display_name": "Till Kothe",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/2/b/c/2116508f6.363194,3.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/2/b/c/2116508f6.363194,3.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/2/b/c/2116508f6.363194,3.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/2/b/c/2116508f6.363194,3.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/2/b/c/2116508f6.363194,3.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Till_Kothe"
+        }
+      ],
+      "possible_actions": [
+        "COMMENT",
+        "IGNORE",
+        "LIKE"
+      ],
+      "actors": [
+        {
+          "gender": "m",
+          "id": "450_14a4f9",
+          "display_name": "Alexander Babing",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/img/users/5/a/8/90c907c8f.450,11.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/img/users/5/a/8/90c907c8f.450,11.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/img/users/5/a/8/90c907c8f.450,11.57x75.jpg",
+            "thumb": "https://www.xing.com/img/users/5/a/8/90c907c8f.450,11.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/img/users/5/a/8/90c907c8f.450,11.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Alexander_Babing"
+        }
+      ],
+      "aggregated_by": null
+    },
+    {
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "303515786_d4d39d"
+      ],
+      "verb": "post",
+      "created_at": "2013-02-08T15:57:06Z",
+      "targets": [
+      ],
+      "aggregated": false,
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "type": "activity",
+      "objects": [
+        {
+          "id": "303515786_d4d39d",
+          "content": "Are you interested in working at what has been labelled as 'Europe's next big thing'. From the US to Berlin. PHP, RabbitMQ/Gearman with testing experience. If you want to be part of highly scale able business working  on highly reputable business get in touch.",
+          "creator": {
+            "gender": "m",
+            "id": "17922290_e85fe5",
+            "display_name": "Charles Wilyman",
+            "type": "user",
+            "photo_urls": {
+              "large": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.140x185.jpg",
+              "maxi_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.70x93.jpg",
+              "medium_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.57x75.jpg",
+              "thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.30x40.jpg",
+              "mini_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.18x24.jpg"
+            },
+            "permalink": "https://www.xing.com/profile/Charles_Wilyman2"
+          },
+          "type": "status",
+          "created_at": "2013-02-08T15:57:06Z"
+        }
+      ],
+      "possible_actions": [
+        "COMMENT",
+        "IGNORE",
+        "LIKE"
+      ],
+      "actors": [
+        {
+          "gender": "m",
+          "id": "17922290_e85fe5",
+          "display_name": "Charles Wilyman",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Charles_Wilyman2"
+        }
+      ],
+      "aggregated_by": null
+    },
+    {
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "303439688_4bc53c",
+        "303439687_daff58"
+      ],
+      "verb": "follow",
+      "created_at": "2013-02-08T13:40:29Z",
+      "targets": [
+      ],
+      "aggregated": true,
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "type": "activity",
+      "objects": [
+        {
+          "photo": "https://www.xing.com/img/custom/cp/company_files/d/a/2/224674/thumbnail/120611_Logo.jpg",
+          "id": "413069_cc9294",
+          "created_at": "2012-07-31T09:35:37Z",
+          "type": "company_profile",
+          "name": "Movinary",
+          "permalink": "https://www.xing.com/companies/movinary"
+        },
+        {
+          "photo": "https://www.xing.com/img/custom/cp/company_files/d/c/b/245195/thumbnail/Logo_CRES_neu.jpg",
+          "id": "449952_15e2a0",
+          "created_at": "2012-10-22T15:06:30Z",
+          "type": "company_profile",
+          "name": "CRES Columbus Internet Group",
+          "permalink": "https://www.xing.com/companies/crescolumbusinternetgroup"
+        }
+      ],
+      "possible_actions": [
+        "IGNORE"
+      ],
+      "actors": [
+        {
+          "gender": "m",
+          "id": "17922290_e85fe5",
+          "display_name": "Charles Wilyman",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/4/0/2/012d5f058.17922290,6.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Charles_Wilyman2"
+        }
+      ],
+      "aggregated_by": "actor"
+    },
+    {
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "303348521_d8dde1",
+        "303347416_f831ad"
+      ],
+      "verb": "join",
+      "created_at": "2013-02-08T11:10:38Z",
+      "targets": [
+      ],
+      "aggregated": true,
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "type": "activity",
+      "objects": [
+        {
+          "created_at": "2010-04-16T14:05:58Z",
+          "id": "54585_c05fe0",
+          "display_name": "Android Community",
+          "type": "group",
+          "permalink": "https://www.xing.com/net/androidcommunity/"
+        },
+        {
+          "created_at": "2008-05-20T08:35:13Z",
+          "id": "21118_05afc9",
+          "display_name": "Android & Co - open source goes mobile",
+          "type": "group",
+          "permalink": "https://www.xing.com/net/mobile_opensource/"
+        }
+      ],
+      "possible_actions": [
+        "IGNORE"
+      ],
+      "actors": [
+        {
+          "gender": "f",
+          "id": "16238957_70d92a",
+          "display_name": "Sherlyn Vallet",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/1/a/f/e5e2ab678.16238957,7.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/1/a/f/e5e2ab678.16238957,7.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/1/a/f/e5e2ab678.16238957,7.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/1/a/f/e5e2ab678.16238957,7.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/1/a/f/e5e2ab678.16238957,7.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Sherlyn_Vallet"
+        }
+      ],
+      "aggregated_by": "actor"
+    },
+    {
+      "comments": {
+        "amount": 0,
+        "current_user_commented": false,
+        "latest_comments": [
+        ],
+        "type": "meta_comment"
+      },
+      "ids": [
+        "303258177_77dfc3"
+      ],
+      "verb": "update",
+      "created_at": "2013-02-08T08:28:44Z",
+      "changes": [
+        "professional_experience"
+      ],
+      "aggregated": false,
+      "targets": [
       ],
       "type": "activity",
-      "verb": "post"
+      "objects": [
+        {
+          "gender": "m",
+          "id": "4226289_a51605",
+          "display_name": "Jörg Polakowski",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Joerg_Polakowski"
+        }
+      ],
+      "likes": {
+        "amount": 0,
+        "type": "meta_like",
+        "current_user_liked": false
+      },
+      "possible_actions": [
+        "COMMENT",
+        "IGNORE",
+        "LIKE"
+      ],
+      "aggregated_by": null,
+      "actors": [
+        {
+          "gender": "m",
+          "id": "4226289_a51605",
+          "display_name": "Jörg Polakowski",
+          "type": "user",
+          "photo_urls": {
+            "large": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.140x185.jpg",
+            "maxi_thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.70x93.jpg",
+            "medium_thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.57x75.jpg",
+            "thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.30x40.jpg",
+            "mini_thumb": "https://www.xing.com/pubimg/users/b/4/6/d5a785db9.4226289,3.18x24.jpg"
+          },
+          "permalink": "https://www.xing.com/profile/Joerg_Polakowski"
+        }
+      ]
     }
   ]
 }

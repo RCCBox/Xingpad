@@ -2,7 +2,7 @@
 //  XPObjects.m
 //  XINGPad
 //
-//  Created by Roberto Seidenberg on 15.02.13.
+//  Created by Roberto Seidenberg on 17.02.13.
 //  Copyright (c) 2013 Joerg Polakowski. All rights reserved.
 //
 
@@ -24,15 +24,15 @@
 
 @dynamic xpID;
 @dynamic xpActivity;
-@dynamic xpStatus;
-@dynamic xpUser;
-@dynamic xpEvent;
+@dynamic xpArticle;
+@dynamic xpBookmark;
 @dynamic xpCompanyProfile;
 @dynamic xpCompanyProfileUpdate;
-@dynamic xpJobPosting;
-@dynamic xpThread;
-@dynamic xpBookmark;
+@dynamic xpEvent;
 @dynamic xpGroup;
-@dynamic xpArticle;
+@dynamic xpJobPosting;
+@dynamic xpStatus;
+@dynamic xpThread;
+@dynamic xpUser;
 
 @end
