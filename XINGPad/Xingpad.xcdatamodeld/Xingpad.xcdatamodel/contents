@@ -390,9 +390,24 @@
         <relationship name="xpThread" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpThread" inverseEntity="XPObjects" syncable="YES"/>
     </entity>
     <entity name="XPUser" representedClassName="XPUser" syncable="YES">
+        <attribute name="xpDisplayName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="display_name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpGender" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="gender"/>
+            </userInfo>
+        </attribute>
         <attribute name="xpID" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpPermalink" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="permalink"/>
             </userInfo>
         </attribute>
         <relationship name="xpActivity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpUser" inverseEntity="XPActivity" syncable="YES">
@@ -421,7 +436,7 @@
         <element name="XPObjects" positionX="160" positionY="192" width="128" height="225"/>
         <element name="XPStatus" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPThread" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="XPUser" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="XPUser" positionX="160" positionY="192" width="128" height="195"/>
         <element name="XPPossibleActions" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

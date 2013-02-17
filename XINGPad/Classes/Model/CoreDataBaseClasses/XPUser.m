@@ -18,6 +18,9 @@
 @implementation XPUser
 
 @dynamic xpID;
+@dynamic xpDisplayName;
+@dynamic xpGender;
+@dynamic xpPermalink;
 @dynamic xpActivity;
 @dynamic xpArticle;
 @dynamic xpBookmark;

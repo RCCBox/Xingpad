@@ -14,6 +14,9 @@
 @interface XPUser : NSManagedObject
 
 @property (nonatomic, retain) NSString * xpID;
+@property (nonatomic, retain) NSString * xpDisplayName;
+@property (nonatomic, retain) NSString * xpGender;
+@property (nonatomic, retain) NSString * xpPermalink;
 @property (nonatomic, retain) NSSet *xpActivity;
 @property (nonatomic, retain) XPArticle *xpArticle;
 @property (nonatomic, retain) XPBookmark *xpBookmark;
