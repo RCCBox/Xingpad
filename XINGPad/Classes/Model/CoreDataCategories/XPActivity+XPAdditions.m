@@ -14,6 +14,7 @@
 // Categories
 #import "NSDictionary+XingAPIAdditions.h"
 #import "NSManagedObject+XingAPIAdditions.h"
+#import "XPPossibleActions+XingAPIAdditions.h"
 
 // Constants
 static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json?user_fields=id,display_name,gender,permalink,photo_urls";
@@ -132,6 +133,40 @@ static NSString* const kXPActivityAPIPath = @"/users/me/network_feed.json?user_f
 		// Persist
 		[[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
 	}
+	
+	// Returning YES means: Object import has been taken care of
+	return YES;
+}
+- (BOOL)importXpPossibleActions:(id)data {
+
+	// Get data for "objects" property
+	data = [data objectForKey:@"possible_actions"];
+	
+	// Only continue if data is available
+	if (data) {
+		
+		// No xpPossibleActions object available
+		XPPossibleActions *actions;
+		if (!self.xpPossibleActions) {
+			
+			// Create new xpObjects instance and add to activity class
+			actions                = [XPPossibleActions createInContext:[NSManagedObjectContext defaultContext]];
+			actions.xpActivity     = self;
+			self.xpPossibleActions = actions;
+		}
+		
+		// Find actions strings in data array and set according bools in db object
+		for (NSString *action in data) {
+			if ([action isEqualToString:kXPPossibleActionsStringComment]) actions.xpIsCommentingPossible = @YES;
+			if ([action isEqualToString:kXPPossibleActionsStringLike])    actions.xpIsLikingPossible     = @YES;
+			if ([action isEqualToString:kXPPossibleActionsStringShare])   actions.xpIsSharingPossible    = @YES;
+			if ([action isEqualToString:kXPPossibleActionsStringDelete])  actions.xpIsDeletingPossible   = @YES;
+			if ([action isEqualToString:kXPPossibleActionsStringIgnore])  actions.xpIsIgnoringPossible   = @YES;
+		}
+	}
+	
+	// Persist
+	[[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
 	
 	// Returning YES means: Object import has been taken care of
 	return YES;

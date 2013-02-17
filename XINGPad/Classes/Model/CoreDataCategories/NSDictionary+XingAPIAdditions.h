@@ -23,6 +23,7 @@
 #import "XPComment.h"
 #import "XPMetaLike.h"
 #import "XPArticle.h"
+#import "XPPossibleActions.h"
 
 @interface NSDictionary (XingAPIAdditions)
 

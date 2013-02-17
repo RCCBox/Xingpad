@@ -41,6 +41,11 @@
                 <entry key="mappedKeyName" value="objects"/>
             </userInfo>
         </relationship>
+        <relationship name="xpPossibleActions" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPPossibleActions" inverseName="xpActivity" inverseEntity="XPPossibleActions" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="possible_actions"/>
+            </userInfo>
+        </relationship>
         <relationship name="xpUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpActivity" inverseEntity="XPUser" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="actors"/>
@@ -329,6 +334,14 @@
         <relationship name="xpThread" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPThread" inverseName="xpThread" inverseEntity="XPThread" syncable="YES"/>
         <relationship name="xpUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpObjects" inverseEntity="XPUser" syncable="YES"/>
     </entity>
+    <entity name="XPPossibleActions" representedClassName="XPPossibleActions" syncable="YES">
+        <attribute name="xpIsCommentingPossible" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="xpIsDeletingPossible" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="xpIsIgnoringPossible" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="xpIsLikingPossible" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="xpIsSharingPossible" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="xpActivity" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPActivity" inverseName="xpPossibleActions" inverseEntity="XPActivity" syncable="YES"/>
+    </entity>
     <entity name="XPStatus" representedClassName="XPStatus" syncable="YES">
         <attribute name="xpContent" attributeType="String" syncable="YES">
             <userInfo>
@@ -394,7 +407,7 @@
         <relationship name="xpStatus" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPStatus" inverseName="xpCreator" inverseEntity="XPStatus" syncable="YES"/>
     </entity>
     <elements>
-        <element name="XPActivity" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="XPActivity" positionX="160" positionY="192" width="128" height="195"/>
         <element name="XPArticle" positionX="160" positionY="192" width="128" height="165"/>
         <element name="XPBookmark" positionX="160" positionY="192" width="128" height="180"/>
         <element name="XPComment" positionX="160" positionY="192" width="128" height="120"/>
@@ -409,5 +422,6 @@
         <element name="XPStatus" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPThread" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPUser" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="XPPossibleActions" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

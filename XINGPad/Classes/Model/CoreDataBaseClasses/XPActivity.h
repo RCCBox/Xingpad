@@ -22,6 +22,7 @@
 @property (nonatomic, retain) XPMetaLike *xpMetaLike;
 @property (nonatomic, retain) XPObjects *xpObjects;
 @property (nonatomic, retain) NSSet *xpUser;
+@property (nonatomic, retain) NSManagedObject *xpPossibleActions;
 @end
 
 @interface XPActivity (CoreDataGeneratedAccessors)

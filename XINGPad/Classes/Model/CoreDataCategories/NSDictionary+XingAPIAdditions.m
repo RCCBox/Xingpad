@@ -19,7 +19,7 @@
 	Class retClass;
 	
 	if (propertyType) {
-		NSDictionary *objectMapping = @{@"user": [XPUser class], @"company_profile": [XPCompanyProfile class], @"status": [XPStatus class], @"event": [XPEvent class], @"company_profile_update": [XPCompanyProfileUpdate class], @"job_posting": [XPJobPosting class], @"thread": [XPThread class], @"bookmark": [XPBookmark class], @"group": [XPGroup class], @"meta_comment": [XPMetaComment class], @"comment": [XPCompanyProfileUpdate class], @"meta_like": [XPMetaLike class], @"article": [XPArticle class]};
+		NSDictionary *objectMapping = @{@"user": [XPUser class], @"company_profile": [XPCompanyProfile class], @"status": [XPStatus class], @"event": [XPEvent class], @"company_profile_update": [XPCompanyProfileUpdate class], @"job_posting": [XPJobPosting class], @"thread": [XPThread class], @"bookmark": [XPBookmark class], @"group": [XPGroup class], @"meta_comment": [XPMetaComment class], @"comment": [XPCompanyProfileUpdate class], @"meta_like": [XPMetaLike class], @"article": [XPArticle class], @"possible_actions": [XPPossibleActions class]};
 		retClass = [objectMapping valueForKey:propertyType];
 	}
 	
