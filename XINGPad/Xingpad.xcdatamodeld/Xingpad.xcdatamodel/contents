@@ -334,6 +334,34 @@
         <relationship name="xpThread" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPThread" inverseName="xpThread" inverseEntity="XPThread" syncable="YES"/>
         <relationship name="xpUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpObjects" inverseEntity="XPUser" syncable="YES"/>
     </entity>
+    <entity name="XPPhotoURLs" representedClassName="XPPhotoURLs" syncable="YES">
+        <attribute name="xpLarge" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="large"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpMaxiThumb" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="maxi_thumb"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpMediumThumb" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="medium_thumb"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpMiniThumb" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="mini_thumb"/>
+            </userInfo>
+        </attribute>
+        <attribute name="xpThumb" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="thumb"/>
+            </userInfo>
+        </attribute>
+        <relationship name="xpUser" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPUser" inverseName="xpPhotoURLs" inverseEntity="XPUser" syncable="YES"/>
+    </entity>
     <entity name="XPPossibleActions" representedClassName="XPPossibleActions" syncable="YES">
         <attribute name="xpIsCommentingPossible" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="xpIsDeletingPossible" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -419,6 +447,11 @@
         <relationship name="xpBookmark" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPBookmark" inverseName="xpCreator" inverseEntity="XPBookmark" syncable="YES"/>
         <relationship name="xpComment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPComment" inverseName="xpUser" inverseEntity="XPComment" syncable="YES"/>
         <relationship name="xpObjects" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPObjects" inverseName="xpUser" inverseEntity="XPObjects" syncable="YES"/>
+        <relationship name="xpPhotoURLs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XPPhotoURLs" inverseName="xpUser" inverseEntity="XPPhotoURLs" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="photo_urls"/>
+            </userInfo>
+        </relationship>
         <relationship name="xpStatus" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="XPStatus" inverseName="xpCreator" inverseEntity="XPStatus" syncable="YES"/>
     </entity>
     <elements>
@@ -436,7 +469,8 @@
         <element name="XPObjects" positionX="160" positionY="192" width="128" height="225"/>
         <element name="XPStatus" positionX="160" positionY="192" width="128" height="120"/>
         <element name="XPThread" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="XPUser" positionX="160" positionY="192" width="128" height="195"/>
+        <element name="XPUser" positionX="160" positionY="192" width="128" height="210"/>
         <element name="XPPossibleActions" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="XPPhotoURLs" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

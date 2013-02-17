@@ -27,5 +27,6 @@
 @dynamic xpComment;
 @dynamic xpObjects;
 @dynamic xpStatus;
+@dynamic xpPhotoURLs;
 
 @end

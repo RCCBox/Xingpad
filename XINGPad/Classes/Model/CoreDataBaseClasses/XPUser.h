@@ -23,6 +23,7 @@
 @property (nonatomic, retain) XPComment *xpComment;
 @property (nonatomic, retain) XPObjects *xpObjects;
 @property (nonatomic, retain) XPStatus *xpStatus;
+@property (nonatomic, retain) NSManagedObject *xpPhotoURLs;
 @end
 
 @interface XPUser (CoreDataGeneratedAccessors)
