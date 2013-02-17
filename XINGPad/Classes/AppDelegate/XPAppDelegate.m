@@ -48,6 +48,21 @@
 	[debugger connectToURL:[NSURL URLWithString:@"ws://localhost:9000/device"]];
 }
 
+#pragma mark Authentication
+
+- (XPUser *)setupUserWithID:(NSString *)userID {
+	
+	// It's not allowed to call this method with a nil argument
+	ZAssert(userID, @"VIOLATION: Method argument (NSString *)userID: %@", userID);
+	
+	// Insert new user in context
+	XPUser *user = [XPUser createEntity];
+	user.xpID    = userID;
+	
+	// Returns user or nil
+	return user;
+}
+
 @end
 
 @implementation XPAppDelegate
@@ -66,7 +81,11 @@
     if ([[OAuthPersistenceManager instance] isUserAuthorized]) {
 		
 		// Get user object for logged in user
-		XPUser *user = [XPUser findFirstByAttribute:@"xpID" withValue:[[OAuthPersistenceManager instance] authorizedUserID]];
+		NSString *userID =[[OAuthPersistenceManager instance] authorizedUserID];
+		XPUser *user     = [XPUser findFirstByAttribute:@"xpID" withValue:userID];
+		
+		// Init new user if none found
+		user = [self setupUserWithID:userID];
 		
 		// Forward user to initial view controller
 		XPHomeViewController *xpHVC = (XPHomeViewController *)self.window.rootViewController;
@@ -123,9 +142,8 @@
         self.alreadyCalled = YES;
 
         // Create new user  with returned id
-        XPUser *user = [XPUser createEntity];
-        user.xpID = [((OAuthXing *)oauth) user_id];
-
+		XPUser *user = [self setupUserWithID:[((OAuthXing *)oauth) user_id]];
+		
         // Forward user object to initial viewcontroller
         XPHomeViewController *xpHVC = (XPHomeViewController *) self.window.rootViewController;
         xpHVC.user = user;
